@@ -1,4 +1,6 @@
 # 🛡️ Ban Evading the AntiCheat
+### 💪💪 Second chance to everyone 💪💪
+
 **Safely bypass all the AntiCheats below, never need to pay someone for spoofing your serials again**
 - BattleEye
 - Ricochet
