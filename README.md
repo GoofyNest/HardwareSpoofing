@@ -149,7 +149,7 @@ CRU (Custom Resolution Utility):
 - Click OK
 - Repeat these steps for each monitor listed
 
-### 🧬 SMBIOS Spoofing Guide
+# 🧬 SMBIOS Spoofing Guide
 
 - You’ll need the binaries listed in the referenced repo (⚠️ I did not create these binaries)
 - After spoofing all SMBIOS fields, you must reinstall your Operating System
