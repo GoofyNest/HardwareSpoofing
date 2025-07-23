@@ -1,5 +1,7 @@
 # 🖥️ Monitor Spoofing Guide
 
+**This step is done after you have freshly reinstalled Windows
+
 > [!IMPORTANT]
 > If you're experiencing black screens after spoofing or restarting your PC, disable FreeSYNC/SYNC in your monitor’s on-screen panel settings before proceeding.
 > 
