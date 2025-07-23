@@ -93,7 +93,7 @@ Anti-cheats can track:
 
 # 🎮 Graphic card (GPU) spoofing
 
-EasyAntiCheat does not log your graphics card’s serial number—since GPUs are frequently resold, tracking serials would cause many false bans. 
+EasyAntiCheat does not log your graphics card’s serial number since GPUs are frequently resold, tracking serials would cause many false bans. 
 However, it’s worth mentioning that the anticheat does log the name/model of your graphics card.
 
 # 🔌 USB Adapter spoofing
