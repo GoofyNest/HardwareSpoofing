@@ -26,7 +26,7 @@ Get-WmiObject -Namespace root\wmi -Class WmiMonitorID | ForEach-Object {
 > 📝 We're working on a document listing **monitors and peripherals that don't include serial numbers**, so you can buy spoof-safe hardware without guessing.
 
 # Supported motherboards
-- ASRock
+- [ASRock](https://github.com/GoofyNest/HardwareSpoofing/blob/main/ASRock.md)
 - Gigabyte
 - ASUS ⚠️
 - MSI ⚠️
