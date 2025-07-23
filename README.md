@@ -67,10 +67,11 @@ When you set up RAID 0, those identifiers get wiped or replaced, making your sys
 > [!TIP]
 > Even if your board supports RAID, you may need at least 2 drives of the same type (either 2× SSDs or 2× NVMe).
 
-|Type|					|NVMe RAID 0|							|SATA SSD RAID 0|
-|Works for spoofing?|		|✅ Yes|			   	   			   |✅ Yes|
-|Setup Difficulty|		|🔧 Moderate–Hard|	    		    |🔧 Easy–Moderate|
-|Controller Needed|		|Intel VMD / AMD RAIDXpert2|	         |Basic RAID controller|
+Type | NVMe RAID 0 | SATA SSD RAID 0
+--- | --- | --- | 
+Works for spoofing? | ✅ Yes | ✅ Yes
+Setup Difficulty | 🔧 Moderate–Hard | 🔧 Easy–Moderate
+Controller Needed | Intel VMD / AMD RAIDXpert2 | Basic RAID controller
 
 > [!IMPORTANT]
 > NVMe RAID 0 might require driver injection during Windows install
