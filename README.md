@@ -25,8 +25,6 @@ This is the most reliable approach with minimal to zero detection flags if done 
 >
 > You cannot be banned by only using this spoofing method.
 
-# 📋 [Read the requirements]((https://github.com/GoofyNest/HardwareSpoofing/blob/main/Requirements.md))
-
 # 🧬 SMBIOS Spoofing Guide
 
 - You’ll need the binaries listed in the referenced repo (⚠️ I did not create these binaries)
