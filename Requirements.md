@@ -98,6 +98,33 @@ if it reports `00000000` or something that does not look unique, you are good to
 > 
 > 📝 We're working on a document listing **components that don't include a serial number**, so you can buy spoof-safe hardware without guessing.
 
+# 🎮 Graphic card (GPU) spoofing
+
+EasyAntiCheat does not log your graphics card’s serial number since GPUs are frequently resold, tracking serials would cause many false bans. 
+However, it’s worth mentioning that the anticheat does log the name/model of your graphics card.
+
+# 🔌 USB Adapter spoofing
+
+If you're concerned about USB device serials such as:
+
+- Headset
+- Keyboard
+- Mouse
+- RGB devices (CPU fans, etc.)
+
+You can choose to buy Chinese or unbranded USB peripherals, or simply stick with [Razer](https://www.razer.com/)
+
+All Razer products—headsets, mice, keyboards—come with no serial numbers from the factory, making them ideal for spoofing purposes.
+
+# 📶 Router / Network Adapter spoofing
+
+EasyAntiCheat/Vanguard can use ARP and nearby device scanning to catch players in games like Fortnite tournaments. 
+If you’re worried about your MAC address leaking through ARP or nearby device detection, I recommend getting a separate router for your cheating setup, isolating it from your normal devices.
+
+Keep in mind, even if your router supports MAC spoofing, it doesn’t always mean the spoofed MAC is actually reported to your connected devices.
+
+While I haven’t personally seen this method used against Rust players on EasyAntiCheat, it’s definitely something to consider if you want to stay legit.
+
 # MAC Spoofing
 > [!TIP]
 > Anti-cheats often **flag MAC addresses for about a week after a ban**.  
