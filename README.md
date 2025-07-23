@@ -40,7 +40,7 @@ This is the most reliable approach with minimal to zero detection flags if done 
 - Windows 10 for Monitor spoofing
 
   
-### 🧩 What Is RAID 0 (and Why It Matters for Spoofing)?
+# 🧩 What Is RAID 0 (and Why It Matters for Spoofing)?
 
 **RAID 0** is a storage setup that combines two or more drives into a single "virtual" drive using a method called striping. While it’s traditionally used for performance, in ban evasion, the goal is different:
 
@@ -91,12 +91,12 @@ Anti-cheats can track:
 - Use a clean Windows ISO after creating the RAID array
 - Do not use backup images or old installs
 
-### 🎮 Graphic card (GPU) spoofing
+# 🎮 Graphic card (GPU) spoofing
 
 EasyAntiCheat does not log your graphics card’s serial number—since GPUs are frequently resold, tracking serials would cause many false bans. 
 However, it’s worth mentioning that the anticheat does log the name/model of your graphics card.
 
-### 🔌 USB Adapter spoofing
+# 🔌 USB Adapter spoofing
 
 If you're concerned about USB device serials such as:
 
@@ -109,7 +109,7 @@ You can choose to buy Chinese or unbranded USB peripherals, or simply stick with
 
 All Razer products—headsets, mice, keyboards—come with no serial numbers from the factory, making them ideal for spoofing purposes.
 
-### 📶 Router / Network Adapter spoofing
+# 📶 Router / Network Adapter spoofing
 
 EasyAntiCheat/Vanguard can use ARP and nearby device scanning to catch players in games like Fortnite tournaments. 
 If you’re worried about your MAC address leaking through ARP or nearby device detection, I recommend getting a separate router for your cheating setup, isolating it from your normal devices.
@@ -118,7 +118,7 @@ Keep in mind, even if your router supports MAC spoofing, it doesn’t always mea
 
 While I haven’t personally seen this method used against Rust players on EasyAntiCheat, it’s definitely something to consider if you want to stay legit.
 
-### 🖥️ Monitor Spoofing Guide
+# 🖥️ Monitor Spoofing Guide
 
 > [!IMPORTANT]
 > If you're experiencing black screens after spoofing or restarting your PC, disable FreeSYNC/SYNC in your monitor’s on-screen panel settings before proceeding.
