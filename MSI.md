@@ -89,7 +89,7 @@ PRO B550M-P GEN3 (MS-7D95)
 ```
 
 > [!IMPORTANT]
-> Keep the same start `07D9` and the same size, but ranomize the numbers.
+> Keep the same start `07D9` and the same size, but randomize the numbers.
 
 ### Asset Tag       			
 ```
