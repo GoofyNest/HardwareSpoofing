@@ -1,4 +1,4 @@
-# 🏭 ASRock Factory Settings Reference
+# 🏭 Clean ASRock motherboard dump (Never spoofed)
 
 # [Type 001] -- System Information
 
