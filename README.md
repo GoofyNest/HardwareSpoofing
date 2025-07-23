@@ -42,12 +42,15 @@ This is the most reliable approach with minimal to zero detection flags if done 
   
 # 🧩 What Is RAID 0 (and Why It Matters for Spoofing)?
 
-**RAID 0** is a storage setup that combines two or more drives into a single "virtual" drive using a method called striping. While it’s traditionally used for performance, in ban evasion, the goal is different:
+**RAID 0** is a storage setup that combines two or more drives into a single "virtual" drive using a method called striping. 
+
+While it’s traditionally used for performance, in ban evasion, the goal is different:
 
 > [!TIP]
 > RAID 0 is used to completely change the hardware signature of your drive(s).
 
 Most games that use anti-cheats like EasyAntiCheat (EAC) or BattlEye (BE) will log unique identifiers from your drives (like serial numbers, volume IDs, etc.). 
+
 When you set up RAID 0, those identifiers get wiped or replaced, making your system appear brand new from a storage/hardware perspective.
 
 
@@ -64,10 +67,10 @@ When you set up RAID 0, those identifiers get wiped or replaced, making your sys
 > [!TIP]
 > Even if your board supports RAID, you may need at least 2 drives of the same type (either 2× SSDs or 2× NVMe).
 
-Type					NVMe RAID 0							SATA SSD RAID 0
-Works for spoofing?		✅ Yes			   	   			   ✅ Yes
-Setup Difficulty		🔧 Moderate–Hard	    		    🔧 Easy–Moderate
-Controller Needed		Intel VMD / AMD RAIDXpert2	         Basic RAID controller
+|Type|					|NVMe RAID 0|							|SATA SSD RAID 0|
+|Works for spoofing?|		|✅ Yes|			   	   			   |✅ Yes|
+|Setup Difficulty|		|🔧 Moderate–Hard|	    		    |🔧 Easy–Moderate|
+|Controller Needed|		|Intel VMD / AMD RAIDXpert2|	         |Basic RAID controller|
 
 > [!IMPORTANT]
 > NVMe RAID 0 might require driver injection during Windows install
