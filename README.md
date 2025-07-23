@@ -81,7 +81,8 @@ Anti-cheats can track:
 - Firmware versions
 - Hidden sector data
 
-When you use RAID 0, you completely overwrite these markers and build a new virtual disk with its own RAID-specific ID — making your system look like a new machine.
+> [!NOTE]
+> When you use RAID 0, you completely overwrite these markers and build a new virtual disk with its own RAID-specific ID — making your system look like a new machine.
 
 ## 📦 Bonus: RAID 0 Tips for Evasion
 
