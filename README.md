@@ -21,7 +21,7 @@ This is the most reliable approach with minimal to zero detection flags if done 
 >
 > You cannot be banned by only using this spoofing method.
 
-### 📋 Read the requirements
+# 📋 Read the requirements
 
 - [Requirements](https://github.com/GoofyNest/HardwareSpoofing/blob/main/Requirements.md)
 
