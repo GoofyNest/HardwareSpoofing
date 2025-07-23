@@ -1,5 +1,10 @@
 # 🏭 Clean ASUS motherboard dump (Never spoofed)
 
+> [!IMPORTANT]
+> Most of the ASUS motherboards are supported
+> 
+> The new ASUS motherboards can be hard to spoof and require newer AMIDEWIN, you can try to google for a newer version or one that work for your motherboard.
+
 # [Type 001] -- System Information
 
 ### Manufacturer    			
