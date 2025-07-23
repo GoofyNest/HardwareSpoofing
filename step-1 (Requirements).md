@@ -27,8 +27,8 @@ Get-WmiObject -Namespace root\wmi -Class WmiMonitorID | ForEach-Object {
 
 # Supported motherboards
 - [ASRock](https://github.com/GoofyNest/HardwareSpoofing/blob/main/ASRock.md)
-- Gigabyte
-- ASUS ⚠️
+- [Gigabyte](https://github.com/GoofyNest/HardwareSpoofing/blob/main/Gigabyte.md)
+- [ASUS](https://github.com/GoofyNest/HardwareSpoofing/blob/main/ASUS.md) ⚠️
 - MSI ⚠️
 
 > [!IMPORTANT]
