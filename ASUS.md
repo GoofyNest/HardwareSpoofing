@@ -61,9 +61,6 @@ To be filled by O.E.M.
 ASUSTeK COMPUTER INC.
 ```
 
-> [!IMPORTANT]
-> Same as Type 001 Manufacturer
-
 ### Product Name    			
 ```
 ROG STRIX Z390-E GAMING
