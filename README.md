@@ -21,16 +21,7 @@ This is the most reliable approach with minimal to zero detection flags if done 
 >
 > You cannot be banned by only using this spoofing method.
 
-### ✅ Supported Motherboards
-- ASUS (Not released)
-- Gigabyte (Not released)
-- [ASRock](https://github.com/GoofyNest/HardwareSpoofing/blob/main/ASRock.md)
-- MSI (Not released)
-
-> [!WARNING]
-> If your motherboard isn't listed, it's likely not supported.
-
-### 📋 Requirements
+### 📋 Read the requirements
 
 - [Requirements](https://github.com/GoofyNest/HardwareSpoofing/blob/main/Requirements.md)
 
