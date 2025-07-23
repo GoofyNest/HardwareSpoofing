@@ -11,6 +11,13 @@
 > 
 > Recommendation: `Disable FreeSYNC/SYNC before starting to avoid issues.`
 
+> [!CAUTION]
+> After updating `Graphic card` drivers you will have to re-spoof your monitor serials again.
+> 
+> After unplugging your `Monitors` or changing `port` in the back of your PC you will have to re-spoof your monitors.
+> 
+> This does not permanently change your monitor serials.
+
 ## Required Tool
 CRU (Custom Resolution Utility):
 🔗 https://customresolutionutility.net/
