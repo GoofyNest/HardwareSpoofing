@@ -11,8 +11,6 @@
 This is the most reliable approach with minimal to zero detection flags if done correctly.
 
 # 📚 Table of Contents
-- [Credits](#-credits)
-- [Supported Motherboards](#-supported-motherboards)
 - [Requirements](https://github.com/GoofyNest/HardwareSpoofing/blob/main/Requirements.md)
 
 
