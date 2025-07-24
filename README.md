@@ -25,10 +25,10 @@ This is the most reliable approach with minimal to zero detection flags if done 
 > You cannot be banned by only using this spoofing method.
 
 # 📚 Guides
-- [📘 Step 0 - What is hardware bans?](https://github.com/GoofyNest/HardwareSpoofing/blob/main/step-0.md)
-- [📋 Step 1 - What are the requirements?](https://github.com/GoofyNest/HardwareSpoofing/blob/main/step-1.md)
-- [🧬 Step 2 - Spoofing SMBIOS (Unfinished)](https://github.com/GoofyNest/HardwareSpoofing/blob/main/step-2.md)
-- [🖥️ Step 3 - Spoofing Monitors](https://github.com/GoofyNest/HardwareSpoofing/blob/main/step-3.md)
+- [Step 0 - What is hardware bans?](https://github.com/GoofyNest/HardwareSpoofing/blob/main/step-0.md)
+- [Step 1 - What are the requirements?](https://github.com/GoofyNest/HardwareSpoofing/blob/main/step-1.md)
+- [Step 2 - Spoofing SMBIOS (Unfinished)](https://github.com/GoofyNest/HardwareSpoofing/blob/main/step-2.md)
+- [Step 3 - Spoofing Monitors](https://github.com/GoofyNest/HardwareSpoofing/blob/main/step-3.md)
 
 
 # 🧾 Factory motherboard dumps
