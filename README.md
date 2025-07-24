@@ -25,11 +25,16 @@ This is the most reliable approach with minimal to zero detection flags if done 
 > You cannot be banned by only using this spoofing method.
 
 # 📚 Table of Contents
-- [Requirements](https://github.com/GoofyNest/HardwareSpoofing/blob/main/step-1%20(Requirements).md)
-- [SMBios Spoofing Guide](https://github.com/GoofyNest/HardwareSpoofing/blob/main/step-2%20(SMBios).md)
-- [Monitor Spoofing Guide](https://github.com/GoofyNest/HardwareSpoofing/blob/main/step-3%20(Monitor).md)
+- [Step 0 - What is hardware bans?](https://github.com/GoofyNest/HardwareSpoofing/blob/main/step-0.md)
+- [Step 1 - What is the requirements?](https://github.com/GoofyNest/HardwareSpoofing/blob/main/step-1.md)
+- [Step 2 - Spoofing SMBios (Unfinished)](https://github.com/GoofyNest/HardwareSpoofing/blob/main/step-2.md)
+- [Step 3 - Spoofing Monitors](https://github.com/GoofyNest/HardwareSpoofing/blob/main/step-3.md)
+
+- **Factory default motherboard dumps**
 - [ASRock factory serials](https://github.com/GoofyNest/HardwareSpoofing/blob/main/Factory-ASRock.md)
 - [ASUS factory serials](https://github.com/GoofyNest/HardwareSpoofing/blob/main/Factory-ASUS.md)
 - [Gigabyte factory serials](https://github.com/GoofyNest/HardwareSpoofing/blob/main/Factory-Gigabyte.md)
 - [MSI Factory serials](https://github.com/GoofyNest/HardwareSpoofing/blob/main/Factory-MSI.md)
+
+- **Part list, stuff we recommend for people ban evading**
 - [Part List](https://github.com/GoofyNest/HardwareSpoofing/blob/main/Part-List.md)
