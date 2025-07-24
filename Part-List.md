@@ -8,7 +8,7 @@
 - Razer keyboards should be fine
 
 # Mice/Mouse
-- [Razer basilisk v3](https://www.pricerunner.com/pl/110-3200349493/Computer-Mice/Razer-Basilisk-V3-Compare-Prices)
+- [Razer Basilisk v3](https://www.pricerunner.com/pl/110-3200349493/Computer-Mice/Razer-Basilisk-V3-Compare-Prices)
 - [Razer Naga X](https://www.pricerunner.com/pl/110-3200065958/Computer-Mice/Razer-Naga-X-Compare-Prices)
 
 # Headset
