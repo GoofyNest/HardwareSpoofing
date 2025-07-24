@@ -11,15 +11,27 @@
 ```
 American Megatrends Inc.
 ```
+**Command prompt:**
+```
+AMIDEWINx64.exe /IVN "American Megatrends Inc."
+```
 
 ## BIOS Version (/IV)
 ```
 1903
 ```
+**Command prompt:**
+```
+AMIDEWINx64.exe /IV "1903"
+```
 
 ## BIOS Release Date (/ID)
 ```
 07/08/2021
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /IV "07/08/2021"
 ```
 
 # [Type 001] -- System Information
