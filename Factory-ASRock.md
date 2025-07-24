@@ -2,14 +2,22 @@
 
 # [Type 001] -- System Information
 
-### Manufacturer    			
+### Manufacturer (/SM)
 ```
 ASRock
 ```
+**Command prompt:**
+```
+AMIDEWINx64.exe /SM "ASRock"
+```
 
-### Product Name    			
+### Product Name (/SP)
 ```
 H510M-HDV/M.2 SE
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /SP "H510M-HDV/M.2 SE"
 ```
 
 > [!IMPORTANT]
@@ -18,19 +26,32 @@ H510M-HDV/M.2 SE
 > This field should match the exact model printed on your motherboard.
        
 
-### Version         			
+### Version (/SV)
 ```
 To Be Filled By O.E.M.
 ```
+**Command prompt:**
+```
+AMIDEWINx64.exe /SV "To Be Filled By O.E.M."
+```
 
-### Serial Number   			
+### Serial Number (/SS)
 ```
 To Be Filled By O.E.M.
 ```
+**Command prompt:**
+```
+AMIDEWINx64.exe /SS "To Be Filled By O.E.M."
+```
 
-### UUID            			
+
+### UUID (/SU)
 ```
 9C 6B 00 76 9C C4 00 00 00 00 00 00 00 00 00 00
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /SU BF37DEFA314E00000000000000000000
 ```
 
 > [!IMPORTANT]
@@ -44,28 +65,44 @@ To Be Filled By O.E.M.
 >
 > The remaining 10 bytes (including TimeHiAndVersion, ClockSeq, and Node) are consistently filled with zeros.
 
-### SKUNumber       			
+### SKUNumber (/SK)
 ```
 To Be Filled By O.E.M.
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /SK "To Be Filled By O.E.M."
 ```
 
-### Family          			
+### Family (/SF)
 ```
 To Be Filled By O.E.M.
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /SF "To Be Filled By O.E.M."
 ```
 
 # [Type 002] -- Base Board/Module information
-### Manufacturer    			
+### Manufacturer (/BM)
 ```
 ASRock
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /BM "ASRock"
 ```
 
 > [!IMPORTANT]
 > Same as Type 001 Manufacturer
 
-### Product Name    			
+### Product Name (/BP)
 ```
 H510M-HDV/M.2 SE
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /BP "H510M-HDV/M.2 SE"
 ```
 
 > [!IMPORTANT]
@@ -73,9 +110,13 @@ H510M-HDV/M.2 SE
 > 
 > This field should match the exact model printed on your motherboard.
 
-### Version         			
+### Version (/BV)
 ```
                       
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /BV "                      "
 ```
 
 > [!IMPORTANT]
@@ -83,9 +124,13 @@ H510M-HDV/M.2 SE
 > 
 > This value appears to be intentional and consistent.
 
-### Serial Number   			
+### Serial Number (/BS)
 ```
 BR80YFDYZ68ICQ4
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /BS "BR80YFDYZ68ICQ4"
 ```
 
 > [!IMPORTANT]
@@ -97,9 +142,13 @@ BR80YFDYZ68ICQ4
 > 
 > Recommended prefix for ASRock boards: `BR80`
 
-### Asset Tag       			
+### Asset Tag (/BT)
 ```
                       
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /BT "                      "
 ```
 
 > [!IMPORTANT]
@@ -107,9 +156,13 @@ BR80YFDYZ68ICQ4
 > 
 > This value appears to be intentional and consistent.
 
-### Location in Chassi          
+### Location in Chassi (/BLC)
 ```
                       
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /BLC "                      "
 ```
 
 > [!IMPORTANT]
@@ -118,61 +171,97 @@ BR80YFDYZ68ICQ4
 > This value appears to be intentional and consistent.
 
 # [Type 003] -- System Enclosure or Chassis
-### Manufacturer       			
+### Manufacturer (/CM)
 ```
 To Be Filled By O.E.M.
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /CM "To Be Filled By O.E.M."
 ```
 
-### Version          			
+### Version (/CV)
 ```
 To Be Filled By O.E.M.
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /CV "To Be Filled By O.E.M."
 ```
 
-### Serial Number          		
+### Serial Number (/CS)
 ```
 To Be Filled By O.E.M.
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /CS "To Be Filled By O.E.M."
 ```
 
-### Asset Tag          			
+### Asset Tag (/CA)
 ```
 To Be Filled By O.E.M.
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /CA "To Be Filled By O.E.M."
 ```
 
-### SKU Number					
+### SKU Number (/CSK)
 ```
 To Be Filled By O.E.M.
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /CSK "To Be Filled By O.E.M."
 ```
 
 # [Type 004] -- Processor information
-### Serial Number				
+### Serial Number (/PSN)
 ```
 To Be Filled By O.E.M.
 ```
 ### or
 ```
 Unknown
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /PSN "To Be Filled By O.E.M."
 ```
 
-### Asset Tag					
+### Asset Tag (/PAT)
 ```
 To Be Filled By O.E.M.
 ```
 ### or
 ```
 Unknown
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /PAT "To Be Filled By O.E.M."
 ```
 
-### Part Number					
+### Part Number (/PPN)
 ```
 To Be Filled By O.E.M.
 ```
 ### or
 ```
 Unknown
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /PPN "To Be Filled By O.E.M."
 ```
 							
 # [Type 011] -- OEM Strings
-### String #1					
+### String #1 (/OS)
 ```
 To Be Filled By O.E.M.
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /OS 0 "To Be Filled By O.E.M."
 ```
