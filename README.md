@@ -25,4 +25,8 @@ This is the most reliable approach with minimal to zero detection flags if done 
 - [Requirements](https://github.com/GoofyNest/HardwareSpoofing/blob/main/step-1%20(Requirements).md)
 - [SMBios Spoofing Guide](https://github.com/GoofyNest/HardwareSpoofing/blob/main/step-2%20(SMBios).md)
 - [Monitor Spoofing Guide](https://github.com/GoofyNest/HardwareSpoofing/blob/main/step-3%20(Monitor).md)
+- [ASRock factory serials](https://github.com/GoofyNest/HardwareSpoofing/blob/main/Factory-ASRock.md)
+- [ASUS factory serials](https://github.com/GoofyNest/HardwareSpoofing/blob/main/Factory-ASUS.md)
+- [Gigabyte factory serials](https://github.com/GoofyNest/HardwareSpoofing/blob/main/Factory-Gigabyte.md)
+- [MSI Factory serials](https://github.com/GoofyNest/HardwareSpoofing/blob/main/Factory-MSI.md)
 - [Part List](https://github.com/GoofyNest/HardwareSpoofing/blob/main/Part-List.md)
