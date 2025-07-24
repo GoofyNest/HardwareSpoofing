@@ -1,5 +1,34 @@
 # 🏭 Clean ASRock motherboard dump (Never spoofed)
 
+# [Type 000] -- BIOS Information
+
+## BIOS Vendor (/IVN)
+```
+American Megatrends Inc.
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /IVN "American Megatrends Inc."
+```
+
+## BIOS Version (/IV)
+```
+P1.60
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /IV "P1.60"
+```
+
+## BIOS Release Date (/ID)
+```
+05/05/2023
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /ID "05/05/2023"
+```
+
 # [Type 001] -- System Information
 
 ## Manufacturer (/SM)
