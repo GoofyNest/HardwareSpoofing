@@ -1,42 +1,37 @@
 # 🏭 Clean MSI motherboard dump (Never spoofed)
 
-> [!IMPORTANT]
+> [!CAUTION]
 > Most of the MSI motherboards are supported
 > 
 > The new MSI motherboards can be hard to spoof and require newer AMIDEWIN, you can try to google for a newer version or one that work for your motherboard.
 
 # [Type 001] -- System Information
 
-### Manufacturer    			
+## Manufacturer    			
 ```
 Micro-Star International Co., Ltd.
 ```
 
-### Product Name    			
+## Product Name    	
+> [!CAUTION]
+> Your motherboard should have a `MS-MODELNUMBER` if you cannot find it, then google it and ensure its correct.
+> Do not change this if your values are already good.
 ```
 MS-7D95
 ```
 
-> [!IMPORTANT]
-> Your motherboard should have a `MS-MODELNUMBER` if you cannot find it, then google it and ensure its correct.
-> Do not change this if your values are already good.
-
-### Version         			
+## Version         			
 ```
 1.0
 ```
 
-### Serial Number   			
+## Serial Number   			
 ```
 To be filled by O.E.M.
 ```
 
-### UUID            			
-```
-3A D4 1B 77 C2 91 4F 2D 92 A3 E8 5C 74 0F D1 29
-```
-
-> [!IMPORTANT]
+## UUID    
+> [!CAUTION]
 > What You Should Change:
 > 
 > TimeLow 0-3 bytes
@@ -48,87 +43,87 @@ To be filled by O.E.M.
 > ClockSq/Var 8 bytes (Random but set variant bits (must start with 10)
 > 
 > Node 10-5 bytes (Random)
+```
+3A D4 1B 77 C2 91 4F 2D 92 A3 E8 5C 74 0F D1 29
+```
 
-### SKUNumber       			
+## SKUNumber       			
 ```
 To be filled by O.E.M.
 ```
 
-### Family          			
+## Family          			
 ```
 To be filled by O.E.M.
 ```
 
 # [Type 002] -- Base Board/Module information
-### Manufacturer    			
+## Manufacturer    
+> [!CAUTION]
+> Same as Type 001 Manufacturer
 ```
 Micro-Star International Co., Ltd.
 ```
 
-> [!IMPORTANT]
-> Same as Type 001 Manufacturer
-
-### Product Name    			
+## Product Name    	
+> [!CAUTION]
+> Do not change this unless your motherboard is misidentified or has issues.
+> 
+> This field should match the exact model printed on your motherboard.
 ```
 PRO B550M-P GEN3 (MS-7D95)
 ```
 
-> [!IMPORTANT]
-> Do not change this unless your motherboard is misidentified or has issues.
-> 
-> This field should match the exact model printed on your motherboard.
-
-### Version         			
+## Version         			
 ```
 1.0
 ```
 
-### Serial Number   			
+## Serial Number   	
+> [!CAUTION]
+> Keep the same start `07D9` and the same size, but randomize the numbers.
 ```
 07D9X40_J19K6852MC
 ```
 
-> [!IMPORTANT]
-> Keep the same start `07D9` and the same size, but randomize the numbers.
-
-### Asset Tag       			
+## Asset Tag       			
 ```
 To be filled by O.E.M.
 ```
 
-### Location in Chassi          
+## Location in Chassi          
 ```
 To be filled by O.E.M.
 ```
 
 # [Type 003] -- System Enclosure or Chassis
-### Manufacturer       			
+## Manufacturer       			
 ```
 Micro-Star International Co., Ltd.
 ```
 
-### Version          			
+## Version          			
 ```
 1.0
 ```
 
-### Serial Number          		
+## Serial Number          		
 ```
 To be filled by O.E.M.
 ```
 
-### Asset Tag          			
+## Asset Tag          			
 ```
 To be filled by O.E.M.
 ```
 
-### SKU Number					
+## SKU Number					
 ```
 To be filled by O.E.M.
 ```
 
 # [Type 004] -- Processor information
-### Serial Number				
+## Serial Number				
 ```
 To Be Filled By O.E.M.
 ```
@@ -137,7 +132,7 @@ To Be Filled By O.E.M.
 Unknown
 ```
 
-### Asset Tag					
+## Asset Tag					
 ```
 To Be Filled By O.E.M.
 ```
@@ -146,7 +141,7 @@ To Be Filled By O.E.M.
 Unknown
 ```
 
-### Part Number					
+## Part Number					
 ```
 To Be Filled By O.E.M.
 ```
@@ -156,13 +151,13 @@ Unknown
 ```
 							
 # [Type 011] -- OEM String(s)
-### String #1 -> #8			
+## String #1 -> #8			
 ```
 To be filled by O.E.M.
 ```
 
 # [Type 012] -- System Configuration Options
-### String #1 -> #4			
+## String #1 -> #4			
 ```
 To be filled by O.E.M.
 ```
