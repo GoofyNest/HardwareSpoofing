@@ -11,15 +11,27 @@
 ```
 American Megatrends International, LLC.
 ```
+**Command prompt:**
+```
+AMIDEWINx64.exe /IVN "American Megatrends International, LLC."
+```
 
 ## BIOS Version (/IV)
 ```
 1.70
 ```
+**Command prompt:**
+```
+AMIDEWINx64.exe /IV "1.70"
+```
 
 ## BIOS Release Date (/ID)
 ```
 03/25/2024
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /IV "03/25/2024"
 ```
 
 # [Type 001] -- System Information
@@ -27,6 +39,10 @@ American Megatrends International, LLC.
 ## Manufacturer (/SM)    			
 ```
 Micro-Star International Co., Ltd.
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /SM "Micro-Star International Co., Ltd."
 ```
 
 ## Product Name (/SP) 	
@@ -36,15 +52,27 @@ Micro-Star International Co., Ltd.
 ```
 MS-7D95
 ```
+**Command prompt:**
+```
+AMIDEWINx64.exe /SP "MS-7D95"
+```
 
 ## Version (/SV)  			
 ```
 1.0
 ```
+**Command prompt:**
+```
+AMIDEWINx64.exe /SV "1.0"
+```
 
 ## Serial Number (/SS)			
 ```
 To be filled by O.E.M.
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /SS "To be filled by O.E.M."
 ```
 
 ## UUID (/SU)  
@@ -63,15 +91,27 @@ To be filled by O.E.M.
 ```
 3A D4 1B 77 C2 91 4F 2D 92 A3 E8 5C 74 0F D1 29
 ```
+**Command prompt:**
+```
+AMIDEWINx64.exe /SU 3AD41B77C2914F2D92A3E85C740FD129
+```
 
 ## SKUNumber (/SK)     			
 ```
 To be filled by O.E.M.
 ```
+**Command prompt:**
+```
+AMIDEWINx64.exe /SK "To be filled by O.E.M."
+```
 
 ## Family (/SF)         			
 ```
 To be filled by O.E.M.
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /SF "To be filled by O.E.M."
 ```
 
 # [Type 002] -- Base Board/Module information
@@ -80,6 +120,10 @@ To be filled by O.E.M.
 > Same as Type 001 Manufacturer
 ```
 Micro-Star International Co., Ltd.
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /BM "Micro-Star International Co., Ltd."
 ```
 
 ## Product Name (/BP)  	
@@ -90,10 +134,18 @@ Micro-Star International Co., Ltd.
 ```
 PRO B550M-P GEN3 (MS-7D95)
 ```
+**Command prompt:**
+```
+AMIDEWINx64.exe /BP "PRO B550M-P GEN3 (MS-7D95)"
+```
 
 ## Version (/BV)     			
 ```
 1.0
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /BV "1.0"
 ```
 
 ## Serial Number (/BS)  	
@@ -102,15 +154,27 @@ PRO B550M-P GEN3 (MS-7D95)
 ```
 07D9X40_J19K6852MC
 ```
+**Command prompt:**
+```
+AMIDEWINx64.exe /BS "07D9X40_J19K6852MC"
+```
 
 ## Asset Tag (/BT)     			
 ```
 To be filled by O.E.M.
 ```
+**Command prompt:**
+```
+AMIDEWINx64.exe /BT "To be filled by O.E.M."
+```
 
 ## Location in Chassi (/BLC)        
 ```
 To be filled by O.E.M.
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /BLC "To be filled by O.E.M."
 ```
 
 # [Type 003] -- System Enclosure or Chassis
@@ -118,25 +182,45 @@ To be filled by O.E.M.
 ```
 Micro-Star International Co., Ltd.
 ```
+**Command prompt:**
+```
+AMIDEWINx64.exe /CM "Micro-Star International Co., Ltd."
+```
 
 ## Version (/CV)        			
 ```
 1.0
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /CV "1.0"
 ```
 
 ## Serial Number (/CS)        		
 ```
 To be filled by O.E.M.
 ```
+**Command prompt:**
+```
+AMIDEWINx64.exe /CS "To be filled by O.E.M."
+```
 
 ## Asset Tag (/CA)        			
 ```
 To be filled by O.E.M.
 ```
+**Command prompt:**
+```
+AMIDEWINx64.exe /CA "To be filled by O.E.M."
+```
 
 ## SKU Number (/CSK)				
 ```
 To be filled by O.E.M.
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /CSK "To be filled by O.E.M."
 ```
 
 # [Type 004] -- Processor information
@@ -148,6 +232,10 @@ To Be Filled By O.E.M.
 ```
 Unknown
 ```
+**Command prompt:**
+```
+AMIDEWINx64.exe /PSN "To be filled by O.E.M."
+```
 
 ## Asset Tag (/PAT)					
 ```
@@ -156,6 +244,10 @@ To Be Filled By O.E.M.
 ### or
 ```
 Unknown
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /PAT "To be filled by O.E.M."
 ```
 
 ## Part Number (/PPN)			
@@ -166,16 +258,58 @@ To Be Filled By O.E.M.
 ```
 Unknown
 ```
+**Command prompt:**
+```
+AMIDEWINx64.exe /PPN "To be filled by O.E.M."
+```
 							
 # [Type 011] -- OEM String(s)
 ## String #1 -> #8 (/OS)			
 ```
 To be filled by O.E.M.
 ```
+**Command prompt:**
+```
+AMIDEWINx64.exe /OS 1 "To be filled by O.E.M."
+```
+```
+AMIDEWINx64.exe /OS 2 "To be filled by O.E.M."
+```
+```
+AMIDEWINx64.exe /OS 3 "To be filled by O.E.M."
+```
+```
+AMIDEWINx64.exe /OS 4 "To be filled by O.E.M."
+```
+```
+AMIDEWINx64.exe /OS 5 "To be filled by O.E.M."
+```
+```
+AMIDEWINx64.exe /OS 6 "To be filled by O.E.M."
+```
+```
+AMIDEWINx64.exe /OS 7 "To be filled by O.E.M."
+```
+```
+AMIDEWINx64.exe /OS 8 "To be filled by O.E.M."
+```
 
 # [Type 012] -- System Configuration Options
 ## String #1 -> #4 (/SCO)			
 ```
 To be filled by O.E.M.
+```
+**Command prompt:**
+```
+AMIDEWINx64.exe /SCO 1 "To be filled by O.E.M."
+```
+```
+AMIDEWINx64.exe /SCO 2 "To be filled by O.E.M."
+```
+```
+AMIDEWINx64.exe /SCO 3 "To be filled by O.E.M."
+```
+```
+AMIDEWINx64.exe /SCO 4 "To be filled by O.E.M."
 ```
 
