@@ -31,7 +31,7 @@ AMIDEWINx64.exe /IV "1903"
 ```
 **Command prompt:**
 ```
-AMIDEWINx64.exe /IV "07/08/2021"
+AMIDEWINx64.exe /ID "07/08/2021"
 ```
 
 # [Type 001] -- System Information
