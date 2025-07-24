@@ -3,6 +3,23 @@
 > [!TIP]
 > Gigabyte is the easiest motherboard to spoof, the only thing that is Unique is UUID and EasyAntiCheat does not log it.
 
+# [Type 000] -- BIOS Information
+
+## BIOS Vendor (/IVN)
+```
+American Megatrends Inc.
+```
+
+## BIOS Version (/IV)
+```
+F12
+```
+
+## BIOS Release Date (/ID)
+```
+01/18/2021
+```
+
 # [Type 001] -- System Information
 
 ## Manufacturer (/SM)  			
