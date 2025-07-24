@@ -5,6 +5,13 @@
 - Reinstall using a clean Windows ISO bootable USB
 - Delete all partitions or destroy the RAID pool before reinstalling
 
+> [!CAUTION]
+> Do not run AMIDEWIN or DMIEDIT while an anti-cheat system is active.
+>
+> These tools load a kernel-mode driver to access and modify firmware-level data.
+>
+> Running them while anti-cheat is open can trigger detections, crashes, or even result in a permanent ban from certain games.
+
 > [!WARNING]
 > You might get away skipping some steps — but don’t blame me if you get banned.
 > 
