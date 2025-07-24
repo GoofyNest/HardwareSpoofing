@@ -12,6 +12,9 @@ This is the most reliable approach with minimal to zero detection flags if done 
 
 ## 🙌 Credits
 - Jakb aka Jacob White (Swivelly Boy, Chad Purifier, Slithery Boy)
+  
+![Yeah Science](https://media1.tenor.com/m/4QqcTvk3jsMAAAAd/yeahmrwhite-breakingbad.gif)
+
 - Reported.lol dev for releasing this version of AMIDEWINx64
 
 > [!WARNING]
