@@ -5,6 +5,23 @@
 > 
 > The new ASUS motherboards can be hard to spoof and require newer AMIDEWIN, you can try to google for a newer version or one that work for your motherboard.
 
+# [Type 000] -- BIOS Information
+
+## BIOS Vendor (/IVN)
+```
+American Megatrends Inc.
+```
+
+## BIOS Version (/IV)
+```
+1903
+```
+
+## BIOS Release Date (/ID)
+```
+07/08/2021
+```
+
 # [Type 001] -- System Information
 
 ## Manufacturer (/SM)   			
