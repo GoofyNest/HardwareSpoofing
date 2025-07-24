@@ -184,6 +184,7 @@ While it’s traditionally used for performance, in ban evasion, the goal is dif
 
 > [!TIP]
 > RAID 0 is used to completely change the hardware signature of your drive(s).
+> 
 > If you dont wanna use RAID 0 you need to buy a new Disk foreach ban
 
 Most games that use anti-cheats like EasyAntiCheat (EAC) or BattlEye (BE) will log unique identifiers from your drives (like serial numbers, volume IDs, etc.). 
