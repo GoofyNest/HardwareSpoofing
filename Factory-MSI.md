@@ -81,7 +81,7 @@ PRO B550M-P GEN3 (MS-7D95)
 
 ## Serial Number   	
 > [!CAUTION]
-> Keep the same start `07D9` and the same size, but randomize the numbers.
+> Keep the same start `07D9` and the same size, but randomize the serial.
 ```
 07D9X40_J19K6852MC
 ```
