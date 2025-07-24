@@ -79,6 +79,29 @@ LockoutMax                :
 SelfTest                  :
 ```
 
+## 🏷️ TPM can have many names, some are listed below:
+- 🔹 ASUS
+  - Trusted Computing
+  - TPM Device Selection → Discrete / Firmware
+  - PTT (for Intel boards)
+
+- 🔹 MSI
+  - Security Device Support
+  - AMD fTPM or Intel PTT
+
+- 🔹 Gigabyte
+  - Trusted Computing
+  - Intel Platform Trust Technology (PTT)
+
+- 🔹 ASRock
+  - Security → Intel PTT / AMD fTPM
+
+- 🔹 HP / Dell / Lenovo (OEM)
+  - Embedded Security Device
+  - TPM State
+  - Security Chip
+  - TPM On/Off
+
 # Ram modules without (Serial number)
 > [!CAUTION]
 > You must have Ram that does not have a unique serial number.
@@ -144,30 +167,6 @@ While I haven’t personally seen this method used against Rust players on EasyA
 [TP link UE300](https://www.tp-link.com/nordic/home-networking/computer-accessory/ue300/) around 9$
 
 [Amazon Basics USB 3.0 to 10/100/1000 Ethernet](https://www.amazon.se/Amazon-Basics-Gigabit-Ethernet-internetadapter/dp/B00M77HMU0) around 10$
-
-# Disable Trusted PlatForm Module (TPM)
-## 🏷️ TPM can have many names, some are listed below:
-- 🔹 ASUS
-  - Trusted Computing
-  - TPM Device Selection → Discrete / Firmware
-  - PTT (for Intel boards)
-
-- 🔹 MSI
-  - Security Device Support
-  - AMD fTPM or Intel PTT
-
-- 🔹 Gigabyte
-  - Trusted Computing
-  - Intel Platform Trust Technology (PTT)
-
-- 🔹 ASRock
-  - Security → Intel PTT / AMD fTPM
-
-- 🔹 HP / Dell / Lenovo (OEM)
-  - Embedded Security Device
-  - TPM State
-  - Security Chip
-  - TPM On/Off
  
 # Disable or Unplug WiFi and Bluetooth card
 > [!CAUTION]
