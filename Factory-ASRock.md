@@ -255,5 +255,5 @@ To Be Filled By O.E.M.
 ```
 **Command prompt:**
 ```
-AMIDEWINx64.exe /OS 0 "To Be Filled By O.E.M."
+AMIDEWINx64.exe /OS 1 "To Be Filled By O.E.M."
 ```
