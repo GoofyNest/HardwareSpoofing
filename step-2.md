@@ -1,4 +1,5 @@
-# 🧬 SMBIOS Spoofing Guide
+# 🧬 SMBIOS Spoofing Guide (Unfinished)
+Work in progress
 
 - You’ll need the [binaries](https://github.com/GoofyNest/HardwareSpoofing/releases/tag/release) listed in the referenced repo (⚠️ I did not create these binaries)
 - After spoofing all SMBIOS fields, you must reinstall your Operating System
