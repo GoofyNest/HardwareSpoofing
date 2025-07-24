@@ -5,38 +5,32 @@
 
 # [Type 001] -- System Information
 
-### Manufacturer    			
+## Manufacturer (/SM)  			
 ```
 Gigabyte Technology Co., Ltd.
 ```
 
-### Product Name    			
-```
-B550 GAMING X V2
-```
-
-> [!IMPORTANT]
+## Product Name (/SP)
+> [!CAUTION]
 > Do not change this unless your motherboard is misidentified or has issues.
 > 
 > This field should match the exact model printed on your motherboard.
-       
+```
+B550 GAMING X V2
+``` 
 
-### Version         			
+## Version (/SV)      			
 ```
 Default string
 ```
 
-### Serial Number   			
+## Serial Number (/SS)  			
 ```
 Default string
 ```
 
-### UUID            			
-```
-A3 9D 4B 72 C1 D8 44 9A B7 82 1F A9 D0 2E 67 41
-```
-
-> [!IMPORTANT]
+## UUID (/SU)      
+> [!CAUTION]
 > What You Should Change:
 > 
 > TimeLow 0-3 bytes
@@ -48,90 +42,90 @@ A3 9D 4B 72 C1 D8 44 9A B7 82 1F A9 D0 2E 67 41
 > ClockSq/Var 8 bytes (Random but set variant bits (must start with 10)
 > 
 > Node 10-5 bytes (Random)
+```
+A3 9D 4B 72 C1 D8 44 9A B7 82 1F A9 D0 2E 67 41
+```
 
-### SKUNumber
+## SKUNumber (/SK)
 ```
 Default string
 ```
 
-### Family
+## Family (/SF)
+> [!CAUTION]
+> Do not change this unless your motherboard is misidentified or has issues.
+> 
+> This field start with the model of your motherboard such as `B550` followed by `MB`
 ```
 B550 MB
 ```
 
-> [!IMPORTANT]
-> Do not change this unless your motherboard is misidentified or has issues.
-> 
-> This field start with the model of your motherboard such as `B550` followed by `MB`
-
-
 # [Type 002] -- Base Board/Module information
-### Manufacturer    			
+## Manufacturer (/BM)    	
+> [!CAUTION]
+> Same as Type 001 Manufacturer
 ```
 Gigabyte Technology Co., Ltd.
 ```
 
-> [!IMPORTANT]
-> Same as Type 001 Manufacturer
 
-### Product Name    			
+## Product Name (/BP)  	
+> [!CAUTION]
+> Do not change this unless your motherboard is misidentified or has issues.
+> 
+> This field should match the exact model printed on your motherboard.
 ```
 B550 GAMING X V2
 ```
 
-> [!IMPORTANT]
-> Do not change this unless your motherboard is misidentified or has issues.
-> 
-> This field should match the exact model printed on your motherboard.
-
-### Version         			
+## Version (/BV)        			
 ```
 x.x
 ```
 
-### Serial Number   			
+## Serial Number (/BS)  			
 ```
 Default string
 ```
 
-### Asset Tag       			
+## Asset Tag (/BT)      			
 ```
 Default string
 ```
 
-### Location in Chassi          
+## Location in Chassi (/BLC)         
 ```
 Default string
 ```
 
 # [Type 003] -- System Enclosure or Chassis
-### Manufacturer       			
+## Manufacturer (/CM)     			
 ```
 Default string
 ```
 
-### Version          			
+## Version (/CV)         			
 ```
 Default string
 ```
 
-### Serial Number          		
+## Serial Number (/CS)        		
 ```
 Default string
 ```
 
-### Asset Tag          			
+## Asset Tag (/CA)        			
 ```
 Default string
 ```
 
-### SKU Number					
+## SKU Number (/CSK)				
 ```
 Default string
 ```
 
 # [Type 004] -- Processor information
-### Serial Number				
+## Serial Number (/PSN)			
 ```
 To Be Filled By O.E.M.
 ```
@@ -140,7 +134,7 @@ To Be Filled By O.E.M.
 Unknown
 ```
 
-### Asset Tag					
+## Asset Tag (/PAT)					
 ```
 To Be Filled By O.E.M.
 ```
@@ -149,7 +143,7 @@ To Be Filled By O.E.M.
 Unknown
 ```
 
-### Part Number					
+## Part Number (/PPN)				
 ```
 To Be Filled By O.E.M.
 ```
@@ -159,13 +153,13 @@ Unknown
 ```
 							
 # [Type 011] -- OEM Strings
-### String #1					
+## String #1 (/OS)					
 ```
 Default string
 ```
 
 # [Type 012] -- System Configuration Options
-### String #1
+## String #1 (/SCO)
 ```
 Default string
 ```
