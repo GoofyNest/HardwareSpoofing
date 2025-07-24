@@ -15,6 +15,7 @@
 - [Logitech G636 Gaming Headset](https://www.pricerunner.com/pl/94-4822845/Headphones/Logitech-G635-LightSync-Compare-Prices)
 - [Logitech G435](https://www.pricerunner.com/pl/94-3200339580/Headphones/Logitech-G435-Compare-Prices)
 - [HyperX Cloud Alpha Wireless](https://www.pricerunner.com/pl/94-3201166228/Headphones/HyperX-Cloud-Alpha-Wireless-Compare-Prices)
+- [SteelSeries Arctis 9](https://steelseries.com/sv-se/gaming-headsets/arctis-9?srsltid=AfmBOoqnrN5HPPMLBfLdILmnReSvjV9V93D-69TcZijTvTccB2LWrT9r)
 
 # Ram modules (Just examples, all Corsair Vengeance has no serials)
 - [Corsair Vengeance DDR4](https://www.pricerunner.com/pl/38-5134118/RAM-Memory/Corsair-Vengeance-LPX-Black-DDR4-3600MHz-2x32GB-%28CMK64GX4M2D3600C18%29-Compare-Prices)
