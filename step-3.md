@@ -37,3 +37,6 @@ CRU (Custom Resolution Utility):
 
 - Click OK
 - Repeat these steps for each monitor listed
+
+- When you have repeated this for all your monitors:
+- run restart64.exe 2 times and then restart your PC
