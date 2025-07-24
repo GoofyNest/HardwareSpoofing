@@ -8,10 +8,19 @@
 # [Type 000] -- BIOS Information
 
 ## BIOS Vendor (/IVN)
+```
+American Megatrends International, LLC.
+```
 
 ## BIOS Version (/IV)
+```
+1.70
+```
 
 ## BIOS Release Date (/ID)
+```
+03/25/2024
+```
 
 # [Type 001] -- System Information
 
