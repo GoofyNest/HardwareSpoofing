@@ -137,7 +137,7 @@ If you're concerned about USB device serials such as:
 
 You can choose to buy Chinese or unbranded USB peripherals, or simply stick with [Razer](https://www.razer.com/)
 
-All Razer products—headsets, mice, keyboards—come with no serial numbers from the factory, making them ideal for spoofing purposes.
+Most of the Razer products headsets, mice, keyboards come with no serial numbers from the factory, making them ideal for spoofing purposes.
 
 # 📶 Router / Network Adapter spoofing
 
