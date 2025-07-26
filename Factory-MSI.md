@@ -2,8 +2,11 @@
 
 > [!CAUTION]
 > Reminder, please do not use the serials in here, this is just an example over how default or factory serials are looking like.
+> 
 > You should use your own serials and randomize them, if you are not sure how to then wait for me to release tools.
+> 
 > Most of the MSI motherboards are supported
+> 
 > The new MSI motherboards can be hard to spoof and require newer AMIDEWIN, you can try to google for a newer version or one that work for your motherboard.
 
 # [Type 000] -- BIOS Information
