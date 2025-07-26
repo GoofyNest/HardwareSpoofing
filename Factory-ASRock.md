@@ -1,5 +1,11 @@
 # 🏭 Clean ASRock motherboard dump (Never spoofed)
 
+> [!CAUTION]
+> Reminder, please do not use the serials in here, this is just an example over how default or factory serials are looking like.
+> 
+> You should use your own serials and randomize them, if you are not sure how to then wait for me to release tools.
+> 
+
 # [Type 000] -- BIOS Information
 
 ## BIOS Vendor (/IVN)
@@ -149,13 +155,11 @@ AMIDEWINx64.exe /BV "                      "
 
 ## Serial Number (/BS)
 > [!CAUTION]
-> Some users spoof this field to start with `M80-`, but based on my experience, all genuine ASRock motherboards I've encountered use serial numbers that begin with `BR80`.
-> 
 > You may set this to any value you like, but keep in mind:
 > 
-> Maximum length: 15 characters
+> Keep the same length as your own serial number, on my board its 15 chars
 > 
-> Recommended prefix for ASRock boards: `BR80`
+> Recommended prefix for ASRock boards: `BR80` or `M80-`
 ```
 BR80YFDYZ68ICQ4
 ```
