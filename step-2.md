@@ -1,6 +1,7 @@
 # 🧬 SMBIOS Spoofing Guide (Unfinished)
 Work in progress
 
+- Make sure to DUMP your factory looking serials, so you have a backup of your factory settings.
 - You’ll need the [binaries](https://github.com/GoofyNest/HardwareSpoofing/releases/tag/release) listed in the referenced repo (⚠️ I did not create these binaries)
 - After spoofing all SMBIOS fields, you must reinstall your Operating System
 - Reinstall using a clean Windows ISO bootable USB
