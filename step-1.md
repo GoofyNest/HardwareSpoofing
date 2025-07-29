@@ -35,11 +35,16 @@ Get-WmiObject -Namespace root\wmi -Class WmiMonitorID | ForEach-Object {
 > Most of the ASUS motherboards are supported
 > 
 > The new ASUS motherboards can be hard to spoof and require newer AMIDEWIN, you can try to google for a newer version or one that work for your motherboard.
+>
+> You can try this (https://github.com/GoofyNest/HardwareSpoofing/releases/tag/MSI)[https://github.com/GoofyNest/HardwareSpoofing/releases/tag/MSI]
 
 > [!IMPORTANT]
 > Most of the MSI motherboards are supported
 > 
 > The new MSI motherboards can be hard to spoof and require newer AMIDEWIN, you can try to google for a newer version or one that work for your motherboard.
+>
+> You can try this (https://github.com/GoofyNest/HardwareSpoofing/releases/tag/MSI)[https://github.com/GoofyNest/HardwareSpoofing/releases/tag/MSI]
+
 
 # Trusted Platform Module (TPM)
 > [!CAUTION]
