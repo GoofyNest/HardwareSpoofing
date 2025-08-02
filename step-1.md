@@ -1,3 +1,15 @@
+# Automated application
+
+> [!IMPORTANT]
+> DarkRed means bad
+> DarkGreen means good
+> DarkCyan is just information
+>
+> Please report bugs if the application is not working, its required to run it as Administrator to access TPM module, based of `MaybeSpoofed`
+
+
+- [Requirement Checker](https://github.com/GoofyNest/HardwareSpoofing/releases/download/requirement/Requirement.Checker.rar)
+
 # 🖥️ Supported Operating System
 
 ### ✅ **[Windows 10](https://drive.massgrave.dev/en-us_windows_10_iot_enterprise_ltsc_2021_x64_dvd_257ad90f.iso)** – Fully supported and recommended
