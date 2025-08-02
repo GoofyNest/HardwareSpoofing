@@ -69,6 +69,7 @@ Work in progress
 - Make sure all `String #` does not have a Unique identifier, make sure they are `Default string`, `To Be Filled By O.E.M.` or `Unknown`
 - Press `Update` => `ALL` between all steps
 
+# What to-do if crashing?
 > [!CAUTION]
 > If you're experiencing issues with `DMI_EDIT`, try updating the segments one at a time, rather than all at once.
 >
