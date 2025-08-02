@@ -23,6 +23,11 @@
 - [Corsair Vengeance DDR4](https://www.pricerunner.com/pl/38-5134118/RAM-Memory/Corsair-Vengeance-LPX-Black-DDR4-3600MHz-2x32GB-%28CMK64GX4M2D3600C18%29-Compare-Prices)
 - [Corsair Vengeance DDR5](https://www.pricerunner.com/pl/38-3258453027/RAM-Memory/Corsair-DDR5-6000MHz-2x16GB-%28CMK32GX5M2B6000Z30%29-Compare-Prices)
 
+# Disk drives (without serial number)
+### If you dont want to use Raid 0 you can use this drive from CaptainDMA
+- [Privacy Drive/NO HWID/NO SERIAL Number Drive-512G](https://captaindma.com/product/privacy-drive-no-hwid-no-serial-number-drive-512g/)
+
 # Ethernet adapters
+- [Anonymous NIC/No HWID/Custom MAC](https://captaindma.com/product/anonymous-nic-no-hwid-custom-mac/)
 - [TP-Link UE300](https://www.pricerunner.com/pl/117-3076573/Network-Cards-Bluetooth-Adapters/TP-Link-UE300-Compare-Prices)
 - [Amazon basic](https://www.amazon.se/Amazon-Basics-Gigabit-Ethernet-internetadapter/dp/B00M77HMU0)
