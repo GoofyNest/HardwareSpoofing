@@ -2,7 +2,9 @@
 
 > [!IMPORTANT]
 > DarkRed means bad
+> 
 > DarkGreen means good
+> 
 > DarkCyan is just information
 >
 > Please report bugs if the application is not working, its required to run it as Administrator to access TPM module, based of `MaybeSpoofed`
