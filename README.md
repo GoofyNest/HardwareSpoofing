@@ -10,6 +10,9 @@
 
 This is the most reliable approach with minimal to zero detection flags if done correctly.
 
+If I saved you from spending money on sketchy spoofers, consider fueling me with some Monster Energy!
+[Buy me a coffee](https://buymeacoffee.com/goofynest) every can counts!
+
 ## 🙌 Credits
 - Jakb aka Jacob White (Swivelly Boy, Chad Purifier, Slithery Boy)
   
