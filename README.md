@@ -23,13 +23,6 @@ If I saved you from spending money on sketchy spoofers, consider fueling me with
 
 - Reported.lol dev for releasing this version of AMIDEWINx64
 
-> [!WARNING]
-> If you get banned using this method, it's most likely because:
-> 1. You're doing it wrong
-> 2. You're using a detected cheat
->
-> You cannot be banned by only using this spoofing method.
-
 # 📚 Guides
 - [Step 0 - What is hardware bans?](https://github.com/GoofyNest/HardwareSpoofing/blob/main/step-0.md)
 - [Step 1 - What are the requirements?](https://github.com/GoofyNest/HardwareSpoofing/blob/main/step-1.md)
