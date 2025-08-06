@@ -4,6 +4,7 @@
 - [ADX A25H2G25 FULL HD 1080P 25" IPS LCD GAMING](https://www.ebay.co.uk/itm/305887408052)
 
 # Keyboard
+- [Leopold FC750R](https://www.amazon.se/Leopold-tangenter-high-end-mekaniskt-tangentbord/dp/B079JSYH7X)
 - [Tangentbord USB Nordic SWEDEN](https://www.biltema.se/kontor---teknik/datortillbehor/tangentbord/tangentbord-usb-nordic-2000032469)
 - Razer keyboards should be fine
 - Unbranded chinese keyboards or cheap ones will not have a serial number
@@ -18,6 +19,9 @@
 - [Logitech G435](https://www.pricerunner.com/pl/94-3200339580/Headphones/Logitech-G435-Compare-Prices)
 - [HyperX Cloud Alpha Wireless](https://www.pricerunner.com/pl/94-3201166228/Headphones/HyperX-Cloud-Alpha-Wireless-Compare-Prices)
 - [SteelSeries Arctis 9](https://steelseries.com/sv-se/gaming-headsets/arctis-9?srsltid=AfmBOoqnrN5HPPMLBfLdILmnReSvjV9V93D-69TcZijTvTccB2LWrT9r)
+
+# Microphone
+- [Hyper X QuadCast](https://hyperx.com/products/hyperx-quadcast-usb-microphone)
 
 # Ram modules (Just examples, all Corsair Vengeance has no serials)
 - [Corsair Vengeance DDR4](https://www.pricerunner.com/pl/38-5134118/RAM-Memory/Corsair-Vengeance-LPX-Black-DDR4-3600MHz-2x32GB-%28CMK64GX4M2D3600C18%29-Compare-Prices)
