@@ -26,6 +26,7 @@
 # Ram modules (Just examples, all Corsair Vengeance has no serials)
 - [Corsair Vengeance DDR4](https://www.pricerunner.com/pl/38-5134118/RAM-Memory/Corsair-Vengeance-LPX-Black-DDR4-3600MHz-2x32GB-%28CMK64GX4M2D3600C18%29-Compare-Prices)
 - [Corsair Vengeance DDR5](https://www.pricerunner.com/pl/38-3258453027/RAM-Memory/Corsair-DDR5-6000MHz-2x16GB-%28CMK32GX5M2B6000Z30%29-Compare-Prices)
+- G.Skill Trident has no serials
 
 # Disk drives (without serial number)
 ### If you dont want to use Raid 0 you can use this drive from CaptainDMA
