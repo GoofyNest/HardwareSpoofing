@@ -1,5 +1,10 @@
 # 🏭 Clean ASUS motherboard dump (Never spoofed)
 
+> [!WARNING]
+> After a lot of testing it seems that ASUS boards reset the Serial Number after computer restart when spoofing with DMI_EDIT
+>
+> Ensure that ur serial number that u change stays after computer restart.
+
 > [!CAUTION]
 > Reminder, please do not use the serials in here, this is just an example over how default or factory serials are looking like.
 > 
@@ -77,7 +82,7 @@ AMIDEWINx64.exe /SS "System Serial Number"
 ```
 
 ## UUID (/SU)     
-> [!CAUTION]
+c
 > What You Should Change:
 > 
 > TimeLow 0-3 bytes
