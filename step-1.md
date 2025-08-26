@@ -196,19 +196,16 @@ While I haven’t personally seen this method used against Rust players on EasyA
 > ✅ You can ignore this warning **only if you replace your WiFi chip after every ban**, as this resets the identifiers.
 
 
-# Disk Serial spoofing (Raid 0)
-**RAID 0** is a storage setup that combines two or more drives into a single "virtual" drive using a method called striping. 
+# Disk Serial spoofing
 
-While it’s traditionally used for performance, in ban evasion, the goal is different:
+**Raid 0**
+> [!IMPORTANT]
+> You can use Raid 0 if you are using **AMD**
 
-> [!TIP]
-> RAID 0 is used to completely change the hardware signature of your drive(s).
-> 
-> If you dont wanna use RAID 0 you need to buy a new Disk foreach ban
-
-Most games that use anti-cheats like EasyAntiCheat (EAC) or BattlEye (BE) will log unique identifiers from your drives (like serial numbers, volume IDs, etc.). 
-
-When you set up RAID 0, those identifiers get wiped or replaced, making your system appear brand new from a storage/hardware perspective.
+> [!CAUTION]
+> **Intel Raid 0** Is not supported, since EasyAntiCheat can get your real Drive Serial numbers
+>
+> Please use https://captaindma.com/product/privacy-drive-no-hwid-no-serial-number-drive-512g/ if you are using Intel CPU
 
 ## 🛠️ How Do I Know If My Motherboard Supports RAID 0?
 ✅ Step-by-step:
@@ -220,33 +217,4 @@ When you set up RAID 0, those identifiers get wiped or replaced, making your sys
 - If you see **RAID MODE**, your board most likely supports RAID 0.
 - Refer to your motherboard manual or Google your motherboard model + RAID support.
 
-> [!TIP]
-> Even if your board supports RAID, you may need at least 2 drives of the same type (either 2× SSDs or 2× NVMe).
 
-Type | NVMe RAID 0 | SATA SSD RAID 0
---- | --- | --- | 
-Works for spoofing? | ✅ Yes | ✅ Yes
-Setup Difficulty | 🔧 Moderate–Hard | 🔧 Easy–Moderate
-Controller Needed | Intel VMD / AMD RAIDXpert2 | Basic RAID controller
-
-> [!IMPORTANT]
-> NVMe RAID 0 might require driver injection during Windows install
-> SATA SSD RAID 0 is easier for beginners
-
-## 🧼 Why Do You Need RAID 0 for Ban Evasion?
-
-Anti-cheats can track:
-- Disk Serial Numbers
-- Volume IDs
-- Firmware versions
-- Hidden sector data
-
-> [!NOTE]
-> When you use RAID 0, you completely overwrite these markers and build a new virtual disk with its own RAID-specific ID — making your system look like a new machine.
-
-## 📦 Bonus: RAID 0 Tips for Evasion
-
-- Always delete all partitions during RAID setup
-- Always re-create your array pool on ban
-- Use a clean Windows ISO after creating the RAID array
-- Do not use backup images or old installs
