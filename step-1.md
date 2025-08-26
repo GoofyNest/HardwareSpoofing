@@ -10,7 +10,7 @@
 > Please report bugs if the application is not working, its required to run it as Administrator to access TPM module, based of `MaybeSpoofed`
 
 
-- [Requirement Checker](https://github.com/GoofyNest/HardwareSpoofing/releases/download/requirement/Requirement.Checker.rar)
+- [Requirement Checker] Deleted, needs updated
 
 # 🖥️ Supported Operating System
 
