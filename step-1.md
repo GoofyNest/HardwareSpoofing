@@ -197,8 +197,6 @@ While I haven’t personally seen this method used against Rust players on EasyA
 
 
 # Disk Serial spoofing
-
-**Raid 0**
 > [!IMPORTANT]
 > You can use Raid 0 if you are using **AMD**
 
