@@ -204,6 +204,8 @@ While I haven’t personally seen this method used against Rust players on EasyA
 > **Intel Raid 0** Is not supported, since EasyAntiCheat can get your real Drive Serial numbers
 >
 > Please use https://captaindma.com/product/privacy-drive-no-hwid-no-serial-number-drive-512g/ if you are using Intel CPU
+>
+> Or if you want to fully stop cheating just buy a new Disk drive to ur liking
 
 ## 🛠️ How Do I Know If My Motherboard Supports RAID 0?
 ✅ Step-by-step:
