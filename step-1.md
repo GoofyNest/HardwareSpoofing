@@ -211,8 +211,6 @@ While I haven’t personally seen this method used against Rust players on EasyA
 ✅ Step-by-step:
 - Enter your BIOS/UEFI (usually by pressing DEL, F2, or F10 on boot).
 - Look for:
- - SATA Configuration
- - Intel Rapid Storage Technology (IRST) -- Intel boards
  - RAIDXpert2 -- AMD boards
 - If you see **RAID MODE**, your board most likely supports RAID 0.
 - Refer to your motherboard manual or Google your motherboard model + RAID support.
