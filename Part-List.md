@@ -8,12 +8,12 @@
 - [Leopold FC750R](https://www.amazon.se/Leopold-tangenter-high-end-mekaniskt-tangentbord/dp/B079JSYH7X)
 - [Tangentbord USB Nordic SWEDEN](https://www.biltema.se/kontor---teknik/datortillbehor/tangentbord/tangentbord-usb-nordic-2000032469)
 - Razer keyboards should be fine
-- Unbranded chinese keyboards or cheap ones will not have a serial number
+- Unbranded chinese usb devices or cheap ones will not have a serial number
 
 # Mice/Mouse
 - [Razer Basilisk v3](https://www.pricerunner.com/pl/110-3200349493/Computer-Mice/Razer-Basilisk-V3-Compare-Prices)
 - [Razer Naga X](https://www.pricerunner.com/pl/110-3200065958/Computer-Mice/Razer-Naga-X-Compare-Prices)
-- Unbranded chinese keyboards or cheap ones will not have a serial number
+- Unbranded chinese usb devices or cheap ones will not have a serial number
 
 # Headset
 - [Logitech G636 Gaming Headset](https://www.pricerunner.com/pl/94-4822845/Headphones/Logitech-G635-LightSync-Compare-Prices)
