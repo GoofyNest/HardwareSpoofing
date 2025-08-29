@@ -2,6 +2,7 @@
 
 # Monitors
 - [ADX A25H2G25 FULL HD 1080P 25" IPS LCD GAMING](https://www.ebay.co.uk/itm/305887408052)
+- [Sceptre Monitors](https://www.amazon.com/Sceptre-FreeSync-DisplayPort-Speakers-E275B-FWD168/dp/B09B8PN1J9?sr=8-5)
 
 # Keyboard
 - [Leopold FC750R](https://www.amazon.se/Leopold-tangenter-high-end-mekaniskt-tangentbord/dp/B079JSYH7X)
