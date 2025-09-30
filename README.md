@@ -1,15 +1,15 @@
-# 🛡️ Ban Evading the AntiCheat (Not fully complete yet)
+# Permanently spoofing guide
+> [!CAUTION]
+> In September of 2025 EasyAntiCheat is now hard banning GPUs
+
 <img width="702" height="290" alt="image" src="https://github.com/user-attachments/assets/633d57fa-988d-45f8-b49e-6a7e4b754c88" />
 
 [ElitePvpers Thread](https://www.elitepvpers.com/forum/rust/5310806-free-guide-manually-spoofing-serials.html) || [Discord Server](https://discord.gg/6zpBHHzVcT)
 
-
-### 💪💪 Second chance to everyone 💪💪
-
-**Safely bypass all the AntiCheats below, never need to pay someone for spoofing your serials again**
+### Supported anticheats
 - BattleEye
 - Ricochet
-- Easy Anti Cheat
+- ~~Easy Anti Cheat~~ (Enforcing GPU bans 2025-09-30)
 - Ace Anti Cheat
 - Chinese-Ace
 
