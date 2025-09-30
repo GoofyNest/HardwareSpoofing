@@ -1,6 +1,6 @@
 # Permanently spoofing guide
 > [!CAUTION]
-> In September of 2025 EasyAntiCheat is now hard banning GPUs
+> In September of 2025 EasyAntiCheat is now hard banning GPUs, meaning this spoofing method is no longer working for EasyAntiCheat protected games
 
 <img width="702" height="290" alt="image" src="https://github.com/user-attachments/assets/633d57fa-988d-45f8-b49e-6a7e4b754c88" />
 
