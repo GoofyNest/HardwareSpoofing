@@ -35,8 +35,8 @@
 
 # Disk drives (without serial number)
 ### If you dont want to use Raid 0 you can use this drive from CaptainDMA
-- [Privacy Drive/NO HWID/NO SERIAL Number Drive-512G](https://captaindma.com/product/privacy-drive-no-hwid-no-serial-number-drive-512g/)
-- [Cheaper alternative](https://github.com/dom0ng/map1202)
+- [Privacy Drive/NO HWID/NO SERIAL Number Drive-512G](https://captaindma.com/product/privacy-drive-no-hwid-no-serial-number-drive-512g/) Do not recommend this, bad support, bad company
+- [map1202](https://github.com/dom0ng/map1202) cheaper, better alternative
 - Only works if ur Raid 0
 
 # Ethernet adapters
