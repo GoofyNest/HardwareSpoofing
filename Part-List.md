@@ -4,6 +4,10 @@
 - [ADX A25H2G25 FULL HD 1080P 25" IPS LCD GAMING](https://www.ebay.co.uk/itm/305887408052)
 - [Sceptre Monitors](https://www.amazon.com/Sceptre-FreeSync-DisplayPort-Speakers-E275B-FWD168/dp/B09B8PN1J9?sr=8-5)
 
+# Alternative to monitors
+- [DMA Fuser](https://www.amazon.com/Multimedia-Interface-Synthesizer-Financial-Conferencing/dp/B0DJVSTZKC/130-9143408-6552852)
+- ^ Can write customized EDID files to the ditchen fuser to null your monitor serial
+
 # Keyboard
 - [Leopold FC750R](https://www.amazon.se/Leopold-tangenter-high-end-mekaniskt-tangentbord/dp/B079JSYH7X)
 - [Tangentbord USB Nordic SWEDEN](https://www.biltema.se/kontor---teknik/datortillbehor/tangentbord/tangentbord-usb-nordic-2000032469)
