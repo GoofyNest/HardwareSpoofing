@@ -15,13 +15,10 @@
 # 🖥️ Supported Operating System
 
 ### ✅ **[Windows 10](https://drive.massgrave.dev/en-us_windows_10_iot_enterprise_ltsc_2021_x64_dvd_257ad90f.iso)** – Fully supported and recommended
-
-> [!WARNING]
-> ~~**Custom Resolution Utility (CRU)** does **not** work reliably on Windows 11.~~
-> ~~If you're using Windows 11, spoofing your monitor may not be possible.~~
+### ✅ **Windows 11** – Fully supported and recommended
 
 > [!IMPORTANT]
-> If you like Windows 11 and want to check if your existing monitor does not have a serial number you can run this command in **powershell:**
+> If you want to check if your existing monitor does not have a serial number you can run this command in **powershell:**
 ```
 Get-WmiObject -Namespace root\wmi -Class WmiMonitorID | ForEach-Object {
     if ($_.UserFriendlyName) {
