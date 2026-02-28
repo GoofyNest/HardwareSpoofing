@@ -46,5 +46,5 @@
 - [Amazon basic](https://www.amazon.se/Amazon-Basics-Gigabit-Ethernet-internetadapter/dp/B00M77HMU0)
 
 # TPM Spoofing
-- Search for TPM-SPI chips on amazon that fits your motherboard, also make sure you have the TPM header.
+- Search for [TPM-SPI](https://www.amazon.com/s?k=tpm+chip) chips on amazon that fits your motherboard, also make sure you have the TPM header.
 - Very important to make sure fTPM is disabled in bios.
