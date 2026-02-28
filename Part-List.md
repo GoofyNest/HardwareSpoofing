@@ -44,3 +44,7 @@
 - [Anonymous NIC/No HWID/Custom MAC](https://captaindma.com/product/anonymous-nic-no-hwid-custom-mac/)
 - [TP-Link UE300](https://www.pricerunner.com/pl/117-3076573/Network-Cards-Bluetooth-Adapters/TP-Link-UE300-Compare-Prices)
 - [Amazon basic](https://www.amazon.se/Amazon-Basics-Gigabit-Ethernet-internetadapter/dp/B00M77HMU0)
+
+# TPM Spoofing
+- Search for TPM-SPI chips on amazon that fits your motherboard, also make sure you have the TPM header.
+- Very important to make sure fTPM is disabled in bios.
