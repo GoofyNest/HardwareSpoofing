@@ -1,5 +1,9 @@
 # 🏭 Clean ASUS motherboard dump (Never spoofed)
 
+## Credits to @exclusi0n for finding ASUS proper spoof method
+<img width="1005" height="368" alt="image" src="https://github.com/user-attachments/assets/d001cdea-4665-43f6-b4e3-57db584356d6" />
+
+
 > [!WARNING]
 > After a lot of testing it seems that ASUS boards reset the Serial Number after computer restart when spoofing with DMI_EDIT
 >
