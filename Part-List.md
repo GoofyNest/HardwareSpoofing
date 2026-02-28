@@ -16,7 +16,7 @@
 - Unbranded chinese usb devices or cheap ones will not have a serial number
 
 # Mice/Mouse
-- Ferrum One can spoof your mouse serial to null.
+- Ferrum One (aim-device) can spoof your mouse serial to null.
 - [Razer Basilisk v3](https://www.pricerunner.com/pl/110-3200349493/Computer-Mice/Razer-Basilisk-V3-Compare-Prices)
 - [Razer Naga X](https://www.pricerunner.com/pl/110-3200065958/Computer-Mice/Razer-Naga-X-Compare-Prices)
 - Unbranded chinese usb devices or cheap ones will not have a serial number
