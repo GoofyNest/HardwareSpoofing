@@ -1,4 +1,5 @@
 # Recommended devices/parts that are used for ban evading
+- If you are lazy and dont wanna buy new Monitors, USB devices just play the game through [moonlight/sunshine](https://github.com/LizardByte/Sunshine) or [parsec](https://parsec.app/).
 
 # Monitors
 - [ADX A25H2G25 FULL HD 1080P 25" IPS LCD GAMING](https://www.ebay.co.uk/itm/305887408052)
