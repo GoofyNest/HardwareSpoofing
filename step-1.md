@@ -137,11 +137,6 @@ if it reports `00000000` or something that does not look unique, you are good to
 > 
 > 📝 We're working on a document listing **components that don't include a serial number**, so you can buy spoof-safe hardware without guessing.
 
-~~# 🎮 Graphic card (GPU) spoofing~~
-
-~~EasyAntiCheat does not log your graphics card’s serial number since GPUs are frequently resold, tracking serials would cause many false bans. 
-However, it’s worth mentioning that the anticheat does log the name/model of your graphics card.~~
-
 # 🔌 USB Adapter spoofing
 
 If you're concerned about USB device serials such as:
