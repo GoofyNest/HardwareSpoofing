@@ -13,12 +13,14 @@
 - [Leopold FC750R](https://www.amazon.se/Leopold-tangenter-high-end-mekaniskt-tangentbord/dp/B079JSYH7X)
 - [Tangentbord USB Nordic SWEDEN](https://www.biltema.se/kontor---teknik/datortillbehor/tangentbord/tangentbord-usb-nordic-2000032469)
 - Razer keyboards should be fine
+- [mchoose](https://www.mchose.store/collections/keyboards)
 - Unbranded chinese usb devices or cheap ones will not have a serial number
 
 # Mice/Mouse
 - Ferrum One (aim-device) can spoof your mouse serial to null.
 - [Razer Basilisk v3](https://www.pricerunner.com/pl/110-3200349493/Computer-Mice/Razer-Basilisk-V3-Compare-Prices)
 - [Razer Naga X](https://www.pricerunner.com/pl/110-3200065958/Computer-Mice/Razer-Naga-X-Compare-Prices)
+- [VXE](https://vxe.com/)
 - Unbranded chinese usb devices or cheap ones will not have a serial number
 
 # Headset
@@ -26,9 +28,11 @@
 - [Logitech G435](https://www.pricerunner.com/pl/94-3200339580/Headphones/Logitech-G435-Compare-Prices)
 - [HyperX Cloud Alpha Wireless](https://www.pricerunner.com/pl/94-3201166228/Headphones/HyperX-Cloud-Alpha-Wireless-Compare-Prices)
 - [SteelSeries Arctis 9](https://steelseries.com/sv-se/gaming-headsets/arctis-9?srsltid=AfmBOoqnrN5HPPMLBfLdILmnReSvjV9V93D-69TcZijTvTccB2LWrT9r)
+- [Redragon](https://www.amazon.se/Redragon-H510-Zeus-Tr%C3%A5dbundet-spelheadset/dp/B07PSCCC78?)
 
 # Microphone
 - [Hyper X QuadCast](https://hyperx.com/products/hyperx-quadcast-usb-microphone)
+- [ME6 USB](https://www.aliexpress.com/item/1005010527402369.html)
 
 # Ram modules (Just examples, all Corsair Vengeance has no serials)
 - [Corsair Vengeance DDR4](https://www.pricerunner.com/pl/38-5134118/RAM-Memory/Corsair-Vengeance-LPX-Black-DDR4-3600MHz-2x32GB-%28CMK64GX4M2D3600C18%29-Compare-Prices)
