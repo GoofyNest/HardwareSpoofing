@@ -54,5 +54,5 @@
 >
 > Just make to always destroy raid array, wipe data and install Windows 10 or Windows 11 from a USB device
 >
-> I also recommend going over Device Manager deleting old/disabled devices and never leaving the USB plugged in.
+> I also recommend going over Device Manager deleting old/disabled devices and never leaving the USB plugged in after done installing Windows.
 
