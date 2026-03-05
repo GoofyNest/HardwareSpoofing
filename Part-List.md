@@ -10,6 +10,7 @@
 - ^ Can write customized EDID files to the ditchen fuser to null your monitor serial
 
 # Keyboard
+- Ferrum One (aim-device) can spoof your keyboard serial to null.
 - [Leopold FC750R](https://www.amazon.se/Leopold-tangenter-high-end-mekaniskt-tangentbord/dp/B079JSYH7X)
 - [Tangentbord USB Nordic SWEDEN](https://www.biltema.se/kontor---teknik/datortillbehor/tangentbord/tangentbord-usb-nordic-2000032469)
 - [mchoose](https://www.mchose.store/collections/keyboards)
