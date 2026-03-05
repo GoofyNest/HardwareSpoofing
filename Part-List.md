@@ -5,24 +5,25 @@
 - [ADX A25H2G25 FULL HD 1080P 25" IPS LCD GAMING](https://www.ebay.co.uk/itm/305887408052)
 - [Sceptre Monitors](https://www.amazon.com/Sceptre-FreeSync-DisplayPort-Speakers-E275B-FWD168/dp/B09B8PN1J9?sr=8-5)
 
-# Alternative to monitors
+# Alternative to monitors (Recommended)
 - [DMA Fuser](https://www.amazon.com/Multimedia-Interface-Synthesizer-Financial-Conferencing/dp/B0DJVSTZKC/130-9143408-6552852)
 - ^ Can write customized EDID files to the ditchen fuser to null your monitor serial
 
-# Keyboard
-- Ferrum One (aim-device) can spoof your keyboard serial to null.
+# Keyboard (Recommended cheap chinese keyboard)
 - [Leopold FC750R](https://www.amazon.se/Leopold-tangenter-high-end-mekaniskt-tangentbord/dp/B079JSYH7X)
 - [Tangentbord USB Nordic SWEDEN](https://www.biltema.se/kontor---teknik/datortillbehor/tangentbord/tangentbord-usb-nordic-2000032469)
 - [mchoose](https://www.mchose.store/collections/keyboards)
 - Razer keyboards should be fine
 - Unbranded chinese usb devices or cheap ones will not have a serial number
 
-# Mice/Mouse
-- Ferrum One (aim-device) can spoof your mouse serial to null.
+# Mice/Mouse (Recommended Razer)
 - [Razer Basilisk v3](https://www.pricerunner.com/pl/110-3200349493/Computer-Mice/Razer-Basilisk-V3-Compare-Prices)
 - [Razer Naga X](https://www.pricerunner.com/pl/110-3200065958/Computer-Mice/Razer-Naga-X-Compare-Prices)
 - [VXE](https://vxe.com/)
 - Unbranded chinese usb devices or cheap ones will not have a serial number
+
+# Alternative to mouse/keyboard
+- Ferrum One (aim-device) can spoof your serial to null.
 
 # Headset
 - [Logitech G636 Gaming Headset](https://www.pricerunner.com/pl/94-4822845/Headphones/Logitech-G635-LightSync-Compare-Prices)
