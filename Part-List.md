@@ -12,8 +12,8 @@
 # Keyboard
 - [Leopold FC750R](https://www.amazon.se/Leopold-tangenter-high-end-mekaniskt-tangentbord/dp/B079JSYH7X)
 - [Tangentbord USB Nordic SWEDEN](https://www.biltema.se/kontor---teknik/datortillbehor/tangentbord/tangentbord-usb-nordic-2000032469)
-- Razer keyboards should be fine
 - [mchoose](https://www.mchose.store/collections/keyboards)
+- Razer keyboards should be fine
 - Unbranded chinese usb devices or cheap ones will not have a serial number
 
 # Mice/Mouse
