@@ -25,7 +25,7 @@
 # Alternative to mouse/keyboard
 - Ferrum One (aim-device) can spoof your serial to null.
 
-# Headset
+# Headset (Recommended Logitech G435)
 - [Logitech G636 Gaming Headset](https://www.pricerunner.com/pl/94-4822845/Headphones/Logitech-G635-LightSync-Compare-Prices)
 - [Logitech G435](https://www.pricerunner.com/pl/94-3200339580/Headphones/Logitech-G435-Compare-Prices)
 - [HyperX Cloud Alpha Wireless](https://www.pricerunner.com/pl/94-3201166228/Headphones/HyperX-Cloud-Alpha-Wireless-Compare-Prices)
@@ -41,13 +41,13 @@
 - [Corsair Vengeance DDR5](https://www.pricerunner.com/pl/38-3258453027/RAM-Memory/Corsair-DDR5-6000MHz-2x16GB-%28CMK32GX5M2B6000Z30%29-Compare-Prices)
 - G.Skill Trident has no serials
 
-# Disk drives (without serial number)
+# Disk drives (Recommended Map1202)
 ### If you dont want to use Raid 0 you can use this drive from CaptainDMA
 - [Privacy Drive/NO HWID/NO SERIAL Number Drive-512G](https://captaindma.com/product/privacy-drive-no-hwid-no-serial-number-drive-512g/) Do not recommend this, bad support, bad company
 - [map1202](https://github.com/dom0ng/map1202) cheaper, better alternative
 - Only works if ur Raid 0
 
-# Ethernet adapters
+# Ethernet adapters (Recommended CaptainDMA)
 - [Anonymous NIC/No HWID/Custom MAC](https://captaindma.com/product/anonymous-nic-no-hwid-custom-mac/)
 - [TP-Link UE300](https://www.pricerunner.com/pl/117-3076573/Network-Cards-Bluetooth-Adapters/TP-Link-UE300-Compare-Prices)
 - [Amazon basic](https://www.amazon.se/Amazon-Basics-Gigabit-Ethernet-internetadapter/dp/B00M77HMU0)
