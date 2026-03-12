@@ -18,9 +18,9 @@
 > Does not have any identifiers that Anticheats can use against you.
 
 ## GPU (Video controller)
-> AMD
+> #1 AMD, #2 NVIDIA
 > 
-> Nvidia has way too many identifiers and is not perm-spoofable to my knowledge
+> Reasoning for NVIDIA being #2 is due to it has identifiers even if they are not currently being logged.
 
 ## Monitor
 > I recommend currently using a `Ditchen 2K Fuser` and write a custom EDID with the programmer tool.
