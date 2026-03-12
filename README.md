@@ -3,7 +3,7 @@
 > If you are playing Facepunch Protected servers and get excessively reported they will start running scans on your PC
 >
 > One of their scans is abusing Discord to obtain your Discord ID and Discord IDs of your friends.
-
+>
 > 0x1540|Discord friend provider failed to post to https://api.facepunch.com/api/discord/friends-lookup: System.Threading.Tasks.TaskCanceledException: A task was canceled.
 
 > [!CAUTION]
