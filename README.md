@@ -1,16 +1,7 @@
 # Permanently spoofing guide
 We are moving the guide to GitBook, https://goofynest.gitbook.io/spoof
 
-<img width="702" height="290" alt="image" src="https://github.com/user-attachments/assets/633d57fa-988d-45f8-b49e-6a7e4b754c88" />
-
 [ElitePvpers Thread](https://www.elitepvpers.com/forum/rust/5310806-free-guide-manually-spoofing-serials.html) || [Discord Server](https://discord.gg/6zpBHHzVcT) || [Recommended Setup](https://github.com/GoofyNest/HardwareSpoofing/blob/main/recommended-setup-eac.md)
-
-### Supported anticheats
-- BattleEye
-- Ricochet
-- Easy Anti Cheat
-- Ace Anti Cheat
-- Chinese-Ace
 
 If I saved you from spending money on sketchy spoofers, consider fueling me with some Monster Energy!
 
