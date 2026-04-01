@@ -1,15 +1,5 @@
 # Permanently spoofing guide
-> [!WARNING]
-> If you are playing Facepunch Protected servers and get excessively reported they will start running scans on your PC
->
-> One of their scans is abusing Discord to obtain your Discord ID and Discord IDs of your friends.
->
-> 0x1540|Discord friend provider failed to post to https://api.facepunch.com/api/discord/friends-lookup: System.Threading.Tasks.TaskCanceledException: A task was canceled.
-
-> [!CAUTION]
-> Be aware, Facepunch is still being intrusive with their Discord scans.
-> 
-> I recommend only installing (Steam, Windows updates & Rust game)
+We are moving the guide to GitBook, https://goofynest.gitbook.io/spoof
 
 <img width="702" height="290" alt="image" src="https://github.com/user-attachments/assets/633d57fa-988d-45f8-b49e-6a7e4b754c88" />
 
