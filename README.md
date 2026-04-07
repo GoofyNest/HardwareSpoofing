@@ -16,18 +16,10 @@ If I saved you from spending money on sketchy spoofers, consider fueling me with
 - Reported.lol dev for releasing this version of AMIDEWINx64
 
 # 📚 Guides
-- [Step 0 - What is hardware bans?](https://github.com/GoofyNest/HardwareSpoofing/blob/main/step-0.md)
-- [Step 1 - What are the requirements?](https://github.com/GoofyNest/HardwareSpoofing/blob/main/step-1.md)
 - [Step 2 - Spoofing SMBIOS (Unfinished)](https://github.com/GoofyNest/HardwareSpoofing/blob/main/step-2.md)
-- [Step 3 - Spoofing Monitors](https://github.com/GoofyNest/HardwareSpoofing/blob/main/step-3.md)
-
 
 # 🧾 Factory motherboard dumps
 - [🧱 ASRock factory serials](https://github.com/GoofyNest/HardwareSpoofing/blob/main/Factory-ASRock.md)
 - [🔧 ASUS factory serials](https://github.com/GoofyNest/HardwareSpoofing/blob/main/Factory-ASUS.md)
 - [⚙️ Gigabyte factory serials](https://github.com/GoofyNest/HardwareSpoofing/blob/main/Factory-Gigabyte.md)
 - [🛠️ MSI Factory serials](https://github.com/GoofyNest/HardwareSpoofing/blob/main/Factory-MSI.md)
-
-
-# 🧩 Part List (Components Without Serials)
-- [🎮 Part List](https://github.com/GoofyNest/HardwareSpoofing/blob/main/Part-List.md)
