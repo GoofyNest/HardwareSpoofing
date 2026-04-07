@@ -14,9 +14,6 @@ If I saved you from spending money on sketchy spoofers, consider fueling me with
 
 - Reported.lol dev for releasing this version of AMIDEWINx64
 
-# 📚 Guides
-- [Step 2 - Spoofing SMBIOS (Unfinished)](https://github.com/GoofyNest/HardwareSpoofing/blob/main/step-2.md)
-
 # 🧾 Factory motherboard dumps
 - [🧱 ASRock factory serials](https://github.com/GoofyNest/HardwareSpoofing/blob/main/Factory-ASRock.md)
 - [🔧 ASUS factory serials](https://github.com/GoofyNest/HardwareSpoofing/blob/main/Factory-ASUS.md)
