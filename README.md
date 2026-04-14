@@ -1,4 +1,4 @@
-# We are moving the guide to GitBook, https://goofynest.gitbook.io/spoof
+# Guide is moved to gitbook = https://goofynest.gitbook.io/spoof
 
 Get the latest updates by joining our Discord server, we also now have free-support!
 
