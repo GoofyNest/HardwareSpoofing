@@ -53,6 +53,8 @@ If I have helped you out or saved you some time and you wanna support my project
 
 * Discord server [https://discord.com/invite/JtU8FxQnN5](https://discord.com/invite/JtU8FxQnN5)
 * Elitepvpers thread [https://www.elitepvpers.com/forum/rust/5310806-free-guide-manually-spoofing-serials.html](https://www.elitepvpers.com/forum/rust/5310806-free-guide-manually-spoofing-serials.html)
+* Github: [https://github.com/GoofyNest/HardwareSpoofing](https://github.com/GoofyNest/HardwareSpoofing)
+* Gitbook: [https://goofynest.gitbook.io/spoof](https://goofynest.gitbook.io/spoof)
 
 ***
 
