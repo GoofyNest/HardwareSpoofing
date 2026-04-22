@@ -67,7 +67,7 @@ This guide is utilizing the discrete TPM module on motherboards to bypass **TPM 
 
 ## Ram
 
-Crosshair Vengeance is a ram manufacturer that has no unique serial numbers that anti-cheats can grab for both DDR4 and DDR5 platforms.
+Corsair Vengeance new generation DDR5 have serial numbers now, so its a gamble if you get ram without serial numbers.
 
 There might be other manufacturers that have null serials, you can verify by running this query in PowerShell:
 
