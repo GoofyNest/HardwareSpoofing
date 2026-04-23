@@ -80,7 +80,7 @@ Supported Motherboards
 Supported Ram
 {% endhint %}
 
-<table data-view="cards"><thead><tr><th></th><th data-type="rating" data-max="3"></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>Corsair Vengeance</td><td>5</td><td>New generation DDR5 has serial numbers</td><td data-object-fit="contain"><a href=".gitbook/assets/corsair.png">corsair.png</a></td></tr><tr><td>G.Skill</td><td>3</td><td>Not sure if all ram is nulled.</td><td data-object-fit="contain"><a href=".gitbook/assets/g-skill.jpg">g-skill.jpg</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-type="rating" data-max="5"></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>Corsair Vengeance</td><td>3</td><td>New generation DDR5 has serial numbers</td><td data-object-fit="contain"><a href=".gitbook/assets/corsair.png">corsair.png</a></td></tr><tr><td>G.Skill</td><td>3</td><td>Not sure if all ram is nulled.</td><td data-object-fit="contain"><a href=".gitbook/assets/g-skill.jpg">g-skill.jpg</a></td></tr></tbody></table>
 
 {% hint style="info" icon="windows" %}
 Supported operating systems
