@@ -35,7 +35,7 @@ Plugin your monitor to your Graphics card using HDMI or DPI, does not matter.
 
 ## Step 2
 
-Download the [Dichen Programming zip](https://mega.nz/folder/aNcFVLpR#B40bYCE3cmLwnXs2gxQ69g) and extract it to a folder.
+Download the [Dichen Programming zip](https://github.com/GoofyNest/HardwareSpoofing/releases/download/dichen/dichen.zip) and extract it to a folder.
 
 Also install the CH driver from the folder so you can re-program the Dichen fuser.
 
