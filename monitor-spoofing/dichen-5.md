@@ -5,6 +5,8 @@ icon: '1'
 
 # Dichen 5
 
+<mark style="color:red;">**This guide needs to be updated, do not use null monitor serials unless your monitor serial is already nulled, we have a tool in discord you can use to generate new EDID**</mark>
+
 <mark style="color:purple;">**It is very annoying to get the spoofing for Dichen 5 to work properly**</mark>
 
 {% hint style="warning" %}
