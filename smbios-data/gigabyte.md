@@ -136,7 +136,7 @@ AMIDEWINx64.exe /SS "Default string"
 ### UUID (/SU)
 
 {% hint style="danger" %}
-The UUID is normally tied to your NIC on your motherboard and other stuff, the easiest option is setting it to **Gigabyte Default** or just nulling it with **0's**
+The UUID is normally tied to your NIC on your motherboard and other stuff, the easiest option is setting it to ~~**Gigabyte Default** or just nulling it with **0's**~~ Not recommended as of 2026-05-01
 {% endhint %}
 
 ```
