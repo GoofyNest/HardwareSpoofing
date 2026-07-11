@@ -1,3 +1,7 @@
+---
+icon: '1'
+---
+
 # SPD Security Editor
 
 Credits goes to **zenoxoid** on discord for finding this.

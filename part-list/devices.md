@@ -63,6 +63,10 @@ Recommending Corsair Vengeance ram <mark style="color:green;">all modules have n
 * [NO SERIAL Number Drive-512G](https://captaindma.com/product/privacy-drive-no-hwid-no-serial-number-drive-512g/) (<mark style="color:$danger;">Do not recommend this, bad support)</mark>
 * [map1202](https://github.com/dom0ng/map1202) (<mark style="color:$danger;">Do not recommend this, heard bad rumors, untested,</mark> <mark style="color:purple;">might work for EAC games</mark><mark style="color:$danger;">)</mark>
 
+## Ram spoofing
+
+* [https://www.aliexpress.com/item/1005010734907283.html](https://www.aliexpress.com/item/1005010734907283.html)
+
 ## Ethernet adapters
 
 * [Anonymous NIC/No HWID/Custom MAC](https://captaindma.com/product/anonymous-nic-no-hwid-custom-mac/) (<mark style="color:green;">Recommend this, tested and working as intended</mark>)
