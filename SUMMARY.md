@@ -18,6 +18,11 @@
 * [MSI](smbios-data/msi.md)
 * [ASUS](smbios-data/asus.md)
 
+## MAC SPOOFING
+
+* [Captain USB adapter](mac-spoofing/captain-usb-adapter.md)
+* [Realtek USB adapter](mac-spoofing/realtek-usb-adapter.md)
+
 ## RAM SPOOFING
 
 * [SPD Security Editor](ram-spoofing/spd-security-editor.md)
