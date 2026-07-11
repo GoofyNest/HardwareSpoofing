@@ -18,6 +18,10 @@
 * [MSI](smbios-data/msi.md)
 * [ASUS](smbios-data/asus.md)
 
+## RAM SPOOFING
+
+* [SPD Security Editor](ram-spoofing/spd-security-editor.md)
+
 ## ARP Spoofing
 
 * [Raspberry Pi 4 Model B](arp-spoofing/raspberry-pi-4-model-b.md)
