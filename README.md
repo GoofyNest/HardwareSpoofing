@@ -16,6 +16,8 @@ layout:
     visible: true
   tags:
     visible: true
+  actions:
+    visible: true
 ---
 
 # Welcome
@@ -23,7 +25,7 @@ layout:
 ## Hardware spoofing
 
 {% hint style="info" icon="gamepad-modern" %}
-Build once, rely forever&#x20;
+Build once, rely forever
 {% endhint %}
 
 {% hint style="warning" icon="face-sunglasses" %}
@@ -36,7 +38,7 @@ We will never support tournament anti-cheats such as Faceit
 {% endhint %}
 
 {% hint style="success" icon="dollar-sign" %}
-If I have helped you out or saved you some time and you wanna support my projects, you can show some love here:&#x20;
+If I have helped you out or saved you some time and you wanna support my projects, you can show some love here:
 
 [https://buymeacoffee.com/goofynest](https://buymeacoffee.com/goofynest)
 {% endhint %}
@@ -79,7 +81,7 @@ Supported Motherboards
 Supported Ram
 {% endhint %}
 
-<table data-view="cards"><thead><tr><th></th><th data-type="rating" data-max="5"></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>Corsair Vengeance</td><td>3</td><td>New generation DDR5 has serial numbers</td><td data-object-fit="contain"><a href=".gitbook/assets/corsair.png">corsair.png</a></td></tr><tr><td>G.Skill</td><td>3</td><td>Not sure if all ram is nulled.</td><td data-object-fit="contain"><a href=".gitbook/assets/g-skill.jpg">g-skill.jpg</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-type="rating" data-max="5"></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>Any ram</td><td>5</td><td>You can spoof ram using SPD programmer module on aliexpress</td><td data-object-fit="contain"><a href=".gitbook/assets/image (32).png">image (32).png</a></td></tr></tbody></table>
 
 {% hint style="info" icon="windows" %}
 Supported operating systems
