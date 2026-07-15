@@ -85,3 +85,7 @@ This is harder since it depends what motherboard you have, you will have to do m
 
 * Search for [TPM-SPI](https://www.amazon.com/s?k=tpm+chip) chips on amazon that fits your motherboard, also make sure you have the TPM header.
 * <mark style="color:$danger;">Very important to make sure fTPM is disabled in bios.</mark>
+
+## ARP Spoofing
+
+* [https://www.amazon.com/dp/B09N72FMH5](https://www.amazon.com/dp/B09N72FMH5)
