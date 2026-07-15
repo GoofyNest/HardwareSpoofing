@@ -1,4 +1,5 @@
 ---
+description: Thanks to @zenoxoid at Discord
 icon: '1'
 ---
 
