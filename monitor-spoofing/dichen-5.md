@@ -1,6 +1,6 @@
 ---
 description: 'DICHEN 5 GEN FUSER - MODEL: DC240HZ5D-2'
-icon: '2'
+icon: '3'
 ---
 
 # Dichen 5
@@ -13,9 +13,9 @@ icon: '2'
 You need the Dichen fuser that has the programmable port
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (19).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (19).png" alt="" width="375"><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (20).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (20).png" alt="" width="375"><figcaption></figcaption></figure>
 
 <mark style="color:purple;">Dichen comes with a USB-C programmable port that is using to flash EDID files to your Fuser, this port is normally only utilized if your fuser does not automatically support your monitor itself.</mark>
 
@@ -31,7 +31,7 @@ I recommend doing this from a secondary pc like a Laptop for example.
 
 Unplug all your monitors from the Fuser and plug in the USB-C connector and power to your pc.
 
-<figure><img src="../../.gitbook/assets/image (21).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (21).png" alt="" width="375"><figcaption></figcaption></figure>
 
 Plugin your monitor to your Graphics card using HDMI or DPI, does not matter.
 
@@ -54,7 +54,7 @@ Download [Custom Resolution Utility](https://customresolutionutility.net/#downlo
 * In the drop-down list at the top left, select each monitor (including inactive ones)
 * Click Edit (top right)
 
-<figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
 
 🔹 Device ID Section
 
@@ -67,7 +67,7 @@ Download [Custom Resolution Utility](https://customresolutionutility.net/#downlo
 * Check “Include if slot available”
 * Click OK
 
-<figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
 
 After this is completed, do Export and you will get a **.bin** file that you can flash to your Fuser.
 
@@ -75,7 +75,7 @@ After this is completed, do Export and you will get a **.bin** file that you can
 
 Open the EDID Flash Tool.exe and follow below:
 
-<figure><img src="../../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
 
 Very important to pick the right **COM** port, you can check in device manager the Fuser should appear as **CH** something.\
 \
@@ -88,7 +88,7 @@ Also very important to set your targeted Resolution.
 
 Some Chinese Mao Zedong message should appear if done.
 
-<figure><img src="../../.gitbook/assets/image (25).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (25).png" alt="" width="375"><figcaption></figcaption></figure>
 
 ## Step 5
 

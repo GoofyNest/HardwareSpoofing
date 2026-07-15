@@ -1,6 +1,6 @@
 ---
 description: Cheaper alternative to spoof monitor EDID
-icon: '1'
+icon: '2'
 ---
 
 # Dr HDMI
