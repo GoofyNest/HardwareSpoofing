@@ -20,8 +20,8 @@
 
 ## MAC SPOOFING
 
-* [Captain USB adapter](mac-spoofing/captain-usb-adapter.md)
 * [Realtek USB adapter](mac-spoofing/realtek-usb-adapter.md)
+* [Captain USB adapter](mac-spoofing/captain-usb-adapter.md)
 
 ## DISK SPOOFING
 

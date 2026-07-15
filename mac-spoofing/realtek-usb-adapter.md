@@ -1,6 +1,6 @@
 ---
 description: Thanks to @lena6168 at discord
-icon: '2'
+icon: '1'
 ---
 
 # Realtek USB adapter
