@@ -33,6 +33,7 @@
 
 ## ARP Spoofing
 
+* [GL.iNet GL-SFT1200](arp-spoofing/gl.inet-gl-sft1200.md)
 * [Raspberry Pi 4 Model B](arp-spoofing/raspberry-pi-4-model-b.md)
 
 ## Monitor spoofing

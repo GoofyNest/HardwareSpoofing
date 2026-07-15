@@ -3,12 +3,10 @@ description: >-
   This is just one of many examples, the reason I went with this is cause it was
   what I had at hand. You can use this guide for any Linux setup, you dont even
   need Pi, you can use 2nd pc.
-icon: '1'
+icon: '2'
 ---
 
 # Raspberry Pi 4 Model B
-
-
 
 {% hint style="warning" %}
 While this setup works, there is other solutions that are less setup involved and less vodoo shit.
@@ -77,7 +75,7 @@ This assumes you are using the RJ45 (Ethernet port) for sharing the network and 
     ```sh
     apt update && apt upgrade -y
     ```
-*   Run command&#x20;
+*   Run command
 
     ```sh
     ip link show
@@ -89,11 +87,11 @@ So in my setup I am going to use the `wlan0` => `eth0`
 
 <mark style="color:purple;">You can also use this method for 2x</mark> <mark style="color:red;">`RJ45(Ethernet Ports)`</mark> <mark style="color:purple;">but it requires you to use a</mark> <mark style="color:$danger;">`USB Ethernet adapter`</mark> <mark style="color:purple;">but you need to reverse the order on how you are doing it.</mark>
 
-<mark style="color:purple;">If you are using a</mark> <mark style="color:$danger;">**USB Ethernet Adapter**</mark> <mark style="color:purple;">**the internet**</mark> <mark style="color:purple;"></mark><mark style="color:purple;">must be coming from the</mark> <mark style="color:$danger;">Ethernet adapter</mark> <mark style="color:purple;">and be shared of the RJ45 built in port on the Raspberry Pi, otherwise it will not allow you to use internet cause the USB Ethernet adapter port will be sleeping.</mark>
+<mark style="color:purple;">If you are using a</mark> <mark style="color:$danger;">**USB Ethernet Adapter**</mark> <mark style="color:purple;">**the internet**</mark> <mark style="color:purple;">must be coming from the</mark> <mark style="color:$danger;">Ethernet adapter</mark> <mark style="color:purple;">and be shared of the RJ45 built in port on the Raspberry Pi, otherwise it will not allow you to use internet cause the USB Ethernet adapter port will be sleeping.</mark>
 
 ### Create config (WiFi config)
 
-*   Run command&#x20;
+*   Run command
 
     ```sh
     sudo nano /etc/systemd/network/10-wlan0.network
@@ -115,12 +113,12 @@ So in my setup I am going to use the `wlan0` => `eth0`
 
 ### Create config (network sharing)
 
-*   Run command&#x20;
+*   Run command
 
     ```sh
     sudo nano /etc/systemd/network/20-eth0.network
     ```
-*   Paste this:&#x20;
+*   Paste this:
 
     ```sh
     [Match]
@@ -132,7 +130,7 @@ So in my setup I am going to use the `wlan0` => `eth0`
     [Network]
     Address=192.168.50.1/24
     ```
-*   Run this:&#x20;
+*   Run this:
 
     ```sh
     sudo systemctl enable systemd-networkd
@@ -144,17 +142,17 @@ So in my setup I am going to use the `wlan0` => `eth0`
 
 ### Enable IP forwarding globally
 
-*   Run command&#x20;
+*   Run command
 
     ```shell
     sudo nano /etc/sysctl.d/99-router.conf
     ```
-*   Paste this:&#x20;
+*   Paste this:
 
     ```sh
     net.ipv4.ip_forward=1
     ```
-*   Apply changes:&#x20;
+*   Apply changes:
 
     ```shell
     sudo sysctl --system
@@ -162,12 +160,12 @@ So in my setup I am going to use the `wlan0` => `eth0`
 
 #### NAT Internet Sharing
 
-*   Run command&#x20;
+*   Run command
 
     ```sh
     sudo apt update && sudo apt install nftables -y
     ```
-*   Edit config&#x20;
+*   Edit config
 
     ```sh
     sudo nano /etc/nftables.conf
@@ -198,7 +196,7 @@ So in my setup I am going to use the `wlan0` => `eth0`
     ```
 
     if you want to make it `USB Ethernet adapter` ⇒ RJ45 sharing you rename `wlan0` to `eth1`
-*   Enable:&#x20;
+*   Enable:
 
     ```sh
     sudo systemctl enable nftables
@@ -265,6 +263,4 @@ If you cannot connect to the internet or the internet connection is dropping aft
     ```sh
     sudo systemctl restart NetworkManager
     ```
-
-
 * And the connection should start working again
