@@ -23,6 +23,10 @@
 * [Captain USB adapter](mac-spoofing/captain-usb-adapter.md)
 * [Realtek USB adapter](mac-spoofing/realtek-usb-adapter.md)
 
+## DISK SPOOFING
+
+* [SMI SX2263XT](disk-spoofing/smi-sx2263xt.md)
+
 ## RAM SPOOFING
 
 * [SPD Security Editor](ram-spoofing/spd-security-editor.md)
