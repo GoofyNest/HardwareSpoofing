@@ -33,8 +33,8 @@
 
 ## Monitor spoofing
 
-* [Dichen 5](monitor-spoofing/dichen-5/README.md)
-  * [Dr HDMI](monitor-spoofing/dichen-5/dr-hdmi.md)
+* [Dr HDMI](monitor-spoofing/dr-hdmi.md)
+* [Dichen 5](monitor-spoofing/dichen-5.md)
 
 ## Windows
 
