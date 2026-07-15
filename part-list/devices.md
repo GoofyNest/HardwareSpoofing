@@ -9,12 +9,15 @@ icon: '1'
 
 * [ADX A25H2G25 FULL HD 1080P 25" IPS LCD GAMING](https://www.ebay.co.uk/itm/305887408052)
 * [Sceptre Monitors](https://www.amazon.com/Sceptre-FreeSync-DisplayPort-Speakers-E275B-FWD168/dp/B09B8PN1J9?sr=8-5)
+* [https://www.amazon.com/GAMEPOWER-Rapid-27-inch-Gaming-Monitor/dp/B0CT3DHSC7](https://www.amazon.com/GAMEPOWER-Rapid-27-inch-Gaming-Monitor/dp/B0CT3DHSC7)
 
 ## Alternative to monitors
 
 Recommended instead of buying new monitor, however <mark style="color:$danger;">only supports 1 monitor</mark>
 
 * [DICHEN 5 GEN FUSER - MODEL: DC240HZ5D-2](https://mavisdma.net/products/fuser)
+* [https://www.amazon.com/dp/B0FLDF8SH6](https://www.amazon.com/dp/B0FLDF8SH6)
+* [https://www.hdfury.com/product/dr-hdmi-4k/](https://www.hdfury.com/product/dr-hdmi-4k/)
 
 ## Keyboard
 
@@ -23,6 +26,8 @@ Recommending cheap Chinese non branded keyboards
 * [Leopold FC750R](https://www.amazon.se/Leopold-tangenter-high-end-mekaniskt-tangentbord/dp/B079JSYH7X)
 * [Tangentbord USB Nordic SWEDEN](https://www.biltema.se/kontor---teknik/datortillbehor/tangentbord/tangentbord-usb-nordic-2000032469)
 * [mchoose](https://www.mchose.store/collections/keyboards)
+* Monsgeek Fun60 (any Monsgeek keyboard)
+* Epomaker He68 Lite
 * Razer keyboards might be fine <mark style="color:$danger;">(not verified)</mark>
 * Unbranded Chinese usb devices or cheap ones will not have a serial number
 
@@ -33,6 +38,7 @@ Recommending Razer Basilisk v3 <mark style="color:green;">verified non unique se
 * [Razer Basilisk v3](https://www.pricerunner.com/pl/110-3200349493/Computer-Mice/Razer-Basilisk-V3-Compare-Prices)
 * [Razer Naga X](https://www.pricerunner.com/pl/110-3200065958/Computer-Mice/Razer-Naga-X-Compare-Prices)
 * [VXE](https://vxe.com/)
+* VGN Dragonfly F1 Pro
 * Unbranded Chinese usb devices or cheap ones will not have a serial number
 
 ## Alternative to mouse/keyboard
