@@ -198,35 +198,57 @@ Skip if you are using a spoofable NVME
     <figure><img src="../.gitbook/assets/image (69).png" alt=""><figcaption></figcaption></figure>
 
 
-12. Click Load Driver<br>
+
+***
+
+### Removing partitions (<mark style="color:$primary;">Skip if using RAID setup</mark>)
+
+Press delete on every partition until you only have 1 Disk, 1 Partition and the full disk size is available.
+
+<figure><img src="../.gitbook/assets/image (76).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/image (77).png" alt=""><figcaption></figcaption></figure>
+
+^ This is how its suppose to look if you did it correctly.
+
+***
+
+### Loading raid driver (<mark style="color:$primary;">Skip if using spoofable NVME</mark>)
+
+1.  Click Load Driver<br>
 
     <figure><img src="../.gitbook/assets/{00ADFE27-9169-4779-A3A0-8C4CF128918E}.png" alt=""><figcaption></figcaption></figure>
 
 
-13. Select the **NVME\_CC ⇒ AMD-RAID Bottom Device (rcbottom.inf)**<br>
+2.  Select the **NVME\_CC ⇒ AMD-RAID Bottom Device (rcbottom.inf)**<br>
 
     <figure><img src="../.gitbook/assets/image (70).png" alt=""><figcaption></figcaption></figure>
 
 
-14. Click Load Driver
-15. Accept the Terms of service shit
-16. Select **NVME\_DID** ⇒ **AMD-RAID controller \[storport] (rcraid.inf)**<br>
+3. Click Load Driver
+4. Accept the Terms of service shit
+5.  Select **NVME\_DID** ⇒ **AMD-RAID controller \[storport] (rcraid.inf)**<br>
 
     <figure><img src="../.gitbook/assets/image (71).png" alt=""><figcaption></figcaption></figure>
 
 
-17. Click Load Driver
-18. **NVME\_CC** ⇒ **AMD-RAID Config Device (rccfg.inf)**<br>
+6. Click Load Driver
+7.  **NVME\_CC** ⇒ **AMD-RAID Config Device (rccfg.inf)**<br>
 
     <figure><img src="../.gitbook/assets/image (72).png" alt=""><figcaption></figcaption></figure>
 
 
-19. Now your raid array should show up in Windows<br>
+8.  Now your raid array should show up in Windows<br>
 
     <figure><img src="../.gitbook/assets/image (73).png" alt=""><figcaption></figcaption></figure>
 
 
-20. Install<br>
+
+***
+
+### Finishing up
+
+1.  Install<br>
 
     <figure><img src="../.gitbook/assets/image (74).png" alt=""><figcaption></figcaption></figure>
 
