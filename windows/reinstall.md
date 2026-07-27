@@ -7,13 +7,233 @@ icon: '1'
 
 # Reinstall
 
-## Very important
+### Operating system
 
-### <mark style="color:$danger;">Always do all the spoofing things first, verify if they work then proceed to reinstall your system.</mark>
+{% hint style="warning" %}
+You must have a working USB device minimum of 8GB of size
+{% endhint %}
 
-If you are using Raid array, you have to demolish your raid array per ban.
+<mark style="background-color:$primary;">These ones are highly recommended to use</mark>
 
-If you are using normal disk drive you have to delete all partitions from your drive before you select a drive to install Windows on.
+* [Windows 10 IoT Enterprise LTSC 2021](https://buzzheavier.com/yhggy3l1e5oq) \
+  Build - 19044.1288
+* [Windows 11 IoT Enterprise LTSC 2024](https://oemsoc.download.prss.microsoft.com/dbazure/X23-81951_26100.1742.240906-0331.ge_release_svc_refresh_CLIENT_ENTERPRISES_OEM_x64FRE_en-us.iso_640de540-87c4-427f-be87-e6d53a3a60b4?t=2c3b664b-b119-4088-9db1-ccff72c6d22e\&P1=102816950270\&P2=601\&P3=2\&P4=OC448onxqdmdUsBUApAiE8pj1FZ%2bEPTU3%2bC6Quq29MVwMyyDUtR%2fsbiy7RdVoZOHaZRndvzeOOnIwJZ2x3%2bmP6YK9cjJSP41Lvs0SulF4SVyL5C0DdDmiWqh2QW%2bcDPj2Xp%2bMrI9NOeElSBS5kkOWP8Eiyf2VkkQFM3g5vIk3HJVvu5sWo6pFKpFv4lML%2bHaIiTSuwbPMs5xwEQTfScuTKfigNlUZPdHRMp1B3uKLgIA3r0IbRpZgHYMXEwXQ%2fSLMdDNQthpqQvz1PThVkx7ObD55CXgt0GNSAWRfjdURWb8ywWk1gT7ozAgpP%2fKNm56U5nh33WZSuMZIuO1SBM2vw%3d%3d)\
+  Build - 26100.1742
 
-\
-**This will be updated in the future with walkthrough how to install windows!**
+***
+
+### Rufus
+
+1. [Open the **Rufus** website](https://rufus.ie/).
+2. Click the link to download the latest version under the “Download” section.
+3. Double-click the **Rufus** executable file to launch the tool.
+4. Select the flash drive to create a Windows 10/11 bootable USB drive in the “Device” section.
+5.  Click the **Select** button.<br>
+
+    <figure><img src="../.gitbook/assets/image (59).png" alt=""><figcaption></figcaption></figure>
+6. Select the **Windows 10/11 ISO** file.
+7. Click **Start**
+8.  Check the **“Remove requirement for 4GB+ RAM, Secure Boot and TPM 2.0”** option to install version 25H2 on unsupported hardware.\
+    <br>
+
+    <figure><img src="../.gitbook/assets/image (61).png" alt=""><figcaption></figcaption></figure>
+9.  Check the **“Remove requirement for an online Microsoft account”**<br>
+
+    <figure><img src="../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
+10. Select the **“Create a local account with username”** option, then specify the account name to install the operating system with a local account.\
+    `user`
+11. Check the **“Set regional options to the same values as this user’s”** option to use the current language as the default for new installations.
+12. Check the **“Disable data collection”** option to prevent Microsoft from collecting certain data.
+13. Check the **“Disable BitLocker automatic device encryption”** option.
+14. Click the **OK** button.
+
+***
+
+### Finding your RAID driver
+
+Google your motherboard manufacturer + motherboard product name on google
+
+Example: Gigabyte B550 AORUS ELITE V2
+
+<figure><img src="../.gitbook/assets/{F957BCD8-E79F-4E63-8391-58DA0ACEFC98}.png" alt=""><figcaption></figcaption></figure>
+
+Go to Support ⇒ Driver
+
+<figure><img src="../.gitbook/assets/image (65).png" alt=""><figcaption></figcaption></figure>
+
+Select your Windows version if the website has it.
+
+Search for Raid Driver
+
+<figure><img src="../.gitbook/assets/{8B6702CC-E4F7-435C-9A3F-539B7669994C}.png" alt=""><figcaption></figcaption></figure>
+
+Download and extract this to your freshly made WIndows USB in a folder called `Raid`
+
+***
+
+### Destroy raid array
+
+<mark style="background-color:violet;">**Only for AMD**</mark>\ <mark style="background-color:violet;">**Only for specific motherboards**</mark>\ <mark style="background-color:violet;">**Check your Manufacturer website if your motherboard supports NVME raid 0**</mark>
+
+{% hint style="info" %}
+Skip if you are using a spoofable NVME
+{% endhint %}
+
+1. Restart pc
+2. Press your BIOS key, if you dont know it google your manufacturer.
+3.  Press F2 for **Advanced mode**
+
+    <figure><img src="../.gitbook/assets/{EC639499-06FD-44C3-9830-0D735A1A11F3}.png" alt=""><figcaption></figcaption></figure>
+4.  Click **Settings**
+
+    <figure><img src="../.gitbook/assets/{C68C132B-C1AC-4673-8B2A-E5666DB61E59}.png" alt=""><figcaption></figcaption></figure>
+
+
+5.  Click **IO Ports**
+
+    <figure><img src="../.gitbook/assets/{7D28C49C-38E2-4009-8681-87D7F534E57E}.png" alt=""><figcaption></figcaption></figure>
+
+
+6.  Click **Sata Configuration**<br>
+
+    <figure><img src="../.gitbook/assets/{327ADE46-D20D-4E63-B3BF-3127496A238B}.png" alt=""><figcaption></figcaption></figure>
+
+
+7.  Copy paste my settings<br>
+
+    <figure><img src="../.gitbook/assets/{0085CF36-D1A0-49F6-A890-06275E6851D2}.png" alt=""><figcaption></figcaption></figure>
+
+
+8. Save settings and restart PC (**First time only**)
+9. Go into **BIOS again**
+10. Navigate to Settings ⇒ IO Ports ⇒ You should now see **RAIDXpert2 Configuration Utility**
+11. Press **Array Managment**<br>
+
+    <figure><img src="../.gitbook/assets/{208F17E9-65D2-4771-A1DB-4509DBF1AE74}.png" alt=""><figcaption></figcaption></figure>
+
+
+12. Click **Delete Array**\
+    <i class="fa-wind-warning" style="color:$danger;">:wind-warning:</i> **`This will erase your files on your disks, this step should only be done when you have done all your spoofing`**<br>
+
+    <figure><img src="../.gitbook/assets/{3263EF6E-556F-4D25-BD92-740A9529A6EF}.png" alt=""><figcaption></figcaption></figure>
+
+
+13. Click **Create Array**<br>
+
+    <figure><img src="../.gitbook/assets/{F236F00C-5EB3-4EFD-90AA-9ED8F6C315AB}.png" alt=""><figcaption></figcaption></figure>
+
+
+14. Click **Raid Level**<br>
+
+    <figure><img src="../.gitbook/assets/{B07EC599-EACB-493B-A2EB-3A4DCFD64510}.png" alt=""><figcaption></figcaption></figure>
+
+    \
+    Use RAIDABLE for 1 DISK raid setup\
+    Use RAID 0 for multiple disk setup<br>
+15. Click **Select physical disks**<br>
+
+    <figure><img src="../.gitbook/assets/{56818BCC-2B27-4288-BA4C-4EF3EA4199A0}.png" alt=""><figcaption></figcaption></figure>
+
+
+16. Click **Check All**<br>
+
+    <figure><img src="../.gitbook/assets/{1510511D-2029-489C-96C0-1212564FACFA}.png" alt=""><figcaption></figcaption></figure>
+
+
+17. Click **Apply Changes**
+18. Click **Create Array**\
+    <br>
+
+    <figure><img src="../.gitbook/assets/{79CBBF08-B3C2-4F85-B4AF-7C1E3A65D89E}.png" alt=""><figcaption></figcaption></figure>
+
+
+19. You are done with your Raid setup, nice!
+
+***
+
+### Installing Windows
+
+1. Plug in your Windows USB you created
+2. Restart PC
+3. Hit your boot key\
+   Normally F12 on Gigabyte\
+   Normally F8 on ASUS, MSI
+4.  Select the USB name partition 1<br>
+
+    <figure><img src="../.gitbook/assets/{1B2BBC2E-EE78-4E60-95AF-8B8C299865DB} (1).png" alt=""><figcaption></figcaption></figure>
+
+
+5.  Select your Windows language<br>
+
+    <figure><img src="../.gitbook/assets/{5A523AD5-80DD-4E83-856A-CA1ED88E277D}.png" alt=""><figcaption></figcaption></figure>
+
+
+6.  Select keyboard input<br>
+
+    <figure><img src="../.gitbook/assets/{EC4CDE37-DEE4-48C7-8F95-50692BCA0BE4}.png" alt=""><figcaption></figcaption></figure>
+
+
+7.  ![](<../.gitbook/assets/image (66).png>)<br>
+
+    <figure><img src="../.gitbook/assets/{0FE98553-420B-403A-A88B-658ADBE099F7}.png" alt=""><figcaption></figcaption></figure>
+
+
+8.  Click **I dont have product key**<br>
+
+    <figure><img src="../.gitbook/assets/{BEA36942-60F2-456A-8877-CFE37A75017E}.png" alt=""><figcaption></figcaption></figure>
+
+
+9.  Select first option<br>
+
+    <figure><img src="../.gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
+
+
+10. Agree to having no privacy<br>
+
+    <figure><img src="../.gitbook/assets/image (68).png" alt=""><figcaption></figcaption></figure>
+
+
+11. A preview of disks you can install Windows on, DO not select one<br>
+
+    <figure><img src="../.gitbook/assets/image (69).png" alt=""><figcaption></figcaption></figure>
+
+
+12. Click Load Driver<br>
+
+    <figure><img src="../.gitbook/assets/{00ADFE27-9169-4779-A3A0-8C4CF128918E}.png" alt=""><figcaption></figcaption></figure>
+
+
+13. Select the **NVME\_CC ⇒ AMD-RAID Bottom Device (rcbottom.inf)**<br>
+
+    <figure><img src="../.gitbook/assets/image (70).png" alt=""><figcaption></figcaption></figure>
+
+
+14. Click Load Driver
+15. Accept the Terms of service shit
+16. Select **NVME\_DID** ⇒ **AMD-RAID controller \[storport] (rcraid.inf)**<br>
+
+    <figure><img src="../.gitbook/assets/image (71).png" alt=""><figcaption></figcaption></figure>
+
+
+17. Click Load Driver
+18. **NVME\_CC** ⇒ **AMD-RAID Config Device (rccfg.inf)**<br>
+
+    <figure><img src="../.gitbook/assets/image (72).png" alt=""><figcaption></figcaption></figure>
+
+
+19. Now your raid array should show up in Windows<br>
+
+    <figure><img src="../.gitbook/assets/image (73).png" alt=""><figcaption></figcaption></figure>
+
+
+20. Install<br>
+
+    <figure><img src="../.gitbook/assets/image (74).png" alt=""><figcaption></figcaption></figure>
+
+    <figure><img src="../.gitbook/assets/image (75).png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="danger" %}
+When the text appears which says "Your PC is re-starting soon" un-plug your USB to avoid leaking banned USB disk serial on your freshly installed PC.
+{% endhint %}
+
+Enjoy fresh gaming!
