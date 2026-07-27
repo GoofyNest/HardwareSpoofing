@@ -173,27 +173,23 @@ Skip if you are using a spoofable NVME
     <figure><img src="../.gitbook/assets/{EC4CDE37-DEE4-48C7-8F95-50692BCA0BE4}.png" alt=""><figcaption></figcaption></figure>
 
 
-7.  ![](<../.gitbook/assets/image (66).png>)<br>
 
-    <figure><img src="../.gitbook/assets/{0FE98553-420B-403A-A88B-658ADBE099F7}.png" alt=""><figcaption></figcaption></figure>
-
-
-8.  Click **I dont have product key**<br>
+1.  Click **I dont have product key**<br>
 
     <figure><img src="../.gitbook/assets/{BEA36942-60F2-456A-8877-CFE37A75017E}.png" alt=""><figcaption></figcaption></figure>
 
 
-9.  Select first option<br>
+2.  Select first option<br>
 
     <figure><img src="../.gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
 
 
-10. Agree to having no privacy<br>
+3.  Agree to having no privacy<br>
 
     <figure><img src="../.gitbook/assets/image (68).png" alt=""><figcaption></figcaption></figure>
 
 
-11. A preview of disks you can install Windows on, DO not select one<br>
+4.  A preview of disks you can install Windows on, DO not select one<br>
 
     <figure><img src="../.gitbook/assets/image (69).png" alt=""><figcaption></figcaption></figure>
 
