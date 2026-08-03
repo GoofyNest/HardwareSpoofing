@@ -128,17 +128,15 @@ AMIDEWINx64.exe /SS "To Be Filled By O.E.M."
 ### UUID (/SU)
 
 {% hint style="danger" %}
-The UUID is normally tied to your NIC on your motherboard and other stuff, the easiest option is setting it to ~~**Default** or just nulling it with **0's**~~~Not recommended as of 2026-05-01
+Random\
+122 random bits\
+Most common&#x20;
 {% endhint %}
-
-```
-03000200-0400-0500-0006-000700080009
-```
 
 **Command Prompt:**
 
 ```
-AMIDEWINx64.exe /SU 03000200040005000006000700080009
+AMIDEWINx64.exe /SU AUTO
 ```
 
 ### SKUNumber (/SK)
@@ -418,4 +416,3 @@ To Be Filled By O.E.M.
 ```
 AMIDEWINx64.exe /SCO "To Be Filled By O.E.M."
 ```
-

@@ -20,22 +20,18 @@ This guide is specifically intended for **ASUS motherboards** that support the a
 **Please ensure that your motherboard supports USB Flashback** and that you are working with a compatible BIOS version before proceeding. Following this guide on unsupported BIOS versions may result in undesirable outcomes, including failure to apply the modifications correctly.
 
 {% hint style="info" %}
-PLEASE MAKE SURE THAT YOU HAVE READ THIS. YOU MIGHT HAVE SUCCESS WITH IT EVEN IF YOU CANT DOWNGRADE, BUT I WOULDNT BET ON IT.&#x20;
+PLEASE MAKE SURE THAT YOU HAVE READ THIS. YOU MIGHT HAVE SUCCESS WITH IT EVEN IF YOU CANT DOWNGRADE, BUT I WOULDNT BET ON IT.
 
 \
 EXAMPLE SERIALS ARE BELOW THE GUIDE!
 {% endhint %}
 
-
-
-For this you will need 4 things:&#x20;
+For this you will need 4 things:
 
 1. The AFUWIN linked in the releases. It MUST be this version specifically.
 2. DMI EDIT, also linked in the releases.
 3. HxD.
 4. The ability to follow instructions and use a brain.
-
-
 
 You may also need to:
 
@@ -121,11 +117,7 @@ You can even update your BIOS version again if you would like. There's not much 
 
 I'd also recommend restoring those BIOS settings we changed in step 1 to the settings you had, if you changed them. It will be required for some games as they enforce secure boot.
 
-
-
 If you have any problems, reach me directly on Discord @exclusi0n or make a ticket.
-
-
 
 {% hint style="warning" icon="megaphone" %}
 This is just a example dump of a real ASUS SMBios that has never been modified.
@@ -238,17 +230,15 @@ AMIDEWINx64.exe /SS "System Serial Number"
 ### UUID (/SU)
 
 {% hint style="danger" %}
-The UUID is normally tied to your NIC on your motherboard and other stuff, the easiest option is setting it to **Default** or just nulling it with **0's**
+Random\
+122 random bits\
+Most common&#x20;
 {% endhint %}
-
-```
-03000200-0400-0500-0006-000700080009
-```
 
 **Command Prompt:**
 
 ```
-AMIDEWINx64.exe /SU 03000200040005000006000700080009
+AMIDEWINx64.exe /SU AUTO
 ```
 
 ### SKUNumber (/SK)
