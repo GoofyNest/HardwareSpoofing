@@ -44,7 +44,7 @@ Instead of finding a clear answer, I found myself stuck in an endless cycle of t
 
 When problems occurred, the blame was often shifted between different parties. Spoofer developers blamed cheat developers, cheat developers blamed spoofers, and users were left trying to figure out what was actually happening.
 
-This guide was created to break that cycle by documentation and sharing my own personal experience combined with many others.
+This guide was created to break that cycle through documentation and sharing my own personal experience combined with many others.
 
 However, permanent hardware-level spoofers have gained a complicated reputation over the years. There has been many reported incidents where permanent spoofing has broken peoples hardware, blowing e-fuses and making their computers not work. I have personally also witnessed many permanent spoofers destroying your SMBIOS Data filling it with full of random characters and digits.
 
