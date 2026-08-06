@@ -205,34 +205,62 @@ So in my setup I am going to use the `wlan0` => `eth0`
     ```sh
     sudo systemctl restart nftables
     ```
-*   Run this:
 
-    ```sh
-    sudo reboot
-    ```
+
+
+Remove powersave:
+
+```sh
+sudo iw dev wlan0 set power_save off
+```
+
+```sh
+sudo nano /etc/rc.local
+```
+
+Before exit 0:
+
+```sh
+iw dev wlan0 set power_save off
+```
 
 ***
 
-### Windows PC (setup)
+#### DHCP Server
 
-Plug your PC into the RJ45 port on the Pi
-
-```apex
-IP:      192.168.50.10
-Mask:    255.255.255.0
-Gateway: 192.168.50.1
-DNS:     1.1.1.1
+```shellscript
+sudo apt install dnsmasq
 ```
 
-<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+```sh
+sudo nano /etc/dnsmasq.d/router.conf
+```
 
-<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+Config:
 
-<figure><img src="../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+```sh
+interface=eth0
 
-<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+dhcp-range=192.168.50.100,192.168.50.200,12h
 
-<figure><img src="../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+dhcp-option=3,192.168.50.1
+dhcp-option=6,1.1.1.1,1.0.0.1
+```
+
+Restart:
+
+```sh
+sudo systemctl restart dnsmasq
+sudo systemctl enable dnsmasq
+```
+
+Finally:
+
+```sh
+sudo reboot
+```
+
+***
 
 ### Result of ARP table:
 
