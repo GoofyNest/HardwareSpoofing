@@ -22,40 +22,57 @@ layout:
 
 # Welcome
 
-## Hardware spoofing
+## Hardware Spoofing
 
-{% hint style="info" icon="gamepad-modern" %}
-Build once, rely forever
-{% endhint %}
+{% hint style="info" icon="computer" %}
+Built from frustration. Refined through research.
 
-{% hint style="warning" icon="face-sunglasses" %}
-This guide is driven/fueled by hate towards unfair ban policies implemented by **Facepunch Studios LTD** and their game **Rust** with the support from **EasyAntiCheat**
-
+The endless hunt for answers ends here. \
+Built around research, transparency, and understanding your system.\
 \
-We also have empathy for people whom bought second-hand computer components that have been hardware banned and got falsely banned.\
-\
-We will never support tournament anti-cheats such as Faceit
+This guide covers advanced system concepts.\
+Take your time, understand each step, and make informed decisions.
 {% endhint %}
 
-{% hint style="success" icon="dollar-sign" %}
-If I have helped you out or saved you some time and you wanna support my projects, you can show some love here:
+#### Why this guide exists
 
-[https://buymeacoffee.com/goofynest](https://buymeacoffee.com/goofynest)
-{% endhint %}
+This guide started from frustration within the EAC and the Rust community.
 
-### 🙌 Credits
+Like many others, I was a normal consumer who trusted recommendations, purchased hardware spoofers that were considered popular, and followed solutions that were advertised as "working."
 
-* <mark style="color:purple;">**Every hardware spoofer developer that failed me and my friends.**</mark>
+Instead of finding a clear answer, I found myself stuck in an endless cycle of trying different solutions and searching for something reliable.
+
+When problems occurred, the blame was often shifted between different parties. Spoofer developers blamed cheat developers, cheat developers blamed spoofers, and users were left trying to figure out what was actually happening.
+
+This guide was created to break that cycle by documentation and sharing my own personal experience combined with many others.
+
+However, permanent hardware-level spoofers have gained a complicated reputation over the years. There has been many reported incidents where permanent spoofing has broken peoples hardware, blowing e-fuses and making their computers not work. I have personally also witnessed many permanent spoofers destroying your SMBIOS Data filling it with full of random characters and digits.
+
+The truth is that many permanent spoofers are not even real **permanent** spoofers. The majority of them are taking shortcuts, I call it **Hybrid** solutions that perm spoof what is normally **possible** then load their own drivers to spoof the remaining identifiers/devices.
+
+Our approach is always advancing, we are using spoofable hardware components combined with what we can permanently change to never need loading anything after you have reinstalled your windows operating system.
+
+### :point\_right: Find us here:
+
+* Discord server [https://discord.com/invite/JtU8FxQnN5](https://discord.com/invite/JtU8FxQnN5)
+* Github: [https://github.com/GoofyNest/HardwareSpoofing](https://github.com/GoofyNest/HardwareSpoofing)
+* Gitbook: [https://goofynest.gitbook.io/spoof](https://goofynest.gitbook.io/spoof)
+
+### 🙌 Special thanks to
+
+* Everyone who keep contributing to the documentation and all our supporters at **buymeacoffee**
 * discord = **@exclusi0n** for helping with research
 * discord = [**@slate\_hub**](https://slatehub.io/) for helping with research
 * discord = **@awong0** for helping with research
 * **Sauche Machine** for releasing binaries for AMIDEWINx64
 
-### :point\_right: Socials
+{% hint style="success" icon="dollar-sign" %}
+If our guides/tools/open research has helped you in any way, consider helping us back by donating
 
-* Discord server [https://discord.com/invite/JtU8FxQnN5](https://discord.com/invite/JtU8FxQnN5)
-* Github: [https://github.com/GoofyNest/HardwareSpoofing](https://github.com/GoofyNest/HardwareSpoofing)
-* Gitbook: [https://goofynest.gitbook.io/spoof](https://goofynest.gitbook.io/spoof)
+{% embed url="https://buymeacoffee.com/goofynest" %}
+
+People whom donate will get a special role in our Discord server as a Thank you :heart:
+{% endhint %}
 
 ***
 
@@ -75,7 +92,7 @@ Supported CPU
 Supported Motherboards
 {% endhint %}
 
-<table data-view="cards"><thead><tr><th></th><th data-type="rating" data-max="5"></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>Gigabyte</td><td>5</td><td>Best choice for this guide</td><td><a href=".gitbook/assets/gigabyte-logo.png">gigabyte-logo.png</a></td></tr><tr><td>AsRock</td><td>4</td><td>Second best choice</td><td><a href=".gitbook/assets/asrock.png">asrock.png</a></td></tr><tr><td>MSI</td><td>3</td><td>Works but not ideal</td><td><a href=".gitbook/assets/MSI-Logo.png">MSI-Logo.png</a></td></tr><tr><td>ASUS</td><td>1</td><td>Very limited support</td><td><a href=".gitbook/assets/asus-logo.webp">asus-logo.webp</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-type="rating" data-max="5"></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>Gigabyte</td><td>3</td><td>Awesome for AM4, bad for AM5</td><td><a href=".gitbook/assets/gigabyte-logo.png">gigabyte-logo.png</a></td></tr><tr><td>AsRock</td><td>3</td><td>Reliable on AM4 and AM5</td><td><a href=".gitbook/assets/asrock.png">asrock.png</a></td></tr><tr><td>MSI</td><td>2</td><td>Works but has issues</td><td><a href=".gitbook/assets/MSI-Logo.png">MSI-Logo.png</a></td></tr><tr><td>ASUS</td><td>1</td><td>Very limited support</td><td><a href=".gitbook/assets/asus-logo.webp">asus-logo.webp</a></td></tr></tbody></table>
 
 {% hint style="info" icon="memory" %}
 Supported Ram
