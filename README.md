@@ -7,9 +7,9 @@ layout:
   description:
     visible: false
   tableOfContents:
-    visible: false
+    visible: true
   outline:
-    visible: false
+    visible: true
   pagination:
     visible: true
   metadata:
@@ -24,7 +24,7 @@ layout:
 
 ## Hardware Spoofing
 
-{% hint style="info" icon="computer" %}
+{% hint style="info" %}
 Built from frustration. Refined through research.
 
 The endless hunt for answers ends here. \
