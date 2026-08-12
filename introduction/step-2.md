@@ -51,7 +51,7 @@ Load up into Bios and head to ⇒ Boot
 
 You can now if you wish to use Secure boot enable it and restore factory defaults.
 
-**4. Resetting secure boot**
+**4. Flash back**
 
 Downgrading BIOS via flashback also clears the entire BIOS and NVRAM
 
