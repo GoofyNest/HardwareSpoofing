@@ -7,7 +7,7 @@ icon: '2'
 
 # Step #2
 
-## NVRAM <mark style="color:$danger;">**new (WILL CAUSE BANS)**</mark>
+## NVRAM <mark style="color:$danger;">**new**</mark>**&#x20;**<mark style="color:pink;">**(MIGHT CAUSE BANS)**</mark>
 
 **NVRAM (Non-Volatile Random-Access Memory)** is memory that can retain information even when the computer is powered off. On modern PCs, the term is commonly used for firmware-managed storage used by the UEFI/BIOS to preserve configuration and platform-specific information.
 
