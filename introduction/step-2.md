@@ -7,6 +7,52 @@ icon: '2'
 
 # Step #2
 
+## NVRAM <mark style="color:$danger;">**new (WILL CAUSE BANS)**</mark>
+
+**NVRAM (Non-Volatile Random-Access Memory)** is memory that can retain information even when the computer is powered off. On modern PCs, the term is commonly used for firmware-managed storage used by the UEFI/BIOS to preserve configuration and platform-specific information.
+
+Unlike normal RAM, which loses its contents when power is removed, NVRAM is designed to retain its contents across reboots and power cycles.
+
+#### How to Reset/Clear NVRAM
+
+There is no universal “clear all NVRAM” procedure because UEFI implementations differ between motherboard manufacturers. In most cases, resetting the firmware configuration restores UEFI variables to their default state rather than erasing every piece of persistent firmware or manufacturing data.
+
+Common methods include:
+
+**1. Load UEFI/BIOS defaults**
+
+Enter the motherboard's UEFI setup and select an option such as:
+
+* `Load Optimized Defaults`
+* `Load Setup Defaults`
+* `Restore Defaults`
+* `Load UEFI Defaults`
+
+Save the changes and reboot.
+
+**2. Clear CMOS**
+
+With the computer powered off and disconnected from power, a motherboard's CMOS reset jumper/button can be used according to the manufacturer's instructions. Some boards also allow the CMOS battery to be temporarily removed.
+
+This resets firmware configuration, but **CMOS reset and NVRAM erasure are not necessarily identical operations** on modern UEFI systems.
+
+**3. Resetting secure boot**
+
+<mark style="color:violet;">Might only work for Gigabyte mobos</mark>
+
+Load up into Bios and head to ⇒ Boot
+
+* Disable CSM (restart pc)
+* Load into bios again under ⇒ Boot
+* Find "Restore factory keys" under secure boot
+* Enter Factory keys and remove 1 by 1 until non of them are remaning.
+* This will trigger NVRam to clear on at least my motherboard.
+* Restart pc
+
+You can now if you wish to use Secure boot enable it and restore factory defaults.
+
+***
+
 ## CPU
 
 This guide is mainly made for `AMD CPU` platforms, you can still use `Intel CPU` but with heavy limitations.
@@ -95,9 +141,9 @@ Also worth mentioning even if your Ram has null serial numbers they might not ha
 
 We recommend having AMD GPU before NVIDIA, due to NVIDIA cards have serial-numbers that anti-cheats can log and in the future ban.
 
-If you wanna build a fool-proof system go with **AMD GPU**
+If you want to build a fool-proof system go with **Gigabyte AMD GPU**
 
-<mark style="color:$danger;">Also worth mentioning that disabling onboard graphics is requried for this guide to work.</mark>
+<mark style="color:$danger;">Also worth mentioning that disabling onboard graphics is required for this guide to work.</mark>
 
 ***
 
@@ -183,4 +229,3 @@ Many daily USB devices have serial numbers, you can check if your setup has any 
 We recommend people to purchase Razer branded mice, they have no serials.
 
 We have a lot of different perhipials in our [devices.md](../part-list/devices.md "mention"), all of them have no serial numbers.
-
