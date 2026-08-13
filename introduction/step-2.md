@@ -83,8 +83,8 @@ Another good part about AMD is that they have a <mark style="color:purple;">**RA
 
 Having the perfect motherboard is very important, our recommended boards are below:
 
-1. Gigabyte (best option)
-2. ASRock (second best)
+1. Gigabyte (Awesome for AM4, bad for AM5)
+2. ASRock (Reliable on AM4 and AM5)
 3. MSI (not ideal, but might work)
 4. <mark style="color:red;">ASUS (Not recommended at all)</mark>
 
