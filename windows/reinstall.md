@@ -155,6 +155,79 @@ Skip if you are using a spoofable NVME
 
 ***
 
+## NVRAM <mark style="color:$danger;">(Will Cause Issues)</mark>
+
+**NVRAM (Non-Volatile Random-Access Memory)** is memory that can retain information even when the computer is powered off. On modern PCs, the term is commonly used for firmware-managed storage used by the UEFI/BIOS to preserve configuration and platform-specific information.
+
+Unlike normal RAM, which loses its contents when power is removed, NVRAM is designed to retain its contents across reboots and power cycles.
+
+#### The investigation
+
+In my testing with EAC/Rust, leaving these variables intact consistently resulted in the previous device identity persisting across disk wipes, partition removal, and factory resets.
+
+Windows create multiple keys in your NVRam, some of them are:
+
+1. UnlockIDCopy
+2. OfflineUniqueIDRandomSeed
+3. OfflineUniqueIDRandomSeedCRC
+
+Not clearing them will result in OfflineUniqueIDRandomSeed & OfflineUniqueIDRandomSeedCRC containing unique information across factory resets, no matter if you destroy raid, format disks, remove partitions. It will stay in NVRam.
+
+I have tested all known methods to flash NVRam and controlled the information with Linux and the 2 options you have is
+
+* A) Bios downgrade, Bios upgrade
+* B) Clearing the keys manually in Linux terminal
+
+#### Potential ways to clearing NVRAM
+
+It is very important that you do not boot into windows after clearing NVRAM, this should be done as the LAST step after you are completely spoofed.
+
+<mark style="color:$danger;">If you remove the keys or flash bios and then boot into Windows afterwards you are compromised again.</mark>
+
+**1. Flash back&#x20;**<mark style="color:blue;">**(Not guaranteed to work)**</mark>
+
+Download the oldest possible version of your BIOS that <mark style="color:$danger;">supports</mark> your <mark style="color:$danger;">CPU</mark> if you are unsure just message an AI for help like ChatGPT your motherboard model, CPU model and ask what the oldest bios version is that supports this CPU.
+
+<mark style="color:$danger;">(VERY IMPORTANT) to manually check so the AI is not lying.</mark>
+
+&#x20;**2. Creating Linux bootable USB**
+
+_<mark style="color:pink;">**I do not recommend or condone messing with this, safest option is to flashback then manually verify that they keys are deleted in a Linux installation.**</mark>_
+
+I will not share the detail of creating the USB, however I was using Ubuntu 22.04 LTS for these commands
+
+List all the keys
+
+```shellscript
+ls /sys/firmware/efi/efivars/
+```
+
+Read the data (if you want to confirm my testing):
+
+```shellscript
+sudo xxd /sys/firmware/efi/efivars/OfflineUniqueIDRandomSeed-*
+sudo xxd /sys/firmware/efi/efivars/OfflineUniqueIDRandomSeedCRC-*
+sudo xxd /sys/firmware/efi/efivars/UnlockIDCopy-*
+```
+
+Remove the Linux immutable attribute (`i`)
+
+```shellscript
+sudo chattr -i /sys/firmware/efi/efivars/OfflineUniqueIDRandomSeed-*
+sudo chattr -i /sys/firmware/efi/efivars/OfflineUniqueIDRandomSeedCRC-*
+sudo chattr -i /sys/firmware/efi/efivars/UnlockIDCopy-*
+```
+
+Remove the keys
+
+```shellscript
+sudo rm /sys/firmware/efi/efivars/OfflineUniqueIDRandomSeed-*
+sudo rm /sys/firmware/efi/efivars/OfflineUniqueIDRandomSeedCRC-*
+sudo rm /sys/firmware/efi/efivars/UnlockIDCopy-*
+```
+
+***
+
 ### Installing Windows
 
 1. Plug in your Windows USB you created

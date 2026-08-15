@@ -7,55 +7,76 @@ icon: '2'
 
 # Step #2
 
-## NVRAM <mark style="color:$danger;">**new**</mark>**&#x20;**<mark style="color:pink;">**(MIGHT CAUSE BANS)**</mark>
+## NVRAM <mark style="color:$danger;">(Will Cause Issues)</mark>
 
 **NVRAM (Non-Volatile Random-Access Memory)** is memory that can retain information even when the computer is powered off. On modern PCs, the term is commonly used for firmware-managed storage used by the UEFI/BIOS to preserve configuration and platform-specific information.
 
 Unlike normal RAM, which loses its contents when power is removed, NVRAM is designed to retain its contents across reboots and power cycles.
 
-#### How to Reset/Clear NVRAM
+#### The investigation
 
-There is no universal “clear all NVRAM” procedure because UEFI implementations differ between motherboard manufacturers. In most cases, resetting the firmware configuration restores UEFI variables to their default state rather than erasing every piece of persistent firmware or manufacturing data.
+In my testing with EAC/Rust, leaving these variables intact consistently resulted in the previous device identity persisting across disk wipes, partition removal, and factory resets.
 
-Common methods include:
+Windows create multiple keys in your NVRam, some of them are:
 
-**1. Load UEFI/BIOS defaults**
+1. UnlockIDCopy
+2. OfflineUniqueIDRandomSeed
+3. OfflineUniqueIDRandomSeedCRC
 
-Enter the motherboard's UEFI setup and select an option such as:
+Not clearing them will result in OfflineUniqueIDRandomSeed & OfflineUniqueIDRandomSeedCRC containing unique information across factory resets, no matter if you destroy raid, format disks, remove partitions. It will stay in NVRam.
 
-* `Load Optimized Defaults`
-* `Load Setup Defaults`
-* `Restore Defaults`
-* `Load UEFI Defaults`
+I have tested all known methods to flash NVRam and controlled the information with Linux and the 2 options you have is
 
-Save the changes and reboot.
+* A) Bios downgrade, Bios upgrade
+* B) Clearing the keys manually in Linux terminal
 
-**2. Clear CMOS**
+#### Potential ways to clearing NVRAM
 
-With the computer powered off and disconnected from power, a motherboard's CMOS reset jumper/button can be used according to the manufacturer's instructions. Some boards also allow the CMOS battery to be temporarily removed.
+It is very important that you do not boot into windows after clearing NVRAM, this should be done as the LAST step after you are completely spoofed.
 
-This resets firmware configuration, but **CMOS reset and NVRAM erasure are not necessarily identical operations** on modern UEFI systems.
+<mark style="color:$danger;">If you remove the keys or flash bios and then boot into Windows afterwards you are compromised again.</mark>
 
-**3. Resetting secure boot**
+**1. Flash back&#x20;**<mark style="color:blue;">**(Not guaranteed to work)**</mark>
 
-<mark style="color:violet;">Might only work for Gigabyte mobos</mark>
+Download the oldest possible version of your BIOS that <mark style="color:$danger;">supports</mark> your <mark style="color:$danger;">CPU</mark> if you are unsure just message an AI for help like ChatGPT your motherboard model, CPU model and ask what the oldest bios version is that supports this CPU.
 
-Load up into Bios and head to ⇒ Boot
+<mark style="color:$danger;">(VERY IMPORTANT) to manually check so the AI is not lying.</mark>
 
-* Disable CSM (restart pc)
-* Load into bios again under ⇒ Boot
-* Find "Restore factory keys" under secure boot
-* Enter Factory keys and remove 1 by 1 until non of them are remaning.
-* This will trigger NVRam to clear on at least my motherboard.
-* Restart pc
+&#x20;**2. Creating Linux bootable USB**
 
-You can now if you wish to use Secure boot enable it and restore factory defaults.
+_<mark style="color:pink;">**I do not recommend or condone messing with this, safest option is to flashback then manually verify that they keys are deleted in a Linux installation.**</mark>_
 
-**4. Flash back**
+I will not share the detail of creating the USB, however I was using Ubuntu 22.04 LTS for these commands
 
-Downgrading BIOS via flashback also clears the entire BIOS and NVRAM
+List all the keys
 
+```shellscript
+ls /sys/firmware/efi/efivars/
+```
 
+Read the data (if you want to confirm my testing):
+
+```shellscript
+sudo xxd /sys/firmware/efi/efivars/OfflineUniqueIDRandomSeed-*
+sudo xxd /sys/firmware/efi/efivars/OfflineUniqueIDRandomSeedCRC-*
+sudo xxd /sys/firmware/efi/efivars/UnlockIDCopy-*
+```
+
+Remove the Linux immutable attribute (`i`)
+
+```shellscript
+sudo chattr -i /sys/firmware/efi/efivars/OfflineUniqueIDRandomSeed-*
+sudo chattr -i /sys/firmware/efi/efivars/OfflineUniqueIDRandomSeedCRC-*
+sudo chattr -i /sys/firmware/efi/efivars/UnlockIDCopy-*
+```
+
+Remove the keys
+
+```shellscript
+sudo rm /sys/firmware/efi/efivars/OfflineUniqueIDRandomSeed-*
+sudo rm /sys/firmware/efi/efivars/OfflineUniqueIDRandomSeedCRC-*
+sudo rm /sys/firmware/efi/efivars/UnlockIDCopy-*
+```
 
 ***
 
