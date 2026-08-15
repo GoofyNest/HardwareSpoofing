@@ -42,6 +42,23 @@ Download the oldest possible version of your BIOS that <mark style="color:$dange
 
 <mark style="color:$danger;">(VERY IMPORTANT) to manually check so the AI is not lying.</mark>
 
+Remember that after flashing BIOS that all your settings will go back to factory defaults leaving TPM enabled and other changes you might have done.
+
+It is very important that you go over your settings and disable this:
+
+* Disable onboard ethernet(not needed if you spoof onboard NIC)
+* Disable BT/WIFI
+* Disable TPM
+* Disable Security Device
+* Disable onboard sound card
+* Disable onboard graphics (if ur cpu has it)
+* Setup XMP and any overclocking if you have it
+* Disable CSM
+* Enable Secure boot
+* Set Secure boot to custom
+* Restore factory keys
+* Restart pc
+
 &#x20;**2. Creating Linux bootable USB**
 
 _<mark style="color:pink;">**I do not recommend or condone messing with this, safest option is to flashback then manually verify that they keys are deleted in a Linux installation.**</mark>_
