@@ -49,9 +49,11 @@ Click the option saying **"Based On Mac Address"**
 
 Change the Mac Address Current, the only thing that is important is that the start remains the same.
 
-**00:24:B9 - This first 3 bytes is the manufacturer mac**
+**00:24:9B - This first 3 bytes is the manufacturer mac**
 
-`Wuhan Higheasy Electronic Technology Development Co.Ltd`
+```
+Action Star Enterprise Co., Ltd.
+```
 
 The last remaining bytes you can randomize with ChatGPT or some online randomizer
 
