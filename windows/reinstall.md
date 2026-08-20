@@ -53,7 +53,7 @@ We do no longer recommend the LTSC versions cause they come with the same Produc
 
 ***
 
-## NVRAM <mark style="color:$danger;">(Will Cause Issues)</mark>
+## NVRAM #1 <mark style="color:$danger;">(Will Cause Issues)</mark>
 
 **NVRAM (Non-Volatile Random-Access Memory)** is memory that can retain information even when the computer is powered off. On modern PCs, the term is commonly used for firmware-managed storage used by the UEFI/BIOS to preserve configuration and platform-specific information.
 
@@ -140,6 +140,21 @@ sudo rm /sys/firmware/efi/efivars/OfflineUniqueIDRandomSeed-*
 sudo rm /sys/firmware/efi/efivars/OfflineUniqueIDRandomSeedCRC-*
 sudo rm /sys/firmware/efi/efivars/UnlockIDCopy-*
 ```
+
+***
+
+## NRAM #2 (<mark style="color:pink;">Potential issue</mark>)
+
+Doing some more digging I found something very interesting in the boot order that saves to NVRam:
+
+<figure><img src="../.gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>
+
+1. This is my USB devices that I had plugged in that have a bootloader
+2. Example USB Flashdrives (what you using to reinstall windows)
+
+This is not known to yet cause issues for **EasyAntiCheat - Rust** but its very bad if you do not clear this after installing Windows.
+
+<mark style="color:violet;">I recommend flashing Bios another time after reinstalling windows just to ensure no other disk serial is leaking here.</mark>
 
 ***
 
