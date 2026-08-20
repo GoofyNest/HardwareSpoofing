@@ -46,7 +46,7 @@ Spoofing is the act of faking or disguising something to trick a system, person,
 
 ***
 
-## Two types of "Spoofing"
+## Three types of "Spoofing"
 
 #### 1. Temporary Spoofing
 
@@ -62,8 +62,14 @@ Spoofing is the act of faking or disguising something to trick a system, person,
   * Motherboard serial number
   * System UUID
   * Asset tags
-* Persists after reboot: Changes remain until manually reset or reflashed.
+* Persists after reboot: Changes remain until manually reset or re-flashed.
 * Used by: OEMs during production but also by advanced users to reset banned hardware.
+
+#### 3. Hybrid Spoofing (<mark style="color:$danger;">fake permanent spoofers</mark>)
+
+* What it does: Permanently modifies hardware identifiers stored in firmware. (what is possible)
+* Loads drivers/boot loaders that changes the rest of identifiers while the system is running.
+* Some examples of Hybrid spoofers: **Verse, Sync, Void**
 
 ***
 
