@@ -80,13 +80,15 @@ People whom donate will get a special role in our Discord server as a Thank you 
 Supported Anti Cheats
 {% endhint %}
 
-<table data-view="cards"><thead><tr><th></th><th data-type="rating" data-max="5"></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>EasyAntiCheat</td><td>5</td><td>Status: <span data-gb-custom-inline data-tag="emoji" data-code="1f7e0">🟠</span>Use at own Risk</td><td><a href=".gitbook/assets/eac.png">eac.png</a></td></tr><tr><td>BattlEye</td><td>5</td><td>Status: <span data-gb-custom-inline data-tag="emoji" data-code="1f535">🔵</span>Undetected</td><td data-object-fit="contain"><a href=".gitbook/assets/BattlEye_Logo.png">BattlEye_Logo.png</a></td></tr><tr><td>RicoChet</td><td>5</td><td>Status: <span data-gb-custom-inline data-tag="emoji" data-code="1f535">🔵</span>Undetected</td><td><a href=".gitbook/assets/COD_Ricochet_Hero.webp">COD_Ricochet_Hero.webp</a></td></tr><tr><td>ACE</td><td>5</td><td>Status: <span data-gb-custom-inline data-tag="emoji" data-code="1f535">🔵</span>Undetected</td><td><a href=".gitbook/assets/ACE_Logo.jpg">ACE_Logo.jpg</a></td></tr><tr><td>Javelin</td><td>5</td><td>Status: <span data-gb-custom-inline data-tag="emoji" data-code="1f535">🔵</span>Undetected</td><td><a href=".gitbook/assets/intro-to-ea-javelin-article-thumbnail.png.adapt.crop191x100.628p.png">intro-to-ea-javelin-article-thumbnail.png.adapt.crop191x100.628p.png</a></td></tr></tbody></table>
+All anti-cheats that does not force fTPM(**CPU**)
+
+Our guide is mainly focused on bypassing **EasyAntiCheat - Rust** but it shall work for most games.
 
 {% hint style="info" icon="microchip" %}
-Supported CPU
+Supported CPU (CPU no longer matters)
 {% endhint %}
 
-<table data-view="cards"><thead><tr><th></th><th data-type="rating" data-max="5"></th><th></th><th></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>AMD</td><td>5</td><td>Best pick due to Raid 0</td><td></td><td></td><td data-object-fit="contain"><a href=".gitbook/assets/amd-logo-ruby-red.webp">amd-logo-ruby-red.webp</a></td></tr><tr><td>Intel</td><td>2</td><td>Very bad Raid 0</td><td>Work if replacing NVME/SSD per ban</td><td>Or if using hardware spoofable NVME/SSD</td><td data-object-fit="contain"><a href=".gitbook/assets/Intel_logo_(2006-2020).svg.png">Intel_logo_(2006-2020).svg.png</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-type="rating" data-max="5"></th><th></th><th></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>AMD</td><td>5</td><td></td><td></td><td></td><td data-object-fit="contain"><a href=".gitbook/assets/amd-logo-ruby-red.webp">amd-logo-ruby-red.webp</a></td></tr><tr><td>Intel</td><td>5</td><td></td><td></td><td></td><td data-object-fit="contain"><a href=".gitbook/assets/Intel_logo_(2006-2020).svg.png">Intel_logo_(2006-2020).svg.png</a></td></tr></tbody></table>
 
 {% hint style="info" icon="desktop" %}
 Supported Motherboards
