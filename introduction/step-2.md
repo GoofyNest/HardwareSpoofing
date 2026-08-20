@@ -22,6 +22,9 @@ Windows create multiple keys in your NVRam, some of them are:
 1. UnlockIDCopy
 2. OfflineUniqueIDRandomSeed
 3. OfflineUniqueIDRandomSeedCRC
+4. OfflineUniqueIDEKPub (TPM related)
+5. OfflineUniqueIDEKPubCRC (TPM related)
+6. Boot0001-Boot0006
 
 Not clearing them will result in OfflineUniqueIDRandomSeed & OfflineUniqueIDRandomSeedCRC containing unique information across factory resets, no matter if you destroy raid, format disks, remove partitions. It will stay in NVRam.
 
@@ -77,6 +80,13 @@ Read the data (if you want to confirm my testing):
 sudo xxd /sys/firmware/efi/efivars/OfflineUniqueIDRandomSeed-*
 sudo xxd /sys/firmware/efi/efivars/OfflineUniqueIDRandomSeedCRC-*
 sudo xxd /sys/firmware/efi/efivars/UnlockIDCopy-*
+sudo xxd /sys/firmware/efi/efivars/OfflineUniqueIDRandomSeed-*
+sudo xxd /sys/firmware/efi/efivars/OfflineUniqueIDEKPubCRC-*
+for f in /sys/firmware/efi/efivars/Boot000[1-6]-*; do
+    echo "==== $f ===="
+    sudo xxd "$f"
+    echo
+done
 ```
 
 Remove the Linux immutable attribute (`i`)
@@ -85,6 +95,14 @@ Remove the Linux immutable attribute (`i`)
 sudo chattr -i /sys/firmware/efi/efivars/OfflineUniqueIDRandomSeed-*
 sudo chattr -i /sys/firmware/efi/efivars/OfflineUniqueIDRandomSeedCRC-*
 sudo chattr -i /sys/firmware/efi/efivars/UnlockIDCopy-*
+sudo chattr -i /sys/firmware/efi/efivars/OfflineUniqueIDRandomSeed-*
+sudo chattr -i /sys/firmware/efi/efivars/OfflineUniqueIDEKPubCRC-*
+
+for f in /sys/firmware/efi/efivars/Boot000[1-6]-*; do
+    echo "==== $f ===="
+    sudo chattr -i "$f"
+    echo
+done
 ```
 
 Remove the keys
@@ -93,6 +111,14 @@ Remove the keys
 sudo rm /sys/firmware/efi/efivars/OfflineUniqueIDRandomSeed-*
 sudo rm /sys/firmware/efi/efivars/OfflineUniqueIDRandomSeedCRC-*
 sudo rm /sys/firmware/efi/efivars/UnlockIDCopy-*
+sudo rm /sys/firmware/efi/efivars/OfflineUniqueIDRandomSeed-*
+sudo rm /sys/firmware/efi/efivars/OfflineUniqueIDEKPubCRC-*
+
+for f in /sys/firmware/efi/efivars/Boot000[1-6]-*; do
+    echo "==== $f ===="
+    sudo rm "$f"
+    echo
+done
 ```
 
 ***
