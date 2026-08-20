@@ -200,7 +200,9 @@ This guide is utilizing the discrete TPM module on motherboards to bypass **TPM 
 
 Corsair Vengeance new generation DDR5 have serial numbers now, so its a gamble if you get ram without serial numbers.
 
-If your ram has serial numbers you can check this guide: [https://goofynest.gitbook.io/spoof/ram-spoofing/spd-security-editor](https://goofynest.gitbook.io/spoof/ram-spoofing/spd-security-editor)
+If your ram has serial numbers you can check this guide:&#x20;
+
+{% embed url="https://goofynest.gitbook.io/spoof/ram-spoofing/spd-security-editor" %}
 
 There might be other manufacturers that have null serials, you can verify by running this query in PowerShell:
 
