@@ -53,108 +53,6 @@ We do no longer recommend the LTSC versions cause they come with the same Produc
 
 ***
 
-### Finding your RAID driver
-
-Google your motherboard manufacturer + motherboard product name on google
-
-Example: Gigabyte B550 AORUS ELITE V2
-
-<figure><img src="../.gitbook/assets/{F957BCD8-E79F-4E63-8391-58DA0ACEFC98}.png" alt=""><figcaption></figcaption></figure>
-
-Go to Support ⇒ Driver
-
-<figure><img src="../.gitbook/assets/image (65).png" alt=""><figcaption></figcaption></figure>
-
-Select your Windows version if the website has it.
-
-Search for Raid Driver
-
-<figure><img src="../.gitbook/assets/{8B6702CC-E4F7-435C-9A3F-539B7669994C}.png" alt=""><figcaption></figcaption></figure>
-
-Download and extract this to your freshly made WIndows USB in a folder called `Raid`
-
-***
-
-### Destroy raid array
-
-<mark style="background-color:violet;">**Only for AMD**</mark>\ <mark style="background-color:violet;">**Only for specific motherboards**</mark>\ <mark style="background-color:violet;">**Check your Manufacturer website if your motherboard supports NVME raid 0**</mark>
-
-{% hint style="info" %}
-Skip if you are using a spoofable NVME
-{% endhint %}
-
-1. Restart pc
-2. Press your BIOS key, if you dont know it google your manufacturer.
-3.  Press F2 for **Advanced mode**
-
-    <figure><img src="../.gitbook/assets/{EC639499-06FD-44C3-9830-0D735A1A11F3}.png" alt=""><figcaption></figcaption></figure>
-4.  Click **Settings**
-
-    <figure><img src="../.gitbook/assets/{C68C132B-C1AC-4673-8B2A-E5666DB61E59}.png" alt=""><figcaption></figcaption></figure>
-
-
-5.  Click **IO Ports**
-
-    <figure><img src="../.gitbook/assets/{7D28C49C-38E2-4009-8681-87D7F534E57E}.png" alt=""><figcaption></figcaption></figure>
-
-
-6.  Click **Sata Configuration**<br>
-
-    <figure><img src="../.gitbook/assets/{327ADE46-D20D-4E63-B3BF-3127496A238B}.png" alt=""><figcaption></figcaption></figure>
-
-
-7.  Copy paste my settings<br>
-
-    <figure><img src="../.gitbook/assets/{0085CF36-D1A0-49F6-A890-06275E6851D2}.png" alt=""><figcaption></figcaption></figure>
-
-
-8. Save settings and restart PC (**First time only**)
-9. Go into **BIOS again**
-10. Navigate to Settings ⇒ IO Ports ⇒ You should now see **RAIDXpert2 Configuration Utility**
-11. Press **Array Managment**<br>
-
-    <figure><img src="../.gitbook/assets/{208F17E9-65D2-4771-A1DB-4509DBF1AE74}.png" alt=""><figcaption></figcaption></figure>
-
-
-12. Click **Delete Array**\
-    <i class="fa-wind-warning" style="color:$danger;">:wind-warning:</i> **`This will erase your files on your disks, this step should only be done when you have done all your spoofing`**<br>
-
-    <figure><img src="../.gitbook/assets/{3263EF6E-556F-4D25-BD92-740A9529A6EF}.png" alt=""><figcaption></figcaption></figure>
-
-
-13. Click **Create Array**<br>
-
-    <figure><img src="../.gitbook/assets/{F236F00C-5EB3-4EFD-90AA-9ED8F6C315AB}.png" alt=""><figcaption></figcaption></figure>
-
-
-14. Click **Raid Level**<br>
-
-    <figure><img src="../.gitbook/assets/{B07EC599-EACB-493B-A2EB-3A4DCFD64510}.png" alt=""><figcaption></figcaption></figure>
-
-    \
-    Use RAIDABLE for 1 DISK raid setup\
-    Use RAID 0 for multiple disk setup<br>
-15. Click **Select physical disks**<br>
-
-    <figure><img src="../.gitbook/assets/{56818BCC-2B27-4288-BA4C-4EF3EA4199A0}.png" alt=""><figcaption></figcaption></figure>
-
-
-16. Click **Check All**<br>
-
-    <figure><img src="../.gitbook/assets/{1510511D-2029-489C-96C0-1212564FACFA}.png" alt=""><figcaption></figcaption></figure>
-
-
-17. Click **Apply Changes**
-18. Click **Create Array**\
-    <br>
-
-    <figure><img src="../.gitbook/assets/{79CBBF08-B3C2-4F85-B4AF-7C1E3A65D89E}.png" alt=""><figcaption></figcaption></figure>
-
-
-19. You are done with your Raid setup, nice!
-
-***
-
 ## NVRAM <mark style="color:$danger;">(Will Cause Issues)</mark>
 
 **NVRAM (Non-Volatile Random-Access Memory)** is memory that can retain information even when the computer is powered off. On modern PCs, the term is commonly used for firmware-managed storage used by the UEFI/BIOS to preserve configuration and platform-specific information.
@@ -283,15 +181,10 @@ sudo rm /sys/firmware/efi/efivars/UnlockIDCopy-*
     <figure><img src="../.gitbook/assets/image (68).png" alt=""><figcaption></figcaption></figure>
 
 
-4.  A preview of disks you can install Windows on, DO not select one<br>
-
-    <figure><img src="../.gitbook/assets/image (69).png" alt=""><figcaption></figcaption></figure>
-
-
 
 ***
 
-### Removing partitions (<mark style="color:$primary;">Skip if using RAID setup</mark>)
+### Removing partitions
 
 Press delete on every partition until you only have 1 Disk, 1 Partition and the full disk size is available.
 
@@ -300,39 +193,6 @@ Press delete on every partition until you only have 1 Disk, 1 Partition and the 
 <figure><img src="../.gitbook/assets/image (77).png" alt=""><figcaption></figcaption></figure>
 
 ^ This is how its suppose to look if you did it correctly.
-
-***
-
-### Loading raid driver (<mark style="color:$primary;">Skip if using spoofable NVME</mark>)
-
-1.  Click Load Driver<br>
-
-    <figure><img src="../.gitbook/assets/{00ADFE27-9169-4779-A3A0-8C4CF128918E}.png" alt=""><figcaption></figcaption></figure>
-
-
-2.  Select the **NVME\_CC ⇒ AMD-RAID Bottom Device (rcbottom.inf)**<br>
-
-    <figure><img src="../.gitbook/assets/image (70).png" alt=""><figcaption></figcaption></figure>
-
-
-3. Click Load Driver
-4. Accept the Terms of service shit
-5.  Select **NVME\_DID** ⇒ **AMD-RAID controller \[storport] (rcraid.inf)**<br>
-
-    <figure><img src="../.gitbook/assets/image (71).png" alt=""><figcaption></figcaption></figure>
-
-
-6. Click Load Driver
-7.  **NVME\_CC** ⇒ **AMD-RAID Config Device (rccfg.inf)**<br>
-
-    <figure><img src="../.gitbook/assets/image (72).png" alt=""><figcaption></figcaption></figure>
-
-
-8.  Now your raid array should show up in Windows<br>
-
-    <figure><img src="../.gitbook/assets/image (73).png" alt=""><figcaption></figcaption></figure>
-
-
 
 ***
 
