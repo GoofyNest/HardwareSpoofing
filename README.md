@@ -82,7 +82,7 @@ Supported Anti Cheats
 
 All anti-cheats that does not force fTPM(**CPU**)
 
-Our guide is mainly focused on bypassing **EasyAntiCheat - Rust** but it shall work for most games.
+> Our guide is mainly focused on bypassing **EasyAntiCheat - Rust** but it shall work for most games.
 
 {% hint style="info" icon="microchip" %}
 Supported CPU (CPU no longer matters)
