@@ -97,23 +97,23 @@ sudo rm /sys/firmware/efi/efivars/UnlockIDCopy-*
 
 ***
 
-## CPU
+## CPU (<mark style="color:$danger;">updated 2026-08-20</mark>)
 
-This guide is mainly made for `AMD CPU` platforms, you can still use `Intel CPU` but with heavy limitations.
+Intel raid 0 has never worked for EasyAntiCheat - Rust, you can obtain disk serials very low level from tools like HWInfo.
 
-If you are using a <mark style="color:$danger;">`Intel CPU`</mark> platform and do not wish to upgrade to <mark style="color:$success;">`AMD CPU`</mark>, one option you have is to replace disk for each <mark style="color:$danger;">permanent ban</mark> or use a <mark style="color:$primary;">perm-spoofable disk</mark> from our [devices.md](../part-list/devices.md "mention").\
-\
-On AMD setups we are utilizing something called Raid and disk replacement is not necessary.
+AMD raid 0 is no longer working for EasyAntiCheat - Rust, EasyAntiCheat obtains your disk serials anyways.
 
-#### What is Raid?
+Anyone claiming otherwise is all lying.
 
-RAID (Redundant Array of Independent Disks) is a storage technology that combines multiple physical disk drives into a single logical unit. It is often associated with data protection, but depending on the RAID level, it can also improve performance or both.
+> Raid 0 itself is not DETECTED or banned, its the fact EasyAntiCheat can read your phyiscal disk serials through the raid array.\
+> \
+> Meaning if your disks never been banned you can still use RAID 0 / RAIDABLE but it will have no affect in ban evading the anticheats anymore.\
+> \
+> And just because you can use it and play currently doesn't mean that you are fine or wont be banned at a later date.
 
-In this guide, we are using RAID 0 (or AMD RAIDXpert/RAIDABLE mode). RAID 0 does not provide redundancy or data protection. Instead, it focuses on performance by distributing data across multiple drives.
+This was bound to happen sooner or later, right now if you want to ban evade you will have to have a perm-spoofable disk or a new ssd/nvme per ban.
 
-The reason for using RAID in this context is to abstract or mask certain disk details from software. Intel and AMD implement RAID differently. <mark style="color:$danger;">Intel RAID typically still exposes more underlying drive information</mark>, while <mark style="color:$success;">AMD RAID tends to hide more of the physical disk details from the operating system.</mark>
-
-Another good part about AMD is that they have a <mark style="color:purple;">**RAIDABLE mode**</mark> which means that you do not need to have more then one disk to create an Raid array.
+We will be testing way of spoofing disks in a few days and keep you guys updated.
 
 ***
 
@@ -158,6 +158,8 @@ This guide is utilizing the discrete TPM module on motherboards to bypass **TPM 
 ## Ram
 
 Corsair Vengeance new generation DDR5 have serial numbers now, so its a gamble if you get ram without serial numbers.
+
+If your ram has serial numbers you can check this guide: [https://goofynest.gitbook.io/spoof/ram-spoofing/spd-security-editor](https://goofynest.gitbook.io/spoof/ram-spoofing/spd-security-editor)
 
 There might be other manufacturers that have null serials, you can verify by running this query in PowerShell:
 
@@ -207,7 +209,17 @@ Get-CimInstance -Namespace root\wmi -ClassName WmiMonitorID | ForEach-Object {
 }
 ```
 
-If you see non unique serial number you are good to continue, otherwise you need to compromise by buying a **DMA Fuser** that supports custom EDID programming.
+If you see non unique serial number you are good to continue, otherwise you need to compromise by buying something to spoof your monitor serials.
+
+I am personally using DMA Fuser
+
+{% embed url="https://goofynest.gitbook.io/spoof/monitor-spoofing/dichen-5" %}
+
+Other listings that might work:
+
+{% embed url="https://goofynest.gitbook.io/spoof/monitor-spoofing/hdmi-edid-emulator-adapter" %}
+
+{% embed url="https://goofynest.gitbook.io/spoof/monitor-spoofing/dr-hdmi" %}
 
 #### What is a DMA Fuser?
 
@@ -227,12 +239,17 @@ The cheapest fuser you can purchase is a `DICHEN 2k FUSER` which can be found in
 
 ## Disk
 
-For AMD setups any <mark style="color:$danger;">NVME SSD</mark> is suitable for Raid setup <mark style="color:$danger;">(for now).</mark> It's very important that you are using Raid on **NVME SSD** and not normal **SATA drives.**
+Spoofing Disks is now a requirement, Raid 0, Raidable is no longer working for EasyAntiCheat - Rust
 
-For **Intel setup** you can use this guide: <mark style="color:purple;">**(NOT TESTED) (NOT RECOMMENDED) (BAD REVIEWS)**</mark>\
-[https://github.com/dom0ng/map1202/blob/main/map1202.pdf](https://github.com/dom0ng/map1202/blob/main/map1202.pdf)
+You can test this:
 
-The size of the **NVME SSD** does not matter, just that they are using the **Maxio MAP1202 controller**.
+{% embed url="https://goofynest.gitbook.io/spoof/disk-spoofing/smi-sx2263xt" %}
+
+Or this:
+
+{% embed url="https://captaindma.com/product/privacy-drive-no-hwid-no-serial-number-drive-512g/" %}
+
+We will be releasing another alternative soon but requires testing.
 
 ***
 
@@ -272,4 +289,4 @@ Many daily USB devices have serial numbers, you can check if your setup has any 
 
 We recommend people to purchase Razer branded mice, they have no serials.
 
-We have a lot of different perhipials in our [devices.md](../part-list/devices.md "mention"), all of them have no serial numbers.
+We have a lot of different peripheral in our [devices.md](../part-list/devices.md "mention"), all of them have no serial numbers.
