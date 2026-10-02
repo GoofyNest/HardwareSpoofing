@@ -16,9 +16,16 @@
 
 * [Not for ASUS](step-1.md)
 * [Manual ASUS](asus.md)
+* [Tools](tools.md)
+
+## TPM Spoofing
+
+* [fTPM](tpm-spoofing/ftpm.md)
 
 ## MAC SPOOFING
 
+* [Realtek NICs](mac-spoofing/realtek-nics.md)
+* [Intel NICs](mac-spoofing/intel-nics.md)
 * [TP-Link UE300](mac-spoofing/tp-link-ue300.md)
 * [Realtek USB adapter](mac-spoofing/realtek-usb-adapter.md)
 * [Captain USB adapter](mac-spoofing/captain-usb-adapter.md)
@@ -27,6 +34,7 @@
 
 * [Sabrent (EC-SVNE)](disk-spoofing/sabrent-ec-svne.md)
 * [SMI SX2263XT](disk-spoofing/smi-sx2263xt.md)
+* [KingSpec SSD](disk-spoofing/kingspec-ssd.md)
 
 ## RAM SPOOFING
 

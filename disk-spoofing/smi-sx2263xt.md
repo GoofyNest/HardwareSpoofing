@@ -5,6 +5,14 @@ icon: broom
 
 # SMI SX2263XT
 
+{% hint style="success" %}
+Confirmed working by @cbrownebay0172
+{% endhint %}
+
+{% embed url="https://www.ebay.com/itm/237042716172" %}
+
+***
+
 ### Changing serial number and ouid (euid64) on SMI SX2263XT-based NVMe SSDs <a href="#changing-serial-number-and-ouid-euid64-on-smi-sx2263xt-based-nvme-ssds" id="changing-serial-number-and-ouid-euid64-on-smi-sx2263xt-based-nvme-ssds"></a>
 
 This manual covers how to change all IDs on a NVMe SSD built on SMI SM2263XT controller, including OUID (EUID64).

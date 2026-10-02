@@ -1,9 +1,13 @@
 ---
 description: Thanks to @lena6168 at discord
-icon: '1'
+icon: ethernet
 ---
 
 # Realtek USB adapter
+
+{% hint style="success" %}
+Tested personally by Exclusion
+{% endhint %}
 
 Are you planning to purchase "spoofable" USB network card? Read this before you do. Cheap ass 10$ dongle from Temu might work just as good as "spoofable" network cards sold for hundreds of dollars.
 

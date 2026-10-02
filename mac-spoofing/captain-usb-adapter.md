@@ -1,11 +1,15 @@
 ---
 description: Guide written by @goof
-icon: '2'
+icon: ethernet
 ---
 
 # Captain USB adapter
 
-Tool can be found [here](https://github.com/GoofyNest/HardwareSpoofing/releases/tag/captain)
+{% hint style="success" %}
+Tested personally by Goofy
+{% endhint %}
+
+{% embed url="https://github.com/GoofyNest/HardwareSpoofing/releases/tag/captain" %}
 
 ***
 
