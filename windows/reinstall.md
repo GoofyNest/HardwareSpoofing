@@ -81,7 +81,25 @@ Not clearing them will result in OfflineUniqueIDRandomSeed & OfflineUniqueIDRand
 
 ***
 
-### Best way to clear NVRAM
+### NVRAM (Windows)
+
+Requirements
+
+{% embed url="https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/" %}
+
+* Secure boot (Temporairly disabled)
+* cmd.exe as Admin ⇒ bcdedit /set TESTSIGNING ON
+* Restart PC
+
+Use our app:
+
+{% file src="../.gitbook/assets/HardwareReport.rar" %}
+
+Archieve password is `1`
+
+***
+
+### NVRAM (Linux)
 
 {% stepper %}
 {% step %}
