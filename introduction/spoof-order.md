@@ -9,7 +9,7 @@ icon: burst-new
 This guide can be overwhelming, but I hope this will help people
 {% endhint %}
 
-## 1. Bios
+## Bios
 
 ```mermaid
 flowchart TD
@@ -44,7 +44,33 @@ flowchart TD
 
 ***
 
-## 2. Motherboard spoofing
+## USB Serials
+
+{% hint style="warning" %}
+Not confirmed if this cause issues, but you might as well replace USB devices with serials
+{% endhint %}
+
+{% embed url="https://www.nirsoft.net/utils/usbdeview-x64.zip" %}
+
+Replace anything that has serial, you can find part list here:
+
+{% embed url="https://goofynest.gitbook.io/spoof/part-list/devices" %}
+
+***
+
+## Graphic card
+
+{% hint style="warning" %}
+Not confirmed if this cause issues
+{% endhint %}
+
+<mark style="color:$danger;">NVIDIA Graphic cards have serial numbers</mark> that at the moment is not perm-spoofable.
+
+I highly recommend you to get a <mark style="color:green;">AMD graphic card from Gigabyte</mark>.
+
+***
+
+## Motherboard spoofing
 
 ```mermaid
 flowchart TD
@@ -67,7 +93,7 @@ flowchart TD
 
 ***
 
-## 3. Mac spoofing
+## Mac spoofing
 
 ```mermaid
 flowchart TD
@@ -92,7 +118,7 @@ flowchart TD
 
 ***
 
-## 4. Disk spoofing
+## Disk spoofing
 
 ```mermaid
 flowchart TD
@@ -114,7 +140,7 @@ flowchart TD
 
 ***
 
-## 5. Ram spoofing
+## Ram spoofing
 
 ```mermaid
 flowchart TD
@@ -135,7 +161,7 @@ flowchart TD
 
 ***
 
-## 6. Arp spoofing
+## Arp spoofing
 
 ```mermaid
 flowchart TD
@@ -159,7 +185,7 @@ flowchart TD
 
 ***
 
-## 7. Monitor spoofing
+## Monitor spoofing
 
 ```mermaid
 flowchart TD
@@ -175,7 +201,7 @@ flowchart TD
     F -->|Yes| G["Good 👍"]
     F -->|No| H{"Choose an option"}
 
-    H --> I["HDMI EDID Emulator Adapter"]
+    H --> I["EDID Emulator Adapter"]
     H --> J["DR HDMI"]
     H --> K["Dichen 5"]
 
@@ -195,3 +221,13 @@ flowchart TD
 ```
 
 ***
+
+## Clear NVRAM
+
+{% embed url="https://goofynest.gitbook.io/spoof/nvram-spoofing/efivars" %}
+
+***
+
+## Reinstall windows
+
+{% embed url="https://goofynest.gitbook.io/spoof/windows/reinstall" %}
