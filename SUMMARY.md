@@ -15,9 +15,9 @@
 
 ***
 
-* [CH341A](ch341a.md)
 * [Not for ASUS](step-1.md)
 * [Manual ASUS](asus.md)
+* [CH341A](ch341a.md)
 * [Tools](tools.md)
 
 ## NVRAM SPOOFING
