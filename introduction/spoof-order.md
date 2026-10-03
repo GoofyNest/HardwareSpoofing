@@ -208,10 +208,12 @@ flowchart TD
     H --> I["EDID Emulator Adapter"]
     H --> J["DR HDMI"]
     H --> K["Dichen 5"]
+    H --> L["Hardware mod"]
 
     click I "https://goofynest.gitbook.io/spoof/monitor-spoofing/hdmi-edid-emulator-adapter"
     click J "https://goofynest.gitbook.io/spoof/monitor-spoofing/dr-hdmi"
     click K "https://goofynest.gitbook.io/spoof/monitor-spoofing/dichen-5"
+    click K "https://goofynest.gitbook.io/spoof/monitor-spoofing/hardware-mod"
 ```
 
 ```powershell
