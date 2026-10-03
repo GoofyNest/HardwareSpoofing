@@ -235,3 +235,40 @@ flowchart TD
 ## Reinstall windows
 
 {% embed url="https://goofynest.gitbook.io/spoof/windows/reinstall" %}
+
+***
+
+## Misc stuff
+
+> You might wonder why I said disable CSM / Secure boot?
+
+### Yes?
+
+> Does this mean our spoofer does not support CSM / Secure boot?
+
+### No
+
+### The reasoning we are disabling Secure boot is to allow you to use our tool for editing NVRAM, Efivars from [efivars.md](../nvram-spoofing/efivars.md "mention")
+
+After you have reinstalled Windows you can enable all security features if you want again.
+
+* Secure boot
+* CSM
+* IOMMU
+* Virtualization
+
+<mark style="color:$danger;">**Just do not enable TPM if your fTPM key was banned before**</mark>**&#x20;**<mark style="color:$primary;">**because if you do that then you have to redo clearing NVRAM and reinstalling Windows again.**</mark>
+
+<mark style="color:$danger;">**And remember that**</mark> [step-3.md](step-3.md "mention") <mark style="color:$danger;">always applies</mark>
+
+<mark style="color:$primary;">**Right now I really recommend people using dTPM (Discrete trusted platform module) instead of spoofing their fTPM.**</mark>
+
+{% embed url="https://discord.com/invite/JtU8FxQnN5" %}
+
+Always remember that you can join our discord for help, just do not waste our time.
+
+> Read <mark style="color:pink;">**#create-a-ticket**</mark> before opening a ticket.
+
+And avoid asking us questions like
+
+* Can you recommend me a spoofer
