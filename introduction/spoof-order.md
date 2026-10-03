@@ -159,6 +159,10 @@ flowchart TD
     click H "https://goofynest.gitbook.io/spoof/ram-spoofing/spd-security-editor" "Ram spoofing"
 ```
 
+```bash
+wmic memorychip get serialnumber
+```
+
 ***
 
 ## Arp spoofing
