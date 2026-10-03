@@ -83,8 +83,12 @@ flowchart TD
     C --> F["ASRock"]
     C --> G["Gigabyte"]
     C --> H["MSI"]
+    
+    E --> EE["Newer generation"]
+    E --> EE1["Older generation"]
 
-    click E "https://goofynest.gitbook.io/spoof/asus" "Manual ASUS"
+    click EE1 "https://goofynest.gitbook.io/spoof/asus" "Manual ASUS"
+    click EE "https://goofynest.gitbook.io/spoof/ch341a" "Manual ASUS"
     click F "https://goofynest.gitbook.io/spoof/step-1" "Automatic ASRock"
     click G "https://goofynest.gitbook.io/spoof/step-1" "Automatic Gigabyte"
     click H "https://goofynest.gitbook.io/spoof/step-1" "Automatic MSI"
