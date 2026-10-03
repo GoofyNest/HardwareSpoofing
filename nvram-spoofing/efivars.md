@@ -17,11 +17,12 @@ In my testing with EAC/Rust, leaving these variables intact consistently resulte
 
 **Windows create multiple keys in your NVRam, some of them are:**
 
-1. UnlockIDCopy
-2. OfflineUniqueIDRandomSeed
-3. OfflineUniqueIDRandomSeedCRC
-4. OfflineUniqueIDEKPub (TPM related)
-5. OfflineUniqueIDEKPubCRC (TPM related)
+1. UnlockID
+2. UnlockIDCopy
+3. OfflineUniqueIDRandomSeed
+4. OfflineUniqueIDRandomSeedCRC
+5. OfflineUniqueIDEKPub (TPM related)
+6. OfflineUniqueIDEKPubCRC (TPM related)
 
 **Bios generated vars:**
 
