@@ -1,5 +1,5 @@
 ---
-description: Found by research by @Goofy
+description: Found with research by @Goofy
 icon: burst-new
 ---
 
