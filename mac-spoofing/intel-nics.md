@@ -6,7 +6,11 @@ icon: burst-new
 # Intel NICs
 
 {% hint style="danger" %}
-Not tested personally by us.
+I do not promote or condone spoofing onboard NICs, I added it here cause people was asking me to complete my guide.
+{% endhint %}
+
+{% hint style="danger" %}
+Use at own risk, this has not been tested personally by us.
 {% endhint %}
 
 {% file src="../.gitbook/assets/EEupdate_5.35.12.0.zip" %}
