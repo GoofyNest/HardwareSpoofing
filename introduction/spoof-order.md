@@ -248,6 +248,8 @@ flowchart TD
 
 ### No
 
+### The reasoning we are disabling CSM is to avoid issues when spoofing your motherboard with DMI edit or AMIDEWINx64
+
 ### The reasoning we are disabling Secure boot is to allow you to use our tool for editing NVRAM, Efivars from [efivars.md](../nvram-spoofing/efivars.md "mention")
 
 After you have reinstalled Windows you can enable all security features if you want again.
