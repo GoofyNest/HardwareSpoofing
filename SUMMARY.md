@@ -9,6 +9,7 @@
 * [Basic Learning](introduction/step-1.md)
 * [Important information](introduction/step-2.md)
 * [Device restriction](introduction/step-3.md)
+* [Spoof order](introduction/spoof-order.md)
 
 ## Automatic-SMBIOS-Manager
 
@@ -17,6 +18,10 @@
 * [Not for ASUS](step-1.md)
 * [Manual ASUS](asus.md)
 * [Tools](tools.md)
+
+## NVRAM SPOOFING
+
+* [Efivars](nvram-spoofing/efivars.md)
 
 ## TPM Spoofing
 
