@@ -7,4 +7,4 @@ icon: '1'
 
 {% embed url="https://www.amazon.com/dp/B09N72FMH5" %}
 
-{% embed url="https://www.youtube.com/watch?v=al8b74syoMU" %}
+{% file src="../.gitbook/assets/How to spoof arp - Intel (1080p, h264).mp4" %}
