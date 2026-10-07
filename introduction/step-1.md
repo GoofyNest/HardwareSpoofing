@@ -1,9 +1,9 @@
 ---
 description: Deep dive, learn why serials matter and why they are there to begin with
-icon: '1'
+icon: face-glasses
 ---
 
-# Step #1
+# Basic Learning
 
 ## What are hardware bans?
 

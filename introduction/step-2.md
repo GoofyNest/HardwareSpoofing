@@ -2,7 +2,7 @@
 description: >-
   Build the perfect perm-spoofable setup and never have to pay for spoofing
   again, never get banned again due to spoofer faults.
-icon: '2'
+icon: face-glasses
 ---
 
 # Important information

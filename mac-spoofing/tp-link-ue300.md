@@ -1,6 +1,6 @@
 ---
 description: Spoofable
-icon: burst-new
+icon: usb
 ---
 
 # TP-Link UE300

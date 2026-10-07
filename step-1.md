@@ -1,6 +1,6 @@
 ---
 description: Written by @goofy
-icon: meteor
+icon: microchip
 ---
 
 # Not for ASUS

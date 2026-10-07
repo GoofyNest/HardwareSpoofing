@@ -3,7 +3,7 @@ description: >-
   This is just one of many examples, the reason I went with this is cause it was
   what I had at hand. You can use this guide for any Linux setup, you dont even
   need Pi, you can use 2nd pc.
-icon: '2'
+icon: router
 ---
 
 # Raspberry Pi 4 Model B

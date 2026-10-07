@@ -1,6 +1,6 @@
 ---
 description: Recommended devices/parts that are used for ban evading
-icon: '1'
+icon: list-ol
 ---
 
 # Devices

@@ -1,6 +1,6 @@
 ---
 description: Written by @Goofy
-icon: burst-new
+icon: face-glasses
 ---
 
 # Spoof order

@@ -1,6 +1,6 @@
 ---
 description: 'DICHEN 5 GEN FUSER - MODEL: DC240HZ5D-2'
-icon: '3'
+icon: display
 ---
 
 # Dichen 5

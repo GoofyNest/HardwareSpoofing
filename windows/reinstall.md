@@ -2,7 +2,7 @@
 description: >-
   You must always reinstall windows per ban, there is no getting away from this
   step.
-icon: '1'
+icon: window-restore
 ---
 
 # Reinstall

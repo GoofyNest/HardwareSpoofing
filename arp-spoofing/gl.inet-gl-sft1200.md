@@ -1,6 +1,6 @@
 ---
 description: Thanks to @anti.zx at Discord
-icon: '1'
+icon: router
 ---
 
 # GL.iNet GL-SFT1200

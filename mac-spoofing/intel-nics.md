@@ -1,6 +1,6 @@
 ---
 description: Written by @Fundryi/HWID-Privacy
-icon: burst-new
+icon: ethernet
 ---
 
 # Intel NICs

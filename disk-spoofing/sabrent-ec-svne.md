@@ -1,6 +1,6 @@
 ---
 description: USB 3.2 Type-C Tool-Free Enclosure for M.2 PCIe NVMe and SATA SSDs
-icon: hand-fingers-crossed
+icon: usb
 ---
 
 # Sabrent (EC-SVNE)

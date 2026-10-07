@@ -1,6 +1,6 @@
 ---
 description: ASUS = A Surprisingly Unreliable System
-icon: face-sad-cry
+icon: microchip
 ---
 
 # Manual ASUS

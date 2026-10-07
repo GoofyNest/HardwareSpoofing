@@ -1,6 +1,6 @@
 ---
 description: Written by @Goofy
-icon: burst-new
+icon: binary
 ---
 
 # Efivars
@@ -49,6 +49,8 @@ Use our app:
 {% file src="../.gitbook/assets/HardwareReport (2).rar" %}
 
 Archieve password is `1`
+
+{% embed url="https://mh-nexus.de/en/hxd/" %}
 
 ***
 

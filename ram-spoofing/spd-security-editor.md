@@ -1,6 +1,6 @@
 ---
 description: Thanks to @zenoxoid at Discord
-icon: '1'
+icon: memory
 ---
 
 # SPD Security Editor

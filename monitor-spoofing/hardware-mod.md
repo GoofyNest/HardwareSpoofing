@@ -1,6 +1,6 @@
 ---
 description: Found with research by @Goofy
-icon: burst-new
+icon: screwdriver-wrench
 ---
 
 # Hardware mod

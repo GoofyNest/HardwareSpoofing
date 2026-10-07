@@ -1,9 +1,9 @@
 ---
 description: Very important before you move forward
-icon: '3'
+icon: face-glasses
 ---
 
-# Step #3
+# Device restriction
 
 ## <mark style="color:$warning;">⚠️ Read Before Proceeding: Device Restrictions</mark>
 
@@ -23,7 +23,7 @@ On AMD systems it will say something like <mark style="color:purple;">**AMD CPU 
 
 On Intel systems it can be named <mark style="color:purple;">**PTT, INTEL CPU TPM**</mark>
 
-#### TPM Device Selection:&#xD; → Discrete TPM ✅ (what you want)&#xD; → Firmware TPM ❌ (disable this)
+#### TPM Device Selection: → Discrete TPM ✅ (what you want) → Firmware TPM ❌ (disable this)
 
 you can verify if its disabled if you boot into Windows and write this in powershell (admin)<br>
 
@@ -35,7 +35,7 @@ If you do not have a TPM module yet everything should say `False`
 
 <figure><img src="../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
-<mark style="color:$danger;">Very important note, even if you buy a new motherboard you cannot have fTPM enabled.</mark>&#x20;
+<mark style="color:$danger;">Very important note, even if you buy a new motherboard you cannot have fTPM enabled.</mark>
 
 <mark style="color:$danger;">Since fTPM is from the CPU and not your motherboard.</mark>
 
@@ -65,7 +65,7 @@ Get-CimInstance -Namespace root\wmi -ClassName WmiMonitorID | ForEach-Object {
 }
 ```
 
-If they show up as like&#x20;
+If they show up as like
 
 ```
 0000 or 0001
@@ -76,4 +76,3 @@ you are good to continue.
 If you have serial numbers and still wanna use 2 monitors I recommend getting one monitor without serial from our [devices.md](../part-list/devices.md "mention") or getting x2 fusers.
 
 Or remote play your PC from platforms like [Sunshine](https://github.com/lizardbyte/sunshine) or [Parsec](https://parsec.app/) but that is nothing we will cover in this guide, you will have to figure it out by urself.
-

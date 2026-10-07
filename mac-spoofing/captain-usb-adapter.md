@@ -1,6 +1,6 @@
 ---
 description: Guide written by @goof
-icon: ethernet
+icon: usb
 ---
 
 # Captain USB adapter

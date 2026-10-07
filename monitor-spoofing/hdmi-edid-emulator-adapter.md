@@ -1,6 +1,6 @@
 ---
 description: Thanks to @anti.zx at Discord
-icon: '1'
+icon: display
 ---
 
 # HDMI edid Emulator Adapter
