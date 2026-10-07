@@ -57,6 +57,7 @@
 * [HDMI edid Emulator Adapter](monitor-spoofing/hdmi-edid-emulator-adapter.md)
 * [Dr HDMI](monitor-spoofing/dr-hdmi.md)
 * [Dichen 5](monitor-spoofing/dichen-5.md)
+* [Tools](monitor-spoofing/tools.md)
 
 ## Windows
 
