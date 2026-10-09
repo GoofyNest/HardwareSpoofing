@@ -46,6 +46,10 @@ Requirements
 
 Use our app:
 
+
+
+{% file src="../.gitbook/assets/HardwareReport.rar" %}
+
 Archieve password is `1`
 
 {% embed url="https://mh-nexus.de/en/hxd/" %}
