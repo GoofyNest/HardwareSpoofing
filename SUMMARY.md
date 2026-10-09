@@ -13,12 +13,10 @@
 
 ## Automatic-SMBIOS-Manager
 
-***
-
-* [Not for ASUS](step-1.md)
-* [Manual ASUS](asus.md)
-* [CH341A](ch341a.md)
-* [Tools](tools.md)
+* [Not for ASUS](automatic-smbios-manager/step-1.md)
+* [Manual ASUS](automatic-smbios-manager/asus.md)
+* [CH341A](automatic-smbios-manager/ch341a.md)
+* [Tools](automatic-smbios-manager/tools.md)
 
 ## NVRAM SPOOFING
 

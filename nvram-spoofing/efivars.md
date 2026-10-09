@@ -46,8 +46,6 @@ Requirements
 
 Use our app:
 
-{% file src="../.gitbook/assets/HardwareReport (3).rar" %}
-
 Archieve password is `1`
 
 {% embed url="https://mh-nexus.de/en/hxd/" %}
@@ -132,8 +130,6 @@ I will not share the detail of creating the USB, however I was using Ubuntu 22.0
 > Clearing NVRAM should be performed as the **final step**, after you have completed all other required changes.
 >
 > If you remove EFI variables or make BIOS changes and then boot into Windows afterward, Windows or the firmware may recreate or modify certain configuration data.
-
-
 
 **1. Boot into Linux**
 

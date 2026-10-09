@@ -22,7 +22,7 @@ Not tested personally by us.
         * Tested: MSI Z790
         * Should work with all Intel boards since the 11th-generation release, when the EK went offline.
 
-<figure><img src="../.gitbook/assets/image (88).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (85).png" alt=""><figcaption></figcaption></figure>
 
 * **How it works**:
   * Check your motherboard manual for the exact flash procedure.

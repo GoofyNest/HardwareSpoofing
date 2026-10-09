@@ -55,7 +55,7 @@ As with any closed-source Chinese tooling, run it sandboxed or on a throwaway Wi
 
 The good news is that unlike fiddling with most mp tools where you're clicking blind through undocumented interfaces, this programmer is genuinely straightforward. The software is simple and clearly built for ease of use.
 
-<figure><img src="../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -69,7 +69,7 @@ On first launch you need to install a required driver, do this before anything e
 
 Make sure your Ram is seated in the programmer like in the image below. Make sure your USB-C cable is a **data cable** and not a charge-only cable. This is a common mistake. If everything is correct you'll see **"Hardware Connected"** along with some basic module info in the display.
 
-<figure><img src="../.gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
 
 #### 3. Read Memory <a href="#id-3-read-memory" id="id-3-read-memory"></a>
 
@@ -138,7 +138,7 @@ The tricky part is matching your actual Ram's speed. Check the Corsair catalogue
 * [Vengeance 32GB DDR5 5200 C40](https://www.corsair.com/us/en/p/memory/cmk32gx5m2b5200z40/vengeance-32gb-2x16gb-ddr5-dram-5200mt-s-cl40-amd-expo-memory-kit-cmk32gx5m2b5200z40)
 * [Vengeance RGB 32GB DDR5 5200 C40](https://www.corsair.com/us/en/p/memory/cmh32gx5m2b5200c40/vengeance-rgb-32gb-2x16gb-ddr5-dram-5200mhz-c40-memory-kit-black-cmh32gx5m2b5200c40)
 
-If you find a match, use that model string. If you don't have an exact match, you have three options: spoof it anyway using your real speed/timings in the model string (anticheats can query XMP/EXPO profiles and compare against the model string, very very unlikely that they do this but worth considering), or put in a speed/timing string that is mismatched from your real speed. (2nd option is probably not bad if you put a higher speed than your actual ram set, would try and match the timings tho)\
+If you find a match, use that model string. If you don't have an exact match, you have three options: spoof it anyway using your real speed/timings in the model string (anticheats can query XMP/EXPO profiles and compare against the model string, very very unlikely that they do this but worth considering), or put in a speed/timing string that is mismatched from your real speed. (2nd option is probably not bad if you put a higher speed than your actual ram set, would try and match the timings tho)\
 Third option is to use the programmer to rewrite your speed profiles down to match an existing Corsair Ram stick, though that's something I have little knowledge of and no experience in, so you're on your own there.
 
 {% hint style="info" icon="lightbulb" %}
@@ -164,5 +164,5 @@ Intel XMP only is the more common variant, as the AMD EXPO was retroactively add
 
 ***
 
-If any unexpected issues occur, you may refer to the original guide by the sellers, as they go into some troubleshooting with locked SPD and such which was not covered in this guide.\
+If any unexpected issues occur, you may refer to the original guide by the sellers, as they go into some troubleshooting with locked SPD and such which was not covered in this guide.\
 There is also a 24 minute video in that guide that goes through the tools usage in greater length and depth than discussed here (aldo in chinese), It showcases some troubleshooting, and also shows the Modifcation of XMP profiles.

@@ -44,23 +44,23 @@ Make sure your work area is washed/cleaned, as you don’t want dirt getting int
 
 **4. Lay the the screen face down carefully**, with the metal rear of the monitor facing upwards. Make sure your surface is clean and completely clear of debris, so it does not scratch or damage the glass of your monitor.
 
-<figure><img src="../.gitbook/assets/image (95).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (91).png" alt=""><figcaption></figcaption></figure>
 
 **5. Remove the metal cover.** Do this by carefully removing all _tape pieces_ surrounding the large protruding metal cover (tape may be silver color instead of black). Then unscrew all _4 screws near video connectors_. And then _disconnect the speaker cable_. Once done, you can carefully lift the metal cover, revealing the green circuit board underneath:
 
-<figure><img src="../.gitbook/assets/image (96).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (92).png" alt=""><figcaption></figcaption></figure>
 
 **6. Unscrew the circuit board.** Remove the two screws that hold the main circuit board. Upon doing this, you can now see the chips sitting on your monitor circuit board.
 
-<figure><img src="../.gitbook/assets/image (97).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (93).png" alt=""><figcaption></figcaption></figure>
 
 **7. Find the correct EDID chip for DVI.** See attached image, with circle. The correct chip you want is immediately behind the DVI connector. It is a tiny 8-legged chip, and says “ATML” on it as the first few letters. _For the electronics geeks, this is the DVI I2C EEPROM chip, an Atmel 24C02C. There are two of them, one for HDMI, and one for DVI. However, we only need to modify the one for DVI._
 
-<figure><img src="../.gitbook/assets/image (98).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (94).png" alt=""><figcaption></figcaption></figure>
 
 **8. Disconnect the Write Protect Pin of the chip.** This is pin #7 of the Atmel chip. If you have the DVI port facing towards you, this leg is third from left. _Tip for Electronics newbies: Pin numbers are often_ [_counted counterclockwise from pin #1_](https://en.wikipedia.org/wiki/Dual_in-line_package#Orientation_and_lead_numbering) _indicated by a white dot on the chip. If you have the same chip as in the screenshot, the correct pin will be on the opposite edge as the white dot, and be right above the label “ATML”_
 
-<figure><img src="../.gitbook/assets/image (99).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (95).png" alt=""><figcaption></figcaption></figure>
 
 _Soldering Iron Method:_ The use of a electronics soldering iron, with a thin tip, is recommended. Heat the pin just enough until the solder melts, and bend the pin upwards using the soldering iron’s tip (or another pointy metal tool). Do not overheat.
 
@@ -68,7 +68,7 @@ _Utility/Exacto Knife Method:_ This method is accident prone, and easily does ac
 
 _Note for Electronics Geeks: The ATMEL 24C02C datasheet says the pin should ideally be connected to ground, however, leaving the pin unconnected works too._
 
-**9. You’re Done.  Reassemble the monitor.** Reattach the circuit board (2 screws), reattach the metal cover (4 screws and tape, use new tape if necessary), and reassemble casing if desired (or keep it de-bezelled, during surround use).
+**9. You’re Done. Reassemble the monitor.** Reattach the circuit board (2 screws), reattach the metal cover (4 screws and tape, use new tape if necessary), and reassemble casing if desired (or keep it de-bezelled, during surround use).
 
 ***
 

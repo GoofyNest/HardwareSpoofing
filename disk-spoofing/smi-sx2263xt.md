@@ -34,15 +34,15 @@ Install Windows to a SATA drive, Win 10 is preferred. You will need it to instal
 
 Controller is a chip that runs small program called firmware, that regulates how system interats with your drive and, most importantly, holds identification information. It's usually located somewhere near M2 connector, few examples are below:
 
-<figure><img src="../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
 
 Sometimes it's located under vendor's sticker:
 
-<figure><img src="../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
 
 <mark style="color:$danger;">Removing/damaging the sticker usually voids the warranty. To avoid this, disconnect your NVMe from the system and warm it up to 60-70 degrees with a blowdryer or something (don't worry, it won't damage it) - that will soften the glue and you will be able to gently lift the sticker to look at its controller.</mark>
 
@@ -60,15 +60,15 @@ For SMI controllers, you'll want to download a utility that queries SSD for info
 
 Start with installing drivers: unarchive the drivers archive, right click on `nvme_MP.inf` file and click "Install"
 
-<figure><img src="../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
 
 Once installed, reboot your system and unarchive the flash\_id utility. Run it as administrator.
 
-<figure><img src="../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
 
 Once running, the utility will display a console window with a list of detected drives. Select your target drive by pressing corresponding number on your keyboard and press enter. Utility will display technical details, you'll want to save these for further use.
 
-<figure><img src="../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -78,7 +78,7 @@ Depending on your controller and memory type, find a corresponding MP tool from 
 
 Take memory type you've noted in the previous step and find corresponding MP Tool version on the website. On this particular website tools are organized per memory types. As our particular SSD is built on Micron 176L (B47R) memory, you will want to look at B47R category. You will need to test every tool from your category to find one that suits your particular SSD because these tools are leaked from different manufacturers and even though their products are based on the same controller and memory, their internal architecture might be different and thus tool leaked from maker "A" might not work for maker "B", etc. You get the idea.
 
-<figure><img src="../.gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
 
 For my particular SSD, `SM2263XT_Micron_B47R_T_PKGX0304_FWX0304B0.rar` works great.
 
@@ -96,9 +96,9 @@ Prepare yourself a piece of wire with two exposed ends or a pair of metal tweeze
 Turn off your PC and find your NVMe. Locate your ROM pin holes, usually they're located at the end of the SSD board or on its side as a pair of pin holes. Sometimes, one pin hole has square lithography pattern around it and the other has round pattern. Sometimes both ROM pinholes have round lithography pattern.\
 Some vendors print pin names by their sides:
 
-<figure><img src="../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
 
 If you are unsure what are your ROM pins, DO NOT short random pins - this might cause electrical shock and permanent damage to your SSD. Instead, look up information on the Internet - most likely, some enthusiasts have already figured what pins are in charge of ROM mode.
 
@@ -108,21 +108,21 @@ Once you have located ROM pins - short them with a pair of tweezers or piece of 
 
 Once running, the utility will display list of compatible detected SSDs. Check that your target SSD has booted in ROM mode.
 
-<figure><img src="../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
 
 Go to "Parameter" tab and press "Edit config". The utility will promt a password - the password is " " `two spaces, without quotes`.
 
 Once config page is unblocked, press "Auto" by "Flash Select" dropdown, the utility will auto-detect your memory type. Always check auto-detected memory type against actual memory type from `Step 2` to avoid bricking your SSD.
 
-<figure><img src="../.gitbook/assets/image (50).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
 
 Next, update your IDs to desired values. Don't null your serials. The best approach is to look up a real SSD on the Internet, and take its IDs as example - name, serial, model, etc. Paste example serial to the "Begin SN", "End SN" and "SN Mask" fields and delete last few characters. In "Begin SN" replace deleted characters with 0's and in "End SN" replace deleted characters with 9's. In "SN Mask" put mask symbols (`###### symbols`) instead of deleted characters, and the utility will generate a random serial within your mask.
 
-<figure><img src="../.gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (50).png" alt=""><figcaption></figcaption></figure>
 
 You will want to also edit your Extension Identifier and OUI - those stand for OUID (EUID64), that are displayed by `get-disk | select serialnumber` command. Those are usually non-editable in most of controllers, so it's crucial to change these values for spoofing, if they're available. For my particular SSD, `Extension Identifier` and `OUI` fields are responsible for resulting EUID64.
 
-<figure><img src="../.gitbook/assets/image (52).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure>
 
 Once filled all the values, you might want to save your config to do the whole thing faster the next time. To do this, press "Save Config As" and save your config. To select your config, click on "Config List" dropdown and choose your config.
 
@@ -130,11 +130,11 @@ Once done, press "Save" - the configuration page should go back to locked state.
 
 After saving your config, go back to "Main" tab and press "Start". The flashing process will start.
 
-<figure><img src="../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (52).png" alt=""><figcaption></figcaption></figure>
 
 Once successfully flashed, your SSD will change its state to "ISP" (usual work mode) and the utility will print updated info about the disk.
 
-<figure><img src="../.gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
 
 Once done, you will want to install a fresh Windows on your freshly flashed SSD.
 

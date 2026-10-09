@@ -11,4 +11,4 @@ Cheapest option for all monitors
 
 {% embed url="https://www.monitortests.com/forum/Thread-EDID-DisplayID-Writer" %}
 
-<figure><img src="../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
