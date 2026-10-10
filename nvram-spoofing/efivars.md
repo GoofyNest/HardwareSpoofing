@@ -56,7 +56,7 @@ When done:
 
 Use our app:
 
-{% file src="../.gitbook/assets/HardwareReport (2).rar" %}
+{% file src="../.gitbook/assets/HardwareReport (3).rar" %}
 
 Archieve password is `1`
 
