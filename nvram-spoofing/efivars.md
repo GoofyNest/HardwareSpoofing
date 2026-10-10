@@ -40,17 +40,25 @@ Requirements
 
 {% embed url="https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/" %}
 
+To remove EFI vars:
+
 * Secure boot (Temporairly disabled)
 * cmd.exe as Admin ⇒ bcdedit /set TESTSIGNING ON
+* Restart PC<br>
+
+When done:
+
+* cmd.exe as Admin ⇒ bcdedit /set TESTSIGNING OFF
 * Restart PC
+* Enable Secure boot
+
+
 
 Use our app:
 
 {% file src="../.gitbook/assets/HardwareReport (2).rar" %}
 
 Archieve password is `1`
-
-{% embed url="https://mh-nexus.de/en/hxd/" %}
 
 ***
 
