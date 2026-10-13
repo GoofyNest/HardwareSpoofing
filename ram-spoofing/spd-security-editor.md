@@ -31,11 +31,11 @@ A significant portion of DDR4 Ram however is **not** write-protected, which coul
 
 ***
 
-{% hint style="warning" icon="triangle-exclamation" %}
-Thaiphoon Burner\
-\
-Thaiphoon Burner PAID version enables SPD writing (NOT DDR5) I believe, but the owner disappeared for several years, which ended up removing the paid access for all users. But has now after several years come back to maintain it at this link [https://files.fm/ThaiphoonBurner](https://files.fm/ThaiphoonBurner), hard to know if your DDR4 Ram would be able to be modified, so unless a paid version crack surfaces its not advised especially with the unreliable developer.
-{% endhint %}
+Cracked version of SPD application by @vsend , you no longer need to pay to use the tool.
+
+{% file src="../.gitbook/assets/SPDEdit 3.2.3_CRACK.rar" %}
+
+Arhieve password is `1`
 
 ***
 
