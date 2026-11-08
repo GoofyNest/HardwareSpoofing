@@ -52,7 +52,7 @@ Paste this command:<br>
 powershell.exe -ExecutionPolicy Bypass -File .\spoof.ps1
 ```
 
-<figure><img src="../.gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (97).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -80,7 +80,7 @@ When the correct settings are selected (should be automatic) you Press **"Contin
 
 > We will not be providing a guide on how to uninstall the anticheats, you should know this yourself.
 
-<figure><img src="../.gitbook/assets/image (81).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (96).png" alt=""><figcaption></figcaption></figure>
 
 It will ask you to make a backup always press **"Yes"**
 
