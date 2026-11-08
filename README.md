@@ -96,7 +96,7 @@ Supported CPU (CPU no longer matters)
 Supported Motherboards
 {% endhint %}
 
-<table data-view="cards"><thead><tr><th></th><th data-type="rating" data-max="5"></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>Gigabyte</td><td>3</td><td>Reliable on AM4 and AM5</td><td><a href=".gitbook/assets/gigabyte-logo.png">gigabyte-logo.png</a></td></tr><tr><td>AsRock</td><td>3</td><td>Reliable on AM4 and AM5</td><td><a href=".gitbook/assets/asrock.png">asrock.png</a></td></tr><tr><td>MSI</td><td>2</td><td>Works but has issues</td><td><a href=".gitbook/assets/MSI-Logo.png">MSI-Logo.png</a></td></tr><tr><td>ASUS</td><td>1</td><td>Very limited support</td><td><a href=".gitbook/assets/asus-logo.webp">asus-logo.webp</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-type="rating" data-max="5"></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>Gigabyte</td><td>4</td><td>Reliable</td><td><a href=".gitbook/assets/gigabyte-logo.png">gigabyte-logo.png</a></td></tr><tr><td>MSI</td><td>4</td><td>Reliable</td><td><a href=".gitbook/assets/MSI-Logo.png">MSI-Logo.png</a></td></tr><tr><td>ASRock</td><td>3</td><td>Reliable</td><td><a href=".gitbook/assets/asrock.png">asrock.png</a></td></tr><tr><td>ASUS</td><td>1</td><td>Very limited support</td><td><a href=".gitbook/assets/asus-logo.webp">asus-logo.webp</a></td></tr></tbody></table>
 
 {% hint style="info" icon="memory" %}
 Supported Ram
