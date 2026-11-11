@@ -24,90 +24,83 @@ layout:
 
 # Welcome
 
-## Hardware Spoofing
+## GoofyNest
 
-{% hint style="info" %}
+**Hardware research, technical guides and community documentation.**
+
 Built from frustration. Refined through research.
 
-The endless hunt for answers ends here.\
-Built around research, transparency, and understanding your system.\
-\
-This guide covers advanced system concepts.\
-Take your time, understand each step, and make informed decisions.
+GoofyNest documents hardware identifiers, firmware behavior, system configuration and hands-on experiments. Explore a topic below, review the prerequisites and understand the risks before making changes.
+
+{% hint style="warning" %}
+**Before you begin:** Firmware, EEPROM and hardware modifications can cause data loss or permanently damage devices. Back up important data, document your original settings and confirm a recovery method before attempting changes. Results depend on your specific hardware and firmware.
 {% endhint %}
 
-#### Why this guide exists
+### Start here
 
-This guide started from frustration within the EAC and the Rust community.
+* Basics & terminology
+* Important information
+* Device restrictions
+* Hardware and tools
 
-Like many others, I was a normal consumer who trusted recommendations, purchased hardware spoofers that were considered popular, and followed solutions that were advertised as "working."
+### Motherboards & SMBIOS
 
-Instead of finding a clear answer, I found myself stuck in an endless cycle of trying different solutions and searching for something reliable.
+* SMBIOS manager
+* ASUS motherboards
+* CH341A programmer
 
-When problems occurred, the blame was often shifted between different parties. Spoofer developers blamed cheat developers, cheat developers blamed spoofers, and users were left trying to figure out what was actually happening.
+### Firmware & TPM
 
-This guide was created to break that cycle through documentation and sharing my own personal experience combined with many others.
+* UEFI variables
+* Firmware TPM
 
-However, permanent hardware-level spoofers have gained a complicated reputation over the years. There has been many reported incidents where permanent spoofing has broken peoples hardware, blowing e-fuses and making their computers not work. I have personally also witnessed many permanent spoofers destroying your SMBIOS Data filling it with full of random characters and digits.
+### Storage
 
-The truth is that many permanent spoofers are not even real **permanent** spoofers. The majority of them are taking shortcuts, I call it **Hybrid** solutions that perm spoof what is normally **possible** then load their own drivers to spoof the remaining identifiers/devices.
+* Sabrent enclosure
+* SMI controller
+* KingSpec SSD
 
-Our approach is always advancing, we are using spoofable hardware components combined with what we can permanently change to never need loading anything after you have reinstalled your windows operating system.
+### Networking
 
-### :point\_right: Find us here:
+* Realtek NICs
+* Intel NICs
+* Raspberry Pi 4
 
-* Discord server [https://discord.com/invite/JtU8FxQnN5](https://discord.com/invite/JtU8FxQnN5)
-* Github: [https://github.com/GoofyNest/HardwareSpoofing](https://github.com/GoofyNest/HardwareSpoofing)
-* Gitbook: [https://goofynest.gitbook.io/spoof](https://goofynest.gitbook.io/spoof)
+### Memory, displays & Windows
 
-### 🙌 Special thanks to
+* SPD Security Editor
+* Monitor tools
+* EDID hardware
+* Windows installation
 
-* Everyone who keep contributing to the documentation and all our supporters at **buymeacoffee**
-* discord = **@exclusi0n** for helping with research
-* discord = [**@slate\_hub**](https://slatehub.io/) for helping with research
-* discord = **@awong0** for helping with research
-* **Sauche Machine** for releasing binaries for AMIDEWINx64
+### Research notes
 
-{% hint style="success" icon="dollar-sign" %}
-If our guides/tools/open research has helped you in any way, consider helping us back by donating
-
-{% embed url="https://buymeacoffee.com/goofynest" %}
-
-People whom donate will get a special role in our Discord server as a Thank you :heart:
+{% hint style="info" %}
+**How to read the guides:** Documented observations are not universal guarantees. Hardware revisions, firmware versions and operating system builds may change behavior. A successful test does not establish that a configuration is undetectable.
 {% endhint %}
+
+The original documentation grew from personal experiences in the Rust and anti-cheat communities, where conflicting advice and unreliable claims made it difficult to understand what hardware tools actually changed. This project aims to make those technical details easier to find, evaluate and discuss.
+
+### Community & source
+
+**GitHub repository**
+
+{% embed url="https://github.com/GoofyNest/HardwareSpoofing" %}
+
+**Discord community**
+
+{% embed url="https://discord.com/invite/JtU8FxQnN5" %}
+
+**Published documentation**
+
+{% embed url="https://goofynest.gitbook.io/spoof" %}
+
+### Credits
+
+Thanks to everyone contributing research, testing and documentation, including **@exclusi0n**, [**@slate\_hub**](https://slatehub.io/), **@awong0**, and **Sauce Machine** for publishing AMIDEWINx64 binaries.
 
 ***
 
-{% hint style="info" icon="gamepad-modern" %}
-Supported Anti Cheats
-{% endhint %}
+If these resources have been helpful, you can support GoofyNest below. Support is entirely optional and the documentation remains freely accessible.
 
-Most anti-cheats that does not force fTPM(**CPU**)
-
-<table><thead><tr><th>Game(s)</th><th>AntiCheat</th><th>Status</th><th valign="top">Last issue</th><th>Requirements</th></tr></thead><tbody><tr><td>Rust</td><td>EasyAntiCheat</td><td><span data-gb-custom-inline data-tag="emoji" data-code="1f7e2">🟢</span>Undetected</td><td valign="top"><em>—</em> 8/16/26 (RAID 0, NVRAM)</td><td>dTPM, Secure boot, IOMMU</td></tr><tr><td>Fortnite</td><td>EasyAntiCheat</td><td><span data-gb-custom-inline data-tag="emoji" data-code="1f7e2">🟢</span>Undetected</td><td valign="top"><em>—</em> 8/16/26 (RAID 0, NVRAM)</td><td>dTPM, Secure boot, IOMMU</td></tr><tr><td>Any</td><td>BattlEye</td><td><span data-gb-custom-inline data-tag="emoji" data-code="1f7e2">🟢</span>Undetected</td><td valign="top"></td><td></td></tr><tr><td>Any</td><td>EA Javeline</td><td><span data-gb-custom-inline data-tag="emoji" data-code="1f7e2">🟢</span>Undetected</td><td valign="top"></td><td>dTPM, Secure boot</td></tr><tr><td>Any</td><td>Tencent ACE</td><td><span data-gb-custom-inline data-tag="emoji" data-code="1f7e2">🟢</span>Undetected</td><td valign="top"></td><td>dTPM, Secure boot, IOMMU</td></tr></tbody></table>
-
-{% hint style="info" icon="microchip" %}
-Supported CPU (CPU no longer matters)
-{% endhint %}
-
-<table data-view="cards"><thead><tr><th></th><th data-type="rating" data-max="5"></th><th></th><th></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>AMD</td><td>5</td><td></td><td></td><td></td><td data-object-fit="contain"><a href=".gitbook/assets/amd-logo-ruby-red.webp">amd-logo-ruby-red.webp</a></td></tr><tr><td>Intel</td><td>5</td><td></td><td></td><td></td><td data-object-fit="contain"><a href=".gitbook/assets/Intel_logo_(2006-2020).svg.png">Intel_logo_(2006-2020).svg.png</a></td></tr></tbody></table>
-
-{% hint style="info" icon="desktop" %}
-Supported Motherboards
-{% endhint %}
-
-<table data-view="cards"><thead><tr><th></th><th data-type="rating" data-max="5"></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>Gigabyte</td><td>4</td><td>Reliable</td><td><a href=".gitbook/assets/gigabyte-logo.png">gigabyte-logo.png</a></td></tr><tr><td>MSI</td><td>4</td><td>Reliable</td><td><a href=".gitbook/assets/MSI-Logo.png">MSI-Logo.png</a></td></tr><tr><td>ASRock</td><td>3</td><td>Reliable</td><td><a href=".gitbook/assets/asrock.png">asrock.png</a></td></tr><tr><td>ASUS</td><td>1</td><td>Very limited support</td><td><a href=".gitbook/assets/asus-logo.webp">asus-logo.webp</a></td></tr></tbody></table>
-
-{% hint style="info" icon="memory" %}
-Supported Ram
-{% endhint %}
-
-<table data-view="cards"><thead><tr><th></th><th data-type="rating" data-max="5"></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>Any ram</td><td>5</td><td>You can spoof ram using SPD programmer module on aliexpress</td><td data-object-fit="contain"><a href=".gitbook/assets/image (32).png">image (32).png</a></td></tr></tbody></table>
-
-{% hint style="info" icon="windows" %}
-Supported operating systems
-
-This guide focus on ban evading on Windows games which is protected by kernel level anticheats, the permanent spoofing will also work for Linux system but is literally pointless cause not many anticheats run on Linux anyways.
-{% endhint %}
-
-<table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>Windows 7</td><td>All versions</td><td data-object-fit="contain"><a href=".gitbook/assets/windows-7-use.png">windows-7-use.png</a></td></tr><tr><td>Windows 10</td><td>All versions</td><td data-object-fit="contain"><a href=".gitbook/assets/win-10.webp">win-10.webp</a></td></tr><tr><td>Windows 11</td><td>All versions</td><td data-object-fit="contain"><a href=".gitbook/assets/win-11.jpg">win-11.jpg</a></td></tr></tbody></table>
+{% embed url="https://buymeacoffee.com/goofynest" %}
