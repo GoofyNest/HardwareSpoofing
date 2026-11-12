@@ -27,8 +27,6 @@ The following information is based on physical motherboards purchased, examined,
 
 These patterns may differ between motherboard models, hardware revisions, and BIOS versions.
 
-These patterns may differ between motherboard models, hardware revisions, and BIOS versions.
-
 | Vendor   | Type 1 system manufacturer           | Type 1 system serial     | Type 2 baseboard manufacturer        | Type 2 serial format                                                      | Type 3 chassis serial                                       | UUID structure                                                        |
 | -------- | ------------------------------------ | ------------------------ | ------------------------------------ | ------------------------------------------------------------------------- | ----------------------------------------------------------- | --------------------------------------------------------------------- |
 | Gigabyte | `Gigabyte Technology Co., Ltd.`      | `Default string`         | `Gigabyte Technology Co., Ltd.`      | `Default string`                                                          | `Default string`                                            | Commonly observed mask `03000200040005000006000700080009`             |
