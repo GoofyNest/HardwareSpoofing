@@ -13,7 +13,8 @@
 
 ## Automatic-SMBIOS-Manager
 
-* [Not for ASUS](automatic-smbios-manager/step-1.md)
+* [Automation](automatic-smbios-manager/step-1.md)
+* [SMBIOS-OEM-Reference](automatic-smbios-manager/smbios-oem-reference.md)
 * [Manual ASUS](automatic-smbios-manager/asus.md)
 * [CH341A](automatic-smbios-manager/ch341a.md)
 * [Tools](automatic-smbios-manager/tools.md)

@@ -9,10 +9,10 @@ icon: memory
 
 ***
 
-{% hint style="success" icon="info" %}
+{% hint style="danger" %}
 Compatibility
 
-G.SKILL memory modules bearing the **"TA" prefix** above the barcode are confirmed incompatible. All other 99% of memory modules are supported.
+G.SKILL memory modules not supported, confirmed E-WASTE
 {% endhint %}
 
 You can buy the SPD Programmer [here](https://www.aliexpress.com/item/1005010734907283.html), there is a couple of sellers all seemingly selling the same SPD Programmer, but this is the one I personally bought from and can confirm worked / provided software for it (i would assume the others sellers also provide the same software).

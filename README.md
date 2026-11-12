@@ -110,7 +110,7 @@ Supported Motherboards
 Supported Ram
 {% endhint %}
 
-<table data-view="cards"><thead><tr><th></th><th data-type="rating" data-max="5"></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>Any ram</td><td>5</td><td>You can spoof ram using SPD programmer module on aliexpress</td><td data-object-fit="fill"><a href=".gitbook/assets/image (56).png">image (56).png</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-type="rating" data-max="5"></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>Most ram</td><td>4</td><td>G.SKILL memory modules not supported, confirmed E-WASTE</td><td data-object-fit="fill"><a href=".gitbook/assets/image (56).png">image (56).png</a></td></tr></tbody></table>
 
 {% hint style="info" icon="windows" %}
 Supported operating systems
