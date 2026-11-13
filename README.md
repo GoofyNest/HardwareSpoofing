@@ -40,21 +40,29 @@ Take your time, understand each step, and make informed decisions.
 
 **Why this guide exists**
 
-This guide started from frustration within the EAC and the Rust community.
+This guide started out of frustration within the EAC and Rust communities.
 
-Like many others, I was a normal consumer who trusted recommendations, purchased hardware spoofers that were considered popular, and followed solutions that were advertised as "working."
+Like many others, I was a regular consumer who trusted recommendations, purchased popular hardware spoofers, and followed solutions advertised as "working."
 
-Instead of finding a clear answer, I found myself stuck in an endless cycle of trying different solutions and searching for something reliable.
+Instead of finding clear answers, I found myself stuck in an endless cycle of testing different solutions and searching for something reliable.
 
-When problems occurred, the blame was often shifted between different parties. Spoofer developers blamed cheat developers, cheat developers blamed spoofers, and users were left trying to figure out what was actually happening.
+Whenever problems occurred, the blame was often passed around. Spoofer developers blamed cheat developers, cheat developers blamed spoofers, and users were left trying to figure out what was actually happening.
 
-This guide was created to break that cycle through documentation and sharing my own personal experience combined with many others.
+This guide was created to break that cycle by documenting my personal experiences, combining them with research and findings shared by others in the community.
 
-However, permanent hardware-level spoofers have gained a complicated reputation over the years. There has been many reported incidents where permanent spoofing has broken peoples hardware, blowing e-fuses and making their computers not work. I have personally also witnessed many permanent spoofers destroying your SMBIOS Data filling it with full of random characters and digits.
+Over the years, permanent hardware-level spoofers have developed a complicated reputation. Users have reported incidents involving corrupted firmware, damaged hardware, and even claims of permanently disabled components due to e-fuse-related issues.
 
-The truth is that many permanent spoofers are not even real **permanent** spoofers. The majority of them are taking shortcuts, I call it **Hybrid** solutions that perm spoof what is normally **possible** then load their own drivers to spoof the remaining identifiers/devices.
+I have personally witnessed tools corrupting SMBIOS data, replacing legitimate manufacturer information with random characters and numbers, leaving systems with inconsistent or damaged hardware identification records.
 
-Our approach is always advancing, we are using spoofable hardware components combined with what we can permanently change to never need loading anything after you have reinstalled your windows operating system.
+Another issue is that many products advertised as **permanent spoofers** are not entirely permanent.
+
+Some use what I call **hybrid solutions**, modifying identifiers that can be changed persistently while relying on additional software or drivers to modify or intercept the remaining identifiers at runtime.
+
+This distinction is often overlooked when these products are advertised.
+
+Our approach continues to evolve through research into hardware components, firmware configurations, and identifiers that can be modified persistently.
+
+The goal is to understand which changes survive a complete Windows reinstallation, which require additional software, and how to achieve consistent hardware configurations without relying on unnecessary background drivers.
 
 #### :point\_right: Find us here:
 
@@ -86,13 +94,12 @@ Supported Anti Cheats
 
 Most anti-cheats that does not force fTPM(**CPU**)
 
-| Game(s)  | AntiCheat     | Status        | Last issue                | Requirements             |
-| -------- | ------------- | ------------- | ------------------------- | ------------------------ |
-| Rust     | EasyAntiCheat | 🟢 Undetected | — 8/16/26 (RAID 0, NVRAM) | dTPM, Secure boot, IOMMU |
-| Fortnite | EasyAntiCheat | 🟢 Undetected | — 8/16/26 (RAID 0, NVRAM) | dTPM, Secure boot, IOMMU |
-| Any      | BattlEye      | 🟢 Undetected |                           |                          |
-| Any      | EA Javeline   | 🟢 Undetected |                           | dTPM, Secure boot        |
-| Any      | Tencent ACE   | 🟢 Undetected |                           | dTPM, Secure boot, IOMMU |
+| AntiCheat     | Status     | Last issue                | Requirements             |
+| ------------- | ---------- | ------------------------- | ------------------------ |
+| EasyAntiCheat | 🟢 Working | — 8/16/26 (RAID 0, NVRAM) | dTPM, Secure boot, IOMMU |
+| BattlEye      | 🟢 Working |                           |                          |
+| EA Javeline   | 🟢 Working |                           | dTPM, Secure boot        |
+| Tencent ACE   | 🟢 Working |                           | dTPM, Secure boot, IOMMU |
 
 {% hint style="info" icon="microchip" %}
 Supported CPU (CPU no longer matters)
@@ -110,12 +117,12 @@ Supported Motherboards
 Supported Ram
 {% endhint %}
 
-<table data-view="cards"><thead><tr><th></th><th data-type="rating" data-max="5"></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>Most ram</td><td>4</td><td>G.SKILL memory modules not supported, confirmed E-WASTE</td><td data-object-fit="fill"><a href=".gitbook/assets/image (56).png">image (56).png</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-type="rating" data-max="5"></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>Most ram</td><td>4</td><td>G.SKILL memory modules not supported, confirmed E-WASTE</td><td data-object-fit="contain"><a href=".gitbook/assets/image (56).png">image (56).png</a></td></tr></tbody></table>
 
 {% hint style="info" icon="windows" %}
 Supported operating systems
 
-This guide focus on ban evading on Windows games which is protected by kernel level anticheats, the permanent spoofing will also work for Linux system but is literally pointless cause not many anticheats run on Linux anyways.
+This guide focuses on hardware identification, hardware-level modifications, and how these technologies interact with kernel-level anti-cheat systems on Windows. Many of the documented techniques also apply to Linux, although hardware identification and anti-cheat implementations differ between operating systems.
 {% endhint %}
 
 <table data-view="cards"><thead><tr><th></th><th></th><th data-hidden data-card-cover data-type="image">Cover image</th></tr></thead><tbody><tr><td>Windows 7</td><td>All versions</td><td data-object-fit="contain"><a href=".gitbook/assets/windows-7-use.png">windows-7-use.png</a></td></tr><tr><td>Windows 10</td><td>All versions</td><td data-object-fit="contain"><a href=".gitbook/assets/win-10.webp">win-10.webp</a></td></tr><tr><td>Windows 11</td><td>All versions</td><td data-object-fit="contain"><a href=".gitbook/assets/win-11.jpg">win-11.jpg</a></td></tr></tbody></table>
