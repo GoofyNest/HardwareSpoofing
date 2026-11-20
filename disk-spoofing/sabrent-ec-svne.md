@@ -5,7 +5,7 @@ icon: usb
 
 # USB => NVME (SWAG ENCLOSURE)
 
-## Undetected
+## <mark style="color:$success;">Undetected</mark>
 
 Reverse engineering the firmware and making our own to fully support SMART, blocking all requests.
 
@@ -15,11 +15,15 @@ _Have fun patching this, L bozo's_
 
 ***
 
+**$16** disk spoofer method :100:
+
 {% embed url="https://www.amazon.com/dp/B083XWBR2V" %}
 
 {% file src="../.gitbook/assets/GoofyNest ELUTENG.rar" %}
 
 OR
+
+**$25** disk spoofer method :100:
 
 {% embed url="https://www.amazon.com/dp/B08RVC6F9Y" %}
 
