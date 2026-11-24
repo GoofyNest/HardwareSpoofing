@@ -44,686 +44,444 @@ If not just leave empty, your SSID must be your routers WiFi Name and you must m
 
 <figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
-After finish writing now you need to plug in the MicroSD card to your Raspberry Pi.
-
-<mark style="color:red;">I have not fully finished testing this setup but currently I am powering my Raspberry Pi 4 connected through USB port on my gaming PC, I have not seen a single unique identifiable serial number on my PC from the connection.</mark>\
-\ <mark style="color:red;">However might be worth mentioning incase you are paranoid, you should just order a power cable to your raspberry pi model 4.</mark>
-
 ***
 
-### Working example
+#### Choose Your Upstream Setup
 
-This example assumes:
+The setup script below supports two ways of getting internet to the Raspberry Pi. Pick whichever suits you best when prompted:
 
-```
-WiFi → Raspberry Pi → RJ45 → PC
-```
-
-The Raspberry Pi uses:
-
-```
-wlan0 = Internet / upstream
-eth0  = LAN / downstream
-```
-
-The network will look like:
+* **Option 1 — WiFi (`wlan0`):** Easiest setup, no extra hardware needed.
+* **Option 2 — USB Ethernet Adapter (`eth1`):** Full wired speeds and lower latency for gaming. _(Keeps `wlan0` connected as a backup for SSH if configured.)_
 
 ```
                  Internet
                     │
-               WiFi Router
+               Main Router
                192.168.0.1
                     │
-                 wlan0
-              192.168.0.x
+         wlan0 (Option 1) OR eth1 (Option 2)
+               192.168.0.x
                     │
-             Raspberry Pi
+             Raspberry Pi 4
                     │
-                  eth0
-              192.168.50.1
+                  eth0 (Random MAC on every reboot)
+               10.0.0.1/24
                     │
                   RJ45
                     │
-                    PC
-              192.168.50.x
+                Gaming PC
+               10.0.0.2–254
 ```
 
-You can also use two Ethernet interfaces.
-
-For example:
-
-```
-eth1 = Internet / upstream
-eth0 = LAN / downstream
-```
-
-If you use a USB Ethernet adapter, the interface name may be `eth1`, `enx...`, or something else. Always check with:
-
-```
-ip link show
-```
-
-and substitute the correct interface name throughout the configuration.
+{% hint style="info" %}
+If you use a USB Ethernet adapter, Linux may name it `eth1`, `enx...`, or similar. The script will display all detected interfaces at the start so you can enter the exact name.
+{% endhint %}
 
 ***
 
-### Connect to the Raspberry Pi
+#### Connect to the Raspberry Pi
 
 * Connect to the Device using (Putty) SSH
 * If your Raspberry Pi is connected to a router you can login to the admin panel and find the IPv4 its using in the device list: (image preview below)
 
-<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (98).png" alt=""><figcaption></figcaption></figure>
 
-* Download Putty ([https://the.earth.li/\~sgtatham/putty/latest/w64/putty-64bit-0.83-installer.msi](https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.83-installer.msi))
+* Download Putty ([https://the.earth.li/\~sgtatham/putty/latest/w64/putty.exe](https://the.earth.li/~sgtatham/putty/latest/w64/putty.exe))
 * Install Putty, is not rocket science.
 * In putty connect to your raspberry pi
 
-## Update the machine
+***
 
-Run:
+### Automated Setup Script
 
-```
+{% hint style="warning" %}
+**SSH Lockout Warning:** Once the script finishes, the firewall blocks **all** direct traffic from your PC (`eth0`) to the Pi (`10.0.0.1`)—including PuTTY/SSH and ping—except DHCP (UDP 67). It also blocks your PC from reaching your main router and other devices on your home LAN (`192.168.0.0/24`).
+{% endhint %}
+
+To manage the Pi afterward, SSH into the Pi's main network IP (`192.168.0.x`) from another device on your home router.
+
+#### 1. Update the Pi
+
+```bash
 sudo -i
-```
-
-Then:
-
-```
 apt update && apt upgrade -y
 ```
 
-Identify your network interfaces:
+#### 2. Create the Setup Script
 
-```
-ip link show
-```
+Create the file:
 
-<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
-
-For this example:
-
-```
-wlan0 → Internet
-eth0  → PC
+```bash
+nano setup-pi-router.sh
 ```
 
-***
+Copy and paste the entire script below into `nano`:
 
-## Configure the Network
+```bash
+#!/usr/bin/env bash
+set -euo pipefail
 
-> **Important:** This guide uses **Netplan + NetworkManager**.
->
-> Do not configure the same interfaces using `systemd-networkd` at the same time. Running multiple network managers against the same interface can result in interfaces being brought up without their expected IP configuration.
+# ==============================================================================
+# Raspberry Pi 4 Router Automated Setup
+# - Disables systemd-networkd / Netplan conflicts so NetworkManager has control
+# - Configures eth0 as 10.0.0.1/24 LAN with a random MAC on every reboot
+# - Supports Option 1 (WiFi / wlan0) or Option 2 (USB Ethernet / eth1)
+# - Sets up dnsmasq DHCP (10.0.0.2 - 10.0.0.254) with Cloudflare DNS (1.1.1.1)
+# - Locks down nftables: NAT + isolates home LAN + drops all PC->Pi ports except DHCP
+# ==============================================================================
 
-### Create the Netplan configuration
+if [[ $EUID -ne 0 ]]; then
+  echo "[ERROR] Please run this script with sudo: sudo bash $0"
+  exit 1
+fi
 
-First check your existing Netplan files:
+ask() {
+  local prompt="$1"
+  local default="$2"
+  local reply
+  read -rp "$prompt [$default]: " reply < /dev/tty || true
+  echo "${reply:-$default}"
+}
 
-```
-ls -la /etc/netplan/
-```
+echo "=============================================="
+echo "     Raspberry Pi Router Automated Setup      "
+echo "=============================================="
+echo ""
+echo "Detected network interfaces:"
+ip -br link | awk '{print "  - " $1 " (" $2 ")  MAC: " $3}'
+echo ""
 
-Create a dedicated router configuration:
+# 1. Choose Upstream (WAN)
+echo "Select your upstream internet interface (WAN):"
+echo "  1) WiFi (wlan0) - Easiest, no extra hardware"
+echo "  2) USB Ethernet Adapter (eth1) - Full wired speed & lower latency"
+WAN_CHOICE=$(ask "Enter 1 or 2" "2")
 
-```
-nano /etc/netplan/01-router.yaml
-```
+if [[ "$WAN_CHOICE" == "1" ]]; then
+  WAN_TYPE="wifi"
+  WAN_IF=$(ask "Enter your WiFi interface name" "wlan0")
+else
+  WAN_TYPE="ethernet"
+  WAN_IF=$(ask "Enter your USB Ethernet interface name" "eth1")
+fi
 
-Paste:
+# 2. Confirm Downstream (LAN)
+LAN_IF=$(ask "Enter your PC-facing Ethernet interface (LAN)" "eth0")
 
-```
-network:
-  version: 2
-  renderer: NetworkManager
+if [[ "$WAN_IF" == "$LAN_IF" ]]; then
+  echo "[ERROR] WAN and LAN interfaces cannot be the same ($WAN_IF)."
+  exit 1
+fi
 
-  ethernets:
-    eth0:
-      dhcp4: false
-      dhcp6: false
-      addresses:
-        - 192.168.50.1/24
-      macaddress: 02:00:00:00:00:01
-```
+# 3. Auto-detect main router subnet to isolate
+DETECTED_SUBNET=$(ip -4 route show dev "$WAN_IF" 2>/dev/null | awk '/proto kernel/ {print $1; exit}' || true)
+if [[ -z "$DETECTED_SUBNET" ]]; then
+  DETECTED_SUBNET=$(ip -4 route | awk '/proto kernel/ && !/10\.0\.0\.0\/24/ {print $1; exit}' || true)
+fi
+DETECTED_SUBNET="${DETECTED_SUBNET:-192.168.0.0/24}"
+HOME_SUBNET=$(ask "Main router subnet to block from your PC" "$DETECTED_SUBNET")
 
-#### What this does
+# 4. Optional Static IP for USB Ethernet
+WAN_IP_MODE="dhcp"
+WAN_STATIC_IP=""
+WAN_GATEWAY=""
+if [[ "$WAN_TYPE" == "ethernet" ]]; then
+  echo ""
+  echo "How should $WAN_IF get its IP from your main router?"
+  echo "  1) DHCP (Recommended / Easiest)"
+  echo "  2) Static IP (e.g. 192.168.0.119/24)"
+  IP_CHOICE=$(ask "Enter 1 or 2" "1")
+  if [[ "$IP_CHOICE" == "2" ]]; then
+    WAN_IP_MODE="static"
+    DEFAULT_GW=$(ip route | awk '/default/ {print $3; exit}' || true)
+    DEFAULT_GW="${DEFAULT_GW:-192.168.0.1}"
+    WAN_STATIC_IP=$(ask "Static IP with prefix for $WAN_IF (e.g. 192.168.0.119/24)" "192.168.0.119/24")
+    WAN_GATEWAY=$(ask "Main router gateway IP" "$DEFAULT_GW")
+  fi
+fi
 
-The Ethernet interface receives:
+# 5. Summary & Confirmation
+echo ""
+echo "================ CONFIGURATION SUMMARY ================"
+echo "  WAN (Internet) : $WAN_IF ($WAN_TYPE / $WAN_IP_MODE)"
+if [[ "$WAN_IP_MODE" == "static" ]]; then
+  echo "  WAN Static IP  : $WAN_STATIC_IP (gw $WAN_GATEWAY)"
+fi
+echo "  LAN (PC)       : $LAN_IF -> 10.0.0.1/24 (Random MAC every reboot)"
+echo "  DHCP Range     : 10.0.0.2 - 10.0.0.254 (DNS: 1.1.1.1, 1.0.0.1)"
+echo "  Blocked Subnet : $HOME_SUBNET (isolated from PC)"
+echo "  Pi Firewall    : Drops all PC -> Pi ports except DHCP (UDP 67)"
+echo "======================================================="
+echo ""
+echo "[WARNING] After this script finishes, your PC on $LAN_IF will NOT be able"
+echo "          to SSH/PuTTY into 10.0.0.1. Manage the Pi via its $HOME_SUBNET IP."
+CONFIRM=$(ask "Proceed with installation? (y/n)" "y")
+if [[ ! "$CONFIRM" =~ ^[Yy]$ ]]; then
+  echo "Aborted."
+  exit 0
+fi
 
-```
-IP: 192.168.50.1
-Subnet: 255.255.255.0
-MAC: 02:00:00:00:00:01
-```
+# 6. Install required packages
+echo ""
+echo "[1/6] Installing nftables and dnsmasq..."
+apt-get update -qq
+DEBIAN_FRONTEND=noninteractive apt-get install -y -qq nftables dnsmasq
 
-The custom MAC address is retained from the original configuration.
+# 7. Disable systemd-networkd & remove conflicting Netplan/networkd configs
+echo "[2/6] Cleaning up systemd-networkd/Netplan conflicts & configuring NetworkManager..."
+systemctl disable --now systemd-networkd systemd-networkd.socket 2>/dev/null || true
+if ls /etc/systemd/network/* >/dev/null 2>&1; then
+  mkdir -p /root/networkd-backup
+  mv /etc/systemd/network/* /root/networkd-backup/ 2>/dev/null || true
+  echo "  -> Moved old /etc/systemd/network/ files to /root/networkd-backup/"
+fi
+systemctl enable --now NetworkManager >/dev/null 2>&1 || true
 
-There is intentionally **no gateway configured on `eth0`**.
+rm -f /etc/netplan/01-router.yaml
+nmcli connection delete netplan-eth0 netplan-eth1 2>/dev/null || true
 
-The gateway belongs to the upstream WiFi connection.Configure the WiFi connection
+mkdir -p /etc/NetworkManager/conf.d
+cat <<'EOF' > /etc/NetworkManager/conf.d/99-random-mac.conf
+[connection]
+ethernet.cloned-mac-address=random
+EOF
 
-The WiFi interface should remain managed by NetworkManager.
+# Configure LAN (eth0 -> 10.0.0.1/24, inherits random MAC)
+nmcli connection delete eth0-lan 2>/dev/null || true
+nmcli connection add type ethernet con-name eth0-lan ifname "$LAN_IF" \
+  ipv4.method manual ipv4.addresses 10.0.0.1/24 \
+  ipv6.method disabled connection.autoconnect yes >/dev/null
 
-Check:
+# Configure WAN
+ACTIVE_WIFI=$(nmcli -t -f NAME,TYPE connection show --active | awk -F: '$2=="802-11-wireless"{print $1; exit}' || true)
 
-```
-nmcli device status
-```
+if [[ "$WAN_TYPE" == "wifi" ]]; then
+  if [[ -n "$ACTIVE_WIFI" ]]; then
+    nmcli connection modify "$ACTIVE_WIFI" \
+      802-11-wireless.cloned-mac-address permanent \
+      802-11-wireless.powersave 2
+    echo "  -> Configured WiFi profile '$ACTIVE_WIFI' (permanent MAC, power-save off)."
+  else
+    echo "  [WARN] No active WiFi connection detected. Make sure WiFi is connected in NetworkManager."
+  fi
+else
+  nmcli connection delete eth1-wan 2>/dev/null || true
+  if [[ "$WAN_IP_MODE" == "static" ]]; then
+    nmcli connection add type ethernet con-name eth1-wan ifname "$WAN_IF" \
+      ipv4.method manual ipv4.addresses "$WAN_STATIC_IP" \
+      ipv4.gateway "$WAN_GATEWAY" ipv4.dns "1.1.1.1 1.0.0.1" \
+      ipv4.route-metric 100 ethernet.cloned-mac-address permanent \
+      ipv6.method disabled connection.autoconnect yes >/dev/null
+  else
+    nmcli connection add type ethernet con-name eth1-wan ifname "$WAN_IF" \
+      ipv4.method auto ipv4.route-metric 100 \
+      ethernet.cloned-mac-address permanent \
+      ipv6.method disabled connection.autoconnect yes >/dev/null
+  fi
 
-You should see something similar to:
+  # Keep WiFi as lower-priority backup SSH if present
+  if [[ -n "$ACTIVE_WIFI" ]]; then
+    nmcli connection modify "$ACTIVE_WIFI" \
+      ipv4.route-metric 600 \
+      802-11-wireless.cloned-mac-address permanent \
+      802-11-wireless.powersave 2
+    echo "  -> Kept WiFi '$ACTIVE_WIFI' as backup SSH (metric 600)."
+  fi
+fi
 
-```
-DEVICE   TYPE      STATE      CONNECTION
-wlan0    wifi      connected  Your-WiFi
-eth0     ethernet  connected  netplan-eth0
-```
+# 8. Enable IPv4 Forwarding
+echo "[3/6] Enabling IPv4 forwarding..."
+echo "net.ipv4.ip_forward=1" > /etc/sysctl.d/99-router.conf
+sysctl --system >/dev/null
 
-The WiFi interface should obtain its address from your existing router using DHCP.
+# 9. Configure dnsmasq
+echo "[4/6] Configuring dnsmasq DHCP server (10.0.0.2 - 10.0.0.254)..."
+cat <<EOF > /etc/dnsmasq.d/router.conf
+interface=$LAN_IF
 
-For example:
+dhcp-range=10.0.0.2,10.0.0.254,255.255.255.0,12h
 
-```
-wlan0 → 192.168.0.204
-Gateway → 192.168.0.1
-```
+dhcp-option=3,10.0.0.1
+dhcp-option=6,1.1.1.1,1.0.0.1
+EOF
+systemctl enable dnsmasq >/dev/null 2>&1
 
-You do not need to manually create a `/etc/systemd/network/10-wlan0.network` file.
-
-***
-
-### Apply the network configuration
-
-Validate the Netplan configuration:
-
-```
-netplan generate
-```
-
-If there are no errors:
-
-```
-netplan apply
-```
-
-Check the result:
-
-```
-ip -br addr
-```
-
-You should have something similar to:
-
-```
-eth0   UP   192.168.50.1/24
-wlan0  UP   192.168.0.x/24
-```
-
-Verify the custom MAC:
-
-```
-ip link show eth0
-```
-
-You should see:
-
-```
-link/ether 02:00:00:00:00:01
-```
-
-Check the routing table:
-
-```
-ip route
-```
-
-You should have:
-
-```
-192.168.50.0/24 dev eth0
-192.168.0.0/24 dev wlan0
-default via 192.168.0.1 dev wlan0
-```
-
-***
-
-## Enable IP forwarding globally
-
-Create:
-
-```
-nano /etc/sysctl.d/99-router.conf
-```
-
-Add:
-
-```
-net.ipv4.ip_forward=1
-```
-
-Apply the configuration:
-
-```
-sysctl --system
-```
-
-Verify:
-
-```
-sysctl net.ipv4.ip_forward
-```
-
-Expected:
-
-```
-net.ipv4.ip_forward = 1
-```
-
-***
-
-## NAT Internet Sharing
-
-Install nftables:
-
-```
-apt update && apt install nftables -y
-```
-
-Edit:
-
-```
-nano /etc/nftables.conf
-```
-
-Use:
-
-```
+# 10. Configure nftables
+echo "[5/6] Configuring nftables NAT and isolation firewall..."
+cat <<EOF > /etc/nftables.conf
 #!/usr/sbin/nft -f
 
 flush ruleset
 
+define WAN = "$WAN_IF"
+define LAN = "$LAN_IF"
+define HOME_NET = "$HOME_SUBNET"
+
 table ip nat {
     chain postrouting {
         type nat hook postrouting priority 100;
-        oifname "wlan0" masquerade
+        oifname \$WAN masquerade
     }
 }
 
 table ip filter {
+    chain input {
+        type filter hook input priority 0;
+        policy accept;
+
+        # Allow only DHCP from the PC so it can get a 10.0.0.x IP
+        iifname \$LAN udp dport 67 accept
+
+        # Drop all other direct traffic from the PC to the Pi (SSH, ping, all ports)
+        iifname \$LAN drop
+    }
+
     chain forward {
         type filter hook forward priority 0;
         policy drop;
 
-        iifname "eth0" oifname "wlan0" accept
-        iifname "wlan0" oifname "eth0" ct state related,established accept
+        # Block PC from reaching the main router and other devices on the home LAN
+        iifname \$LAN ip daddr \$HOME_NET drop
+
+        # Allow normal internet forwarding between LAN and WAN
+        iifname \$LAN oifname \$WAN accept
+        iifname \$WAN oifname \$LAN ct state related,established accept
     }
 }
-```
+EOF
 
-If your upstream Internet interface is different, replace:
+nft -c -f /etc/nftables.conf
+systemctl enable nftables >/dev/null 2>&1
 
-```
-wlan0
-```
-
-with the appropriate interface.
-
-If your downstream LAN interface is different, replace:
-
-```
-eth0
-```
-
-with the appropriate interface.
-
-Enable nftables:
-
-```
-systemctl enable nftables
-```
-
-Restart:
-
-```
-systemctl restart nftables
-```
-
-Verify:
-
-```
-nft list ruleset
-```
-
-***
-
-## Disable WiFi Power Saving
-
-Check the current state:
-
-```
-iw dev wlan0 get power_save
-```
-
-Temporarily disable power saving:
-
-```
-iw dev wlan0 set power_save off
-```
-
-For a persistent configuration with NetworkManager, configure the WiFi connection directly.
-
-First find the connection name:
-
-```
-nmcli connection show
-```
-
-Then:
-
-```
-nmcli connection modify "YOUR-WIFI-NAME" 802-11-wireless.powersave 2
-```
-
-Reconnect:
-
-```
-nmcli connection down "YOUR-WIFI-NAME"
-nmcli connection up "YOUR-WIFI-NAME"
-```
-
-Verify:
-
-```
-iw dev wlan0 get power_save
-```
-
-Expected:
-
-```
-Power save: off
-```
-
-***
-
-## DHCP Server
-
-Install dnsmasq:
-
-```
-apt install dnsmasq -y
-```
-
-Create the router configuration:
-
-```
-nano /etc/dnsmasq.d/router.conf
-```
-
-Add:
-
-```
-interface=eth0
-
-dhcp-range=192.168.50.100,192.168.50.200,12h
-
-dhcp-option=3,192.168.50.1
-dhcp-option=6,1.1.1.1,1.0.0.1
-```
-
-This provides DHCP addresses to devices connected to the Raspberry Pi's LAN interface.
-
-Restart dnsmasq:
-
-```
+# 11. Apply live services
+echo "[6/6] Applying network profiles and starting services..."
+nmcli general reload || true
+nmcli connection up eth0-lan >/dev/null 2>&1 || true
+if [[ "$WAN_TYPE" == "ethernet" ]]; then
+  nmcli connection up eth1-wan >/dev/null 2>&1 || true
+fi
 systemctl restart dnsmasq
-```
+systemctl restart nftables
 
-Enable it at boot:
-
-```
-systemctl enable dnsmasq
-```
-
-Check its status:
-
-```
-systemctl status dnsmasq
-```
-
-***
-
-## Final Verification
-
-Before rebooting, check the interfaces:
-
-```
+echo ""
+echo "=============================================="
+echo "              SETUP COMPLETE!                 "
+echo "=============================================="
+echo "Current interfaces:"
 ip -br addr
+echo ""
+echo "A reboot is recommended so $LAN_IF picks up a fresh random MAC cleanly."
+DO_REBOOT=$(ask "Reboot now? (y/n)" "y")
+if [[ "$DO_REBOOT" =~ ^[Yy]$ ]]; then
+  echo "Rebooting..."
+  reboot
+fi
 ```
 
-Expected:
+Save (`Ctrl+O`, `Enter`) and exit (`Ctrl+X`).
 
-```
-eth0   UP   192.168.50.1/24
-wlan0  UP   192.168.0.x/24
-```
+#### 3. Run the Script
 
-Check routing:
-
-```
-ip route
+```bash
+chmod +x setup-pi-router.sh
+./setup-pi-router.sh
 ```
 
-Check forwarding:
-
-```
-sysctl net.ipv4.ip_forward
-```
-
-Check the custom MAC:
-
-```
-ip link show eth0
-```
-
-You should see:
-
-```
-link/ether 02:00:00:00:00:01
-```
-
-At this point, connect your PC to the Raspberry Pi's Ethernet port.
-
-The PC should receive an address in:
-
-```
-192.168.50.100 – 192.168.50.200
-```
-
-The PC's gateway should be:
-
-```
-192.168.50.1
-```
-
-### Result of ARP table:
-
-<figure><img src="../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
+Follow the on-screen prompts and choose **y** to reboot at the end.
 
 ***
 
-## Reboot
+### Final Verification (On Your Windows PC)
 
-Finally:
+After the Raspberry Pi finishes rebooting, plug your PC into the Pi's built-in Ethernet port (`eth0`).
 
-```
-reboot
-```
+Open Command Prompt on your **Windows PC** and run:
 
-After the Raspberry Pi comes back online, verify:
-
-```
-ip -br addr
+```cmd
+ipconfig /release
+ipconfig /renew
+ipconfig
 ```
 
-The important part is that `eth0` should automatically have:
+Your PC should receive:
 
-```
-192.168.50.1/24
+* **IPv4 Address:** `10.0.0.2` – `10.0.0.254`
+* **Subnet Mask:** `255.255.255.0`
+* **Default Gateway:** `10.0.0.1`
+
+Test connectivity and firewall isolation from your PC:
+
+```cmd
+ping 1.1.1.1
+ping 10.0.0.1
+ping 192.168.0.1
+arp -a
 ```
 
-You should **not** need to manually run:
+Expected results:
 
-```
-ip addr add 192.168.50.1/24 dev eth0
-```
+* `ping 1.1.1.1` → **Replies** (0% packet loss, internet works)
+* `ping 10.0.0.1` → **Times out** (Pi is hidden/locked down from PC)
+* `ping 192.168.0.1` → **Times out** (Main router & home LAN are isolated from PC)
+* `arp -a` → Shows `10.0.0.1` with a **randomized MAC address**
+
+<figure><img src="../.gitbook/assets/image (99).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-## If You Have Issues
+### If You Have Issues
 
-If the PC cannot access the Internet, first determine where the failure occurs rather than immediately disabling network offloading.
+If the PC cannot access the Internet, SSH into the Raspberry Pi using its `192.168.0.x` IP from another device and check:
 
-From the PC, test:
-
-```
-192.168.50.1
-```
-
-Then:
-
-```
-192.168.0.1
-```
-
-Then:
-
-```
-1.1.1.1
-```
-
-Then:
-
-```
-google.com
-```
-
-This helps determine whether the problem is:
-
-```
-PC → Raspberry Pi
-```
-
-```
-Raspberry Pi → Router
-```
-
-```
-NAT/forwarding
-```
-
-or:
-
-```
-DNS
-```
-
-On the Raspberry Pi, check:
-
-```
+```bash
 ip -br addr
 ip route
-```
-
-Then:
-
-```
 sysctl net.ipv4.ip_forward
-```
-
-Check nftables:
-
-```
 nft list ruleset
-```
-
-Check dnsmasq:
-
-```
 systemctl status dnsmasq
 ```
 
-Check the WiFi connection:
+Test upstream internet directly from your chosen WAN interface:
 
-```
-iw dev wlan0 link
+```bash
+# For Option 2 (USB Ethernet):
+ping -I eth1 -c 3 192.168.0.1
+ping -I eth1 -c 3 1.1.1.1
+
+# For Option 1 (WiFi):
+ping -I wlan0 -c 3 192.168.0.1
+ping -I wlan0 -c 3 1.1.1.1
 ```
 
-Check the kernel/network logs:
+{% hint style="info" %}
+Many USB Ethernet adapters silently drop incoming packets if their MAC address is randomized. The script locks `eth1` to its `permanent` MAC automatically—your PC **never** sees `eth1`'s MAC address anyway, only `eth0`'s randomized MAC.
+{% endhint %}
 
-```
-journalctl -k -n 100 --no-pager
-```
-
-#### Advanced troubleshooting
+**Advanced troubleshooting**
 
 If packet handling appears to be failing under load, you can temporarily test with hardware/software offloading disabled:
 
-```
+```bash
 sudo ethtool -K eth0 gro off gso off tso off
-sudo ethtool -K wlan0 gro off gso off tso off
+sudo ethtool -K eth1 gro off gso off tso off
 ```
 
-Then test the connection again.
+**Do not treat this as a default configuration.** Restore normal settings with:
 
-**Do not treat this as a default configuration.** Offload settings can affect performance and CPU usage, and they should only be changed if testing indicates an offload/driver-related problem.
-
-If the problem disappears after disabling offloads, investigate the driver/kernel/network adapter before making those settings permanent.
-
-You can restore the normal settings with:
-
-```
+```bash
 sudo ethtool -K eth0 gro on gso on tso on
-sudo ethtool -K wlan0 gro on gso on tso on
-```
-
-If NetworkManager was restarted during troubleshooting:
-
-```
-sudo systemctl restart NetworkManager
+sudo ethtool -K eth1 gro on gso on tso on
 ```
 
 ***
 
-### Result
+#### Result
 
-Your final setup should be:
+Your final setup provides:
 
-```
-                 INTERNET
-                     │
-                 WiFi Router
-                  192.168.0.1
-                     │
-                   wlan0
-                DHCP / 192.168.0.x
-                     │
-              Raspberry Pi 4
-                     │
-                   eth0
-             MAC: 02:00:00:00:00:01
-               192.168.50.1/24
-                     │
-                    RJ45
-                     │
-                    PC
-              192.168.50.x
-```
-
-The Raspberry Pi provides:
-
-* WiFi → Ethernet routing
-* IPv4 forwarding
-* nftables NAT
-* DHCP through dnsmasq
-* Static `192.168.50.1/24` LAN addressing
-* Persistent custom MAC address on `eth0`
-* NetworkManager/Netplan-based configuration
-* WiFi power saving disabled
+* **Option 1 (`wlan0`) or Option 2 (`eth1` USB Ethernet)** → `eth0` routing
+* IPv4 forwarding + `nftables` NAT
+* Strict firewall: blocks all PC-to-Pi ports (except DHCP UDP 67) and isolates your home LAN (`192.168.0.0/24`)
+* Full `10.0.0.1/24` LAN subnet (`10.0.0.2` – `10.0.0.254`) via `dnsmasq` with Cloudflare DNS (`1.1.1.1`)
+* Automatic randomized MAC address on `eth0` every reboot
+* Pure NetworkManager configuration with `systemd-networkd` and Netplan conflicts automatically removed
