@@ -127,7 +127,8 @@ set -euo pipefail
 # - Configures eth0 as 10.0.0.1/24 LAN with a random MAC on every reboot
 # - Supports Option 1 (WiFi / wlan0) or Option 2 (USB Ethernet / eth1)
 # - Sets up dnsmasq DHCP (10.0.0.2 - 10.0.0.254) with Cloudflare DNS (1.1.1.1)
-# - Locks down nftables: NAT + isolates home LAN + drops all PC->Pi ports except DHCP
+# - Locks down nftables: NAT + isolates home LAN + drops all PC->Pi ports except
+#   DHCP + hides Pi (10.0.0.1) and main router (192.168.0.1) from WinMTR/tracert
 # ==============================================================================
 
 if [[ $EUID -ne 0 ]]; then
@@ -209,8 +210,8 @@ if [[ "$WAN_IP_MODE" == "static" ]]; then
 fi
 echo "  LAN (PC)       : $LAN_IF -> 10.0.0.1/24 (Random MAC every reboot)"
 echo "  DHCP Range     : 10.0.0.2 - 10.0.0.254 (DNS: 1.1.1.1, 1.0.0.1)"
-echo "  Blocked Subnet : $HOME_SUBNET (isolated from PC)"
-echo "  Pi Firewall    : Drops all PC -> Pi ports except DHCP (UDP 67)"
+echo "  Blocked Subnet : $HOME_SUBNET (isolated + hidden from WinMTR/tracert)"
+echo "  Pi Firewall    : Drops all PC -> Pi ports except DHCP (UDP 67) & hides 10.0.0.1 hop"
 echo "======================================================="
 echo ""
 echo "[WARNING] After this script finishes, your PC on $LAN_IF will NOT be able"
@@ -315,7 +316,7 @@ flush ruleset
 
 define WAN = "$WAN_IF"
 define LAN = "$LAN_IF"
-define HOME_NET = "$HOME_SUBNET"
+define HOME_NET = $HOME_SUBNET
 
 table ip nat {
     chain postrouting {
@@ -336,12 +337,23 @@ table ip filter {
         iifname \$LAN drop
     }
 
+    chain output {
+        type filter hook output priority 0;
+        policy accept;
+
+        # Hide 10.0.0.1 from WinMTR / tracert
+        oifname \$LAN icmp type { time-exceeded, destination-unreachable } drop
+    }
+
     chain forward {
         type filter hook forward priority 0;
         policy drop;
 
         # Block PC from reaching the main router and other devices on the home LAN
         iifname \$LAN ip daddr \$HOME_NET drop
+
+        # Hide main router and home LAN from WinMTR / tracert
+        iifname \$WAN oifname \$LAN ip saddr \$HOME_NET drop
 
         # Allow normal internet forwarding between LAN and WAN
         iifname \$LAN oifname \$WAN accept
@@ -415,6 +427,7 @@ Test connectivity and firewall isolation from your PC:
 ping 1.1.1.1
 ping 10.0.0.1
 ping 192.168.0.1
+tracert -d 1.1.1.1
 arp -a
 ```
 
@@ -423,6 +436,7 @@ Expected results:
 * `ping 1.1.1.1` → **Replies** (0% packet loss, internet works)
 * `ping 10.0.0.1` → **Times out** (Pi is hidden/locked down from PC)
 * `ping 192.168.0.1` → **Times out** (Main router & home LAN are isolated from PC)
+* `tracert -d 1.1.1.1` (or **WinMTR**) → Hops 1 and 2 show `* * * Request timed out` / `No response from host` (both `10.0.0.1` and `192.168.0.1` are hidden), while Hop 3 onward and `1.1.1.1` respond normally
 * `arp -a` → Shows `10.0.0.1` with a **randomized MAC address**
 
 <figure><img src="../.gitbook/assets/image (99).png" alt=""><figcaption></figcaption></figure>
